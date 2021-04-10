@@ -1,9 +1,11 @@
 include("robot/robot.jl")
-include("env/system-clock.jl")
-include("env/user-input.jl")
+include("system/system-clock.jl")
+include("system/user-input.jl")
+include("system/pubsub.jl")
 
 import Base.Threads.@spawn
 
+using .PubSub
 using .GenEnv
 using .UserInput
 
