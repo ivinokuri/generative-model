@@ -1,13 +1,12 @@
 
-
-struct Location
-	x::Integer
-	y::Integer
+@enum MoveDirection begin
+	stand
+	forward
+	backward
+	left
+	right
 end
-
-@enum Direction
-	forward = 1
-	backward = 2
-	left = 3
-	right = 4
+struct Location
+	x::Float64
+	y::Float64
 end

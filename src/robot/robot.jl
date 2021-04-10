@@ -1,18 +1,18 @@
-module Robots
-
 include("sensor.jl")
 include("state.jl")
 include("robot-components.jl")
 
-struct GenerativeRobot
-	sensors::Sensor
+mutable struct GenerativeRobot
+	# sensors::Sensor
 	currentState::State
 	
-	rightRearWheel::Wheel
-	leftRearWheel::Wheel
-	rightFrontWheel::Wheel
-	leftFrontWheel::Wheel
+	# rightRearWheel::Wheel
+	# leftRearWheel::Wheel
+	# rightFrontWheel::Wheel
+	# leftFrontWheel::Wheel
 end
 
-
+function move(robot, direction::MoveDirection, location::Location) 
+	s = get_state(location, direction)
+	robot.currentState = s
 end
