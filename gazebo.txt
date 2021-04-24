@@ -1,0 +1,12 @@
+Run ros and gazebo
+roscore &
+rosrun gazebo_ros gazebo
+Add model to gazebo
+rosrun gazebo_ros spawn_model -sdf -file './robot/robot/model.sdf' -model my_robot -y 1
+
+rostopic pub -r 20 /gazebo/set_model_state gazebo_msgs/ModelState '{model_name: my_robot, pose: { position: { x: 1, y: 0, z: 0}, orientation: {x: 0, y: 0.491983115673, z: 0, w: 0.870604813099 } }, twist: { linear: { x: 0, y: 0, z: 0 }, angular: { x: 1, y: 0, z: 0}  }, reference_frame: world }'
+
+
+rosservice call /gazebo/set_model_state '{model_state: { model_name: my_robot, pose: { position: { x: 0, y: 0 ,z: 0 }, orientation: {x: 0, y: 1, z: 0, w: 0.870604813099 } }, twist: { linear: {x: 0.0 , y: 0 ,z: 0 } , angular: { x: 0.0 , y: 0 , z: 0.0 } } , reference_frame: world } }'
+
+http://gazebosim.org/tutorials/?tut=ros_comm
