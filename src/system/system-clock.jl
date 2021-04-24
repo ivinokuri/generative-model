@@ -8,7 +8,7 @@ end
 
 systemClock = SystemClock(0)
 
-function increment_time(sleep_time=1.0) 
+function incrementtime(sleep_time=1.0) 
 	systemClock.system_time += sleep_time
 	round_time = round(systemClock.system_time)
 	if round_time % 10 == 0 && systemClock.system_time - round_time > 0 && systemClock.system_time - round_time < sleep_time
@@ -16,6 +16,6 @@ function increment_time(sleep_time=1.0)
 	end
 end
 
-export increment_time
+export incrementtime
 
 end

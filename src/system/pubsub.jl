@@ -4,30 +4,32 @@ Topics = Base.ImmutableDict(
 	:position => "/pose", 
 	:velocity => "/vel")
 
-callbacks = Dict()
+channels = Dict{String, Set{Channel}}()
 
 for (k, v) in Topics
-	callbacks[v] = Set()
+	channels[v] = Set{Channel}()
 end
 
-function publish(topic, data::Any)
-	if haskey(callbacks, topic)
-		cs = callbacks[topic]
+function publish(topic::String, data::Any)
+	if haskey(channels, topic)
+		cs = channels[topic]
 		for c in cs
-			c(data)
+			put!(c, data)
 		end
 	end
 end
 
-function subscribe(topic, callback)
-	cs = get!(callbacks, topic, Set())
-	push!(cs, callback)
+function subscribe(topic::String)
+	cs = get!(channels, topic, Set())
+	channel = Channel(1)
+	push!(cs, channel)
+	return channel
 end
 
-function unsubscribe(topic, callback)
-	if haskey(callbacks, topic)
-		cs = get!(callbacks, topic, [])
-		delete!(cs, callback)
+function unsubscribe(topic::String, channel::Channel)
+	if haskey(channels, topic)
+		cs = get!(channels, topic, [])
+		delete!(cs, channel)
 	end
 end
 

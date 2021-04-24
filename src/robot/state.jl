@@ -5,7 +5,3 @@ struct State
 	moveDirection::MoveDirection
 end
 
-function get_state(location::Location, direction::MoveDirection) 
-	return State(location, direction)
-end
-

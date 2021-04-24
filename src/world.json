@@ -1,0 +1,13 @@
+{
+	"scale": "",
+	"bounds": {
+		"width": 10,
+		"height": 10
+	},
+	"obstacles": [{
+		"location": {"x": 4.2, "y": 3},
+		"length": 3,
+		"width": 0.5,
+		"direction": 3
+	}]
+}

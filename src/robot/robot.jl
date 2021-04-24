@@ -1,6 +1,7 @@
 include("sensor.jl")
 include("state.jl")
 include("robot-components.jl")
+include("../system/pubsub.jl")
 
 mutable struct GenerativeRobot
 	# sensors::Sensor
@@ -12,7 +13,12 @@ mutable struct GenerativeRobot
 	# leftFrontWheel::Wheel
 end
 
-function move(robot, direction::MoveDirection, location::Location) 
-	s = get_state(location, direction)
+function move(robot::GenerativeRobot, direction::MoveDirection, location::Location) 
+	s = State(location, direction)
 	robot.currentState = s
+	data = Dict(
+		"topic" => Topics[:position],
+		"data" => s
+	)
+	publish(Topics[:position], data)
 end
