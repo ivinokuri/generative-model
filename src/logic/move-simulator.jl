@@ -7,15 +7,20 @@ module MoveSimulator
 	using Distributions 
 	_isrunning = false
 	_velocity = 0
-	# _robot::GenerativeRobot
+	_currenttime = 0
+	_robot::GenerativeRobot
 
 	c = PubSub.subscribe(PubSub.Topics[:clock])
 
 	function simulatemove(sim_channel::Channel)
 		while isrunning
 			sleep(nextinterval())
+			if isready(c)
+				global _currenttime = take!(c).data
+			end
 			dir = randomdirection()
 			location = calcnextloc(dir)
+			put!(sim_channel, location)
 		end
 	end
 
@@ -25,25 +30,31 @@ module MoveSimulator
 
 	function randomdirection()
 		direction = rand([forward, backward, stand, left, right])
-		if isready(c)
-			v = take!(c)
-			println(v["data"])
-		end
 		return direction
 	end
 
 	function calcnextloc(direction)
+		loc = _robot.state.location
+		x = loc.x
+		y = loc.y
 		if dir == forward
 			println("forward")
+			y = y + _velocity * _currenttime
 		elseif dir == backward
 			println("backward")
+			y = y - _velocity * _currenttime
 		elseif dir == left
 			println("left")
+			x = x - _velocity * _currenttime
 		elseif dir == right
 			println("right")
+			x = x + _velocity * _currenttime
 		else
 			println("stand")
 		end
+		loc = Location(x, y)
+		move(_robot, direction, loc)
+		return loc
 	end
 
 	function setrunning(isrunning)
@@ -55,6 +66,7 @@ module MoveSimulator
 	end
 
 	function setrobot(robot)
+		global _robot = robot
 	end
 
 	export setrunning, setvelocity, nextinterval
