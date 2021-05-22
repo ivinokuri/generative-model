@@ -3,7 +3,6 @@ include("robot/robot.jl")
 include("system/system-clock.jl")
 include("system/user-input.jl")
 include("env/world.jl")
-include("logic/move-simulator.jl")
 
 import Base.Threads.@spawn
 
@@ -11,6 +10,8 @@ using .PubSub
 using .GenEnv
 using .UserInput
 using .WorldEnv
+
+include("logic/move-simulator.jl")
 using .MoveSimulator
 
 function mainloop(robot::GenerativeRobot, world::World, comm_channel::Channel)

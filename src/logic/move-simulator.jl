@@ -1,14 +1,10 @@
 module MoveSimulator
-	include("../system/pubsub.jl")
-	include("../env/location.jl")
-	include("../robot/robot.jl")
 
-	using .PubSub
 	using Distributions 
 	_isrunning = false
 	_velocity = 0
 	_currenttime = 0
-	_robot::GenerativeRobot
+	# _robot::GenerativeRobot = GenerativeRobot()
 
 	c = PubSub.subscribe(PubSub.Topics[:clock])
 
