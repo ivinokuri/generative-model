@@ -2,6 +2,8 @@ module UserInput
 
 function userinput(comm_channel::Channel)
 	println("============= Menu ============")
+	println("Use s to start automatic simulation") 
+	println("Use t to terminate automatic simulation") 
 	println("Use v to change the velocity") 
 	println("Use q to quite")
 	println("===============================")
