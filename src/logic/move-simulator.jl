@@ -1,11 +1,15 @@
 module MoveSimulator
-
+	include("../system/pubsub.jl")
 	include("../env/location.jl")
 	include("../robot/robot.jl")
+
+	using .PubSub
 	using Distributions 
 	_isrunning = false
 	_velocity = 0
 	# _robot::GenerativeRobot
+
+	c = PubSub.subscribe(PubSub.Topics[:clock])
 
 	function simulatemove(sim_channel::Channel)
 		while isrunning
@@ -16,11 +20,15 @@ module MoveSimulator
 	end
 
 	function nextinterval()
-		return 100
+		return rand(Distributions.Gamma(2, 5), 1) * 100
 	end
 
 	function randomdirection()
 		direction = rand([forward, backward, stand, left, right])
+		if isready(c)
+			v = take!(c)
+			println(v["data"])
+		end
 		return direction
 	end
 

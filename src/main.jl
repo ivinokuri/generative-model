@@ -1,7 +1,7 @@
+include("system/pubsub.jl")
 include("robot/robot.jl")
 include("system/system-clock.jl")
 include("system/user-input.jl")
-include("system/pubsub.jl")
 include("env/world.jl")
 include("logic/move-simulator.jl")
 
