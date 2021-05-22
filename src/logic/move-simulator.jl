@@ -13,7 +13,7 @@ module MoveSimulator
 		while isrunning
 			sleep(nextinterval())
 			dir = randomdirection()
-
+			location = calcnextloc(dir)
 		end
 	end
 
@@ -26,8 +26,16 @@ module MoveSimulator
 	end
 
 	function calcnextloc(direction)
-		
-
+		if dir == forward
+			println("forward")
+		elseif dir == backward
+			println("backward")
+		elseif dir == left
+			println("left")
+		elseif dir == right
+			println("right")
+		else
+			println("stand")
 	end
 
 	function setrunning(isrunning)
