@@ -1,13 +1,11 @@
-
-include("../env/location.jl")
-include("../robot/robot.jl")
-
-
 module MoveSimulator
 
+	include("../env/location.jl")
+	include("../robot/robot.jl")
+	using Distributions 
 	_isrunning = false
 	_velocity = 0
-	_robot:GenerativeRobot
+	# _robot::GenerativeRobot
 
 	function simulatemove(sim_channel::Channel)
 		while isrunning
@@ -17,12 +15,13 @@ module MoveSimulator
 		end
 	end
 
-	function nextinterval() 
+	function nextinterval()
 		return 100
 	end
 
 	function randomdirection()
-		return forward
+		direction = rand([forward, backward, stand, left, right])
+		return direction
 	end
 
 	function calcnextloc(direction)
@@ -36,19 +35,20 @@ module MoveSimulator
 			println("right")
 		else
 			println("stand")
+		end
 	end
 
 	function setrunning(isrunning)
-		MoveSimulator._isrunning = isrunning
+		global _isrunning = isrunning
 	end
 
 	function setvelocity(vel)
-		MoveSimulator._velocity = vel
+		global _velocity = vel
 	end
 
 	function setrobot(robot)
 	end
 
-	export setrunning, setvelocity
+	export setrunning, setvelocity, nextinterval
 
 end

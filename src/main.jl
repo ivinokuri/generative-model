@@ -3,6 +3,7 @@ include("system/system-clock.jl")
 include("system/user-input.jl")
 include("system/pubsub.jl")
 include("env/world.jl")
+include("logic/move-simulator.jl")
 
 import Base.Threads.@spawn
 
@@ -10,11 +11,13 @@ using .PubSub
 using .GenEnv
 using .UserInput
 using .WorldEnv
+using .MoveSimulator
 
 function mainloop(robot::GenerativeRobot, world::World, comm_channel::Channel)
 	shutdown = false
 	sleep_time = 0.1
 	c = PubSub.subscribe(Topics[:position])
+	MoveSimulator.setrunning(true)
 	while !shutdown
 		# run update
 		if isready(comm_channel)
@@ -24,7 +27,8 @@ function mainloop(robot::GenerativeRobot, world::World, comm_channel::Channel)
 		if isready(c)
 			println("from channel", take!(c))
 		end
-		move(robot, forward, Location(1.0, robot.currentState.location.y + sleep_time))
+		# move(robot, forward, Location(1.0, robot.currentState.location.y + sleep_time))
+		MoveSimulator.randomdirection()
 		GenEnv.incrementtime(sleep_time)
 		sleep(sleep_time)
 	end
