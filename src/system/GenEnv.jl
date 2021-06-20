@@ -1,7 +1,6 @@
 module GenEnv
-	include("./pubsub.jl")
 
-	using .PubSub
+	import PubSub
 	using Printf
 
 	mutable struct SystemClock
@@ -13,7 +12,7 @@ module GenEnv
 	function incrementtime(sleep_time=1.0) 
 		systemClock.system_time += sleep_time
 		round_time = round(systemClock.system_time)
-		publish(PubSub.Topics[:clock], Dict(
+		PubSub.publish(PubSub.Topics[:clock], Dict(
 			"topic" => PubSub.Topics[:clock],
 			"data" => round_time
 		))

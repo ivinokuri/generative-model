@@ -1,6 +1,7 @@
 module WorldEnv
-include("./location.jl")
 import JSON
+import Loc.Location
+import Loc.MoveDirection
 
 @enum WorldDirection begin
 	north

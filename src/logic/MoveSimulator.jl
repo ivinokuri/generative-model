@@ -1,6 +1,9 @@
 module MoveSimulator
 
+	using Loc
 	using Distributions 
+	import PubSub
+	
 	_isrunning = false
 	_velocity = 0
 	_currenttime = 0

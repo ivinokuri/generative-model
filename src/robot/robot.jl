@@ -1,7 +1,18 @@
+module Robot
 include("sensor.jl")
-include("state.jl")
 include("robot-components.jl")
-# include("../system/pubsub.jl")
+import Loc.Location
+import Loc.MoveDirection
+
+struct State
+	location::Location
+	moveDirection::MoveDirection
+	velocity:Float16 = 1
+
+	State(loc::Location, md::MoveDirection) = new(loc, md)
+	State(loc::Location, md::MoveDirection, vel::Float16) = new(loc, md, vel)
+end
+
 
 mutable struct GenerativeRobot
 	# sensors::Sensor
@@ -21,4 +32,7 @@ function move(robot::GenerativeRobot, direction::MoveDirection, location::Locati
 		"data" => s
 	)
 	publish(Topics[:position], data)
+end
+
+export GenerativeRobot, State
 end
