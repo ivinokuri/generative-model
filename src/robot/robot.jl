@@ -1,7 +1,7 @@
 include("sensor.jl")
 include("state.jl")
 include("robot-components.jl")
-include("../system/pubsub.jl")
+# include("../system/pubsub.jl")
 
 mutable struct GenerativeRobot
 	# sensors::Sensor
