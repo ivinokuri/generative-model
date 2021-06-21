@@ -1,6 +1,7 @@
 from enum import Enum
 import enum
 from typing import Dict, Set
+from system.utils import SingletonDecorator
 
 class Topics(Enum):
 	clock = "/clock"
@@ -9,18 +10,29 @@ class Topics(Enum):
 
 class PubSub:
 	def __init__(self) -> None:
-		self.channels = dict()
+		self.callbacks = dict()
 		for t in enum(Topics):
-			self.channels[t] = set()
+			self.callbacks[t] = set()
 	
 	def publish(self, topic, data):
-		# if self.channels.has_key(topic):
-		# 	cs = self.channels[topic]
-		# 	for c in c:
-		pass
+		if self.callbacks.has_key(topic):
+			callbacks = self.callbacks[topic]
+			for c in callbacks:
+				c(data)
+		else:
+			print('Topic not found')
 
-	def subsctibe(self, topic):
-		pass
+	def subsctibe(self, topic, callback):
+		callbacks = self.callbacks[topic]
+		if not callbacks:
+			callbacks = set()
+		callbacks.add(callback)
+		self.callbacks = callbacks
 
-	def unsubscribe(self, topic):
-		pass
+	def unsubscribe(self, topic, callback):
+		callbacks = self.callbacks[topic]
+		if callbacks:
+			callbacks.remove(callback)
+			self.callbacks = callbacks
+
+PubSubInstance = SingletonDecorator(PubSub)
