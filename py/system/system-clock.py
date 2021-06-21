@@ -1,5 +1,6 @@
 from pubsub import PubSubInstance
 from pubsub import Topics
+from utils import SingletonDecorator
 
 class SystemClock:
 
@@ -13,3 +14,5 @@ class SystemClock:
 			"topic": Topics.clock,
 			"data": roundTime
 		})
+
+systemClock = SingletonDecorator(SystemClock)
