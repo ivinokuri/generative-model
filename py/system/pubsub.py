@@ -22,7 +22,7 @@ class PubSub:
 		else:
 			print('Topic not found')
 
-	def subsctibe(self, topic, callback):
+	def subscribe(self, topic, callback):
 		callbacks = self.callbacks[topic]
 		if not callbacks:
 			callbacks = set()
