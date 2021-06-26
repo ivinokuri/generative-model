@@ -3,7 +3,7 @@ from env.location import Location
 from env.location import MoveDirection
 
 class State:
-	def __init__(self, location, moveDirection, velocity) -> None:
+	def __init__(self, location, moveDirection, velocity=1) -> None:
 		self.location = location
 		self.moveDirection = moveDirection
 		self.velocity = velocity

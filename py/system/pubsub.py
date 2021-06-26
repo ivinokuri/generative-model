@@ -10,30 +10,39 @@ class Topics(Enum):
 	simulation = '/sim/data'
 
 class PubSub:
-	def __init__(self) -> None:
-		self.callbacks = dict()
-		for t in enum(Topics):
-			self.callbacks[t] = set()
-	
-	def publish(self, topic, data):
-		if self.callbacks.has_key(topic):
+
+	class __PubSub:
+		def __init__(self):
+			self.callbacks = dict()
+			for t in Topics:
+				self.callbacks[t] = set()
+
+		def publish(self, topic, data):
+			if self.callbacks[topic]:
+				callbacks = self.callbacks[topic]
+				for c in callbacks:
+					c(data)
+			else:
+				print('Topic not found')
+
+		def subscribe(self, topic, callback):
 			callbacks = self.callbacks[topic]
-			for c in callbacks:
-				c(data)
-		else:
-			print('Topic not found')
+			if not callbacks:
+				callbacks = set()
+			callbacks.add(callback)
+			self.callbacks[topic] = callbacks
 
-	def subscribe(self, topic, callback):
-		callbacks = self.callbacks[topic]
-		if not callbacks:
-			callbacks = set()
-		callbacks.add(callback)
-		self.callbacks = callbacks
+		def unsubscribe(self, topic, callback):
+			callbacks = self.callbacks[topic]
+			if callbacks:
+				callbacks.remove(callback)
+				self.callbacks = callbacks
 
-	def unsubscribe(self, topic, callback):
-		callbacks = self.callbacks[topic]
-		if callbacks:
-			callbacks.remove(callback)
-			self.callbacks = callbacks
+	instance = None
 
-PubSubInstance = SingletonDecorator(PubSub)
+	def __init__(self) -> None:
+		if not PubSub.instance:
+			PubSub.instance = PubSub.__PubSub()
+
+_ = PubSub()
+# PubSubInstance = SingletonDecorator(PubSub)

@@ -1,7 +1,7 @@
 from env.location import MoveDirection,Location
 from robot.robot import GenerativeRobot
-from system.pubsub import PubSubInstance, Topics
-
+from system.pubsub import PubSub, Topics
+from pyro.distributions import Gamma
 import torch
 
 import random
@@ -16,7 +16,7 @@ class MoveSimulator:
 		self.currentTime = 0
 		self.prevTime = 0
 		self.robot = robot
-		self.gamma = Gamma(torch.tensor([2.0]), torch.tensor([5.0]))
+		self.gamma:Gamma = Gamma(torch.tensor([2.0]), torch.tensor([5.0]))
 
 	def receiveClock(self, data):
 		clock = data.data
@@ -26,7 +26,7 @@ class MoveSimulator:
 	def startRunning(self, velocity):
 		self.isRunning = True
 		self.velocity = velocity
-		PubSubInstance.subscribe(Topics.clock, self.receiveClock)
+		PubSub.instance.subscribe(Topics.clock, self.receiveClock)
 		self.simulateMove()
 
 	def simulateMove(self):
@@ -35,7 +35,7 @@ class MoveSimulator:
 			timePass = self.currentTime - self.prevTime
 			dir = self.randomDirection()
 			loc = self.calcNextLoc(dir, timePass)
-			PubSubInstance.publish(Topics.simulation, {
+			PubSub.instance.publish(Topics.simulation, {
 				"topic": Topics.simulation,
 				"data": {
 					"direction": dir,

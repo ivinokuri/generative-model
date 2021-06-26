@@ -1,2 +1,2 @@
-from .pubsub import PubSubInstance, Topics
+from .pubsub import PubSub, Topics
 from .utils import *
