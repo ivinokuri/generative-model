@@ -1,4 +1,4 @@
-import RobotComponents as rc
+# import RobotComponents as rc
 from env.location import Location
 from env.location import MoveDirection
 

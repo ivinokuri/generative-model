@@ -1,6 +1,5 @@
-from pubsub import PubSubInstance
-from pubsub import Topics
-from utils import SingletonDecorator
+from .pubsub import PubSubInstance, Topics
+from .utils import SingletonDecorator
 
 class SystemClock:
 

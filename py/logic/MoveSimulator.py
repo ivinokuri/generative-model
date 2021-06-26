@@ -1,13 +1,16 @@
 from env.location import MoveDirection,Location
 from robot.robot import GenerativeRobot
 from system.pubsub import PubSubInstance, Topics
-from torch.distributed.gamma import Gamma
+
 import torch
 
 import random
+from env import Location
+from env import World
+
 class MoveSimulator:
 
-	def __init__(self, robot:GenerativeRobot):
+	def __init__(self, robot:GenerativeRobot, world:World):
 		self.isRunning = False
 		self.velocity = 0
 		self.currentTime = 0

@@ -1,7 +1,6 @@
 
 from os import name
 
-
 class Wheel:
 
 	def __init__(self, velocity, radialVelocity, angle):

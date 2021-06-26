@@ -1,5 +1,5 @@
 from enum import Enum
-from location import Location
+from .location import Location
 import json
 
 class WorldDirection(Enum):
@@ -8,15 +8,16 @@ class WorldDirection(Enum):
 	EAST = 2
 	WEST = 3
 
+
 class Obstacle:
 	def __init__(self, position:Location, length, width, direction:WorldDirection):
 		self.position = position
 		self.length = length
 		self.width = width
 		self.direction = direction
-	
+
 	def __str__(self):
-		return "At " + self.position + " length: " + self.length + " width: " + self.width + " direction: " + self.direction.name
+		return "At " + str(self.position) + " length: " + str(self.length) + " width: " + str(self.width) + " direction: " + str(self.direction.name)
 
 class World:
 
@@ -26,7 +27,7 @@ class World:
 		self.obstacles = obstacles
 
 	def __str__(self) -> str:
-		return "W: " + self.width + " H: " + self.height + " obs: " + self.obstacles 
+		return "W: " + str(self.width) + " H: " + str(self.height) + " obs: " + str(self.obstacles)
 
 	@staticmethod
 	def loadWorld(path="./world.json"):
