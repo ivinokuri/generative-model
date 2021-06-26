@@ -19,29 +19,32 @@ class MoveSimulator:
 		self.gamma:Gamma = Gamma(torch.tensor([2.0]), torch.tensor([5.0]))
 
 	def receiveClock(self, data):
-		clock = data.data
+		print(data)
+		clock = data['data']
 		self.prevTime = self.currentTime
 		self.currentTime = clock
+		self.simulateMove()
 
 	def startRunning(self, velocity):
 		self.isRunning = True
 		self.velocity = velocity
 		PubSub.instance.subscribe(Topics.clock, self.receiveClock)
-		self.simulateMove()
+		# self.simulateMove()
 
 	def simulateMove(self):
-		while self.isRunning:
-			# TODO sleep
-			timePass = self.currentTime - self.prevTime
-			dir = self.randomDirection()
-			loc = self.calcNextLoc(dir, timePass)
-			PubSub.instance.publish(Topics.simulation, {
-				"topic": Topics.simulation,
-				"data": {
-					"direction": dir,
-					"newLocation": loc
-				}
-			})
+		timePass = self.currentTime - self.prevTime
+		dir = self.randomDirection()
+		loc = self.calcNextLoc(dir, timePass)
+		PubSub.instance.publish(Topics.simulation, {
+			"topic": Topics.simulation,
+			"data": {
+				"direction": dir,
+				"newLocation": loc
+			}
+		})
+		# while self.isRunning:
+		# 	pass
+		# TODO sleep
 
 	def nextInterval(self):
 		nextInter = self.gamma.sample() * 100
