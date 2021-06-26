@@ -19,7 +19,6 @@ class MoveSimulator:
 		self.gamma:Gamma = Gamma(torch.tensor([2.0]), torch.tensor([5.0]))
 
 	def receiveClock(self, data):
-		print(data)
 		clock = data['data']
 		self.prevTime = self.currentTime
 		self.currentTime = clock
@@ -42,9 +41,6 @@ class MoveSimulator:
 				"newLocation": loc
 			}
 		})
-		# while self.isRunning:
-		# 	pass
-		# TODO sleep
 
 	def nextInterval(self):
 		nextInter = self.gamma.sample() * 100

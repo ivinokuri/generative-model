@@ -22,3 +22,6 @@ class Location:
 
 	def __str__(self) -> str:
 		return "Location x:" + self.x + " y:" + self.y
+
+	def __repr__(self):
+		return "Location x:" + str(self.x) + " y:" + str(self.y)

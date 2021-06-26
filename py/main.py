@@ -16,7 +16,6 @@ def systemTime():
 
 def simulationSubcription(data):
 	print(data)
-	print(data)
 
 def mainLoop(robot:GenerativeRobot, world:World):
 	moveSim = MoveSimulator(robot, world)
