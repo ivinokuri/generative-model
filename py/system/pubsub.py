@@ -7,6 +7,7 @@ class Topics(Enum):
 	clock = "/clock"
 	position = "/pose"
 	velocity = "/vel"
+	simulation = '/sim/data'
 
 class PubSub:
 	def __init__(self) -> None:
