@@ -15,12 +15,13 @@ class MoveSimulator:
 		self.velocity = 0
 		self.currentTime = 0
 		self.prevTime = 0
+		self.waitTime = 0
 		self.robot = robot
+		self.world = world
 		self.gamma:Gamma = Gamma(torch.tensor([2.0]), torch.tensor([5.0]))
 
 	def receiveClock(self, data):
 		clock = data['data']
-		self.prevTime = self.currentTime
 		self.currentTime = clock
 		self.simulateMove()
 
@@ -28,51 +29,62 @@ class MoveSimulator:
 		self.isRunning = True
 		self.velocity = velocity
 		PubSub.instance.subscribe(Topics.clock, self.receiveClock)
-		# self.simulateMove()
 
 	def simulateMove(self):
 		timePass = self.currentTime - self.prevTime
-		dir = self.randomDirection()
-		loc = self.calcNextLoc(dir, timePass)
-		PubSub.instance.publish(Topics.simulation, {
-			"topic": Topics.simulation,
-			"data": {
-				"direction": dir,
-				"newLocation": loc
-			}
-		})
+		if self.waitTime <= timePass:
+			self.waitTime = self.nextInterval()
+			self.prevTime = self.currentTime
+			print("Wait for " + str(self.waitTime))
+			loc, dir = self.calcNextLoc(timePass)
+			PubSub.instance.publish(Topics.simulation, {
+				"topic": Topics.simulation,
+				"data": {
+					"direction": dir,
+					"newLocation": loc
+				}
+			})
 
 	def nextInterval(self):
-		nextInter = self.gamma.sample() * 100
+		nextInter = self.gamma.sample() * 10
 		print('Next interval')
 		return nextInter
 
-	
-	def randomDirection(self):
+	@staticmethod
+	def randomDirection():
 		return random.choice([MoveDirection.FORWARD, 
 			MoveDirection.BACKWARD, 
-			MoveDirection.STAND, 
+			# MoveDirection.STAND,
 			MoveDirection.LEFT, 
 			MoveDirection.RIGHT])
 
-	def calcNextLoc(self, direction, timePass):
-		loc:Location = self.robot.currentState.location
+	def calcNextLoc(self, timePass):
+		locationFit = False
+		direction = MoveDirection.STAND
+		loc: Location = self.robot.currentState.location
 		x = loc.x
 		y = loc.y
-		if direction == MoveDirection.FORWARD:
-			print('Move forward')
-			y = y + self.velocity * timePass
-		elif direction == MoveDirection.BACKWARD:
-			print('Move backward')
-			y = y - self.velocity * timePass
-		elif direction == MoveDirection.LEFT:
-			print('Move left')
-			x = x - self.velocity * timePass
-		elif direction == MoveDirection.RIGHT:
-			print('Move right')
-			x = x + self.velocity * timePass
-		else:
-			print('Standing')
+		while not locationFit:
+			direction = self.randomDirection()
+			if direction == MoveDirection.FORWARD:
+				print('Move forward')
+				y = y + self.velocity * timePass
+			elif direction == MoveDirection.BACKWARD:
+				print('Move backward')
+				y = y - self.velocity * timePass
+			elif direction == MoveDirection.LEFT:
+				print('Move left')
+				x = x - self.velocity * timePass
+			elif direction == MoveDirection.RIGHT:
+				print('Move right')
+				x = x + self.velocity * timePass
+			else:
+				print('Standing')
+			if 0 <= x < self.world.width and 0 <= y < self.world.height:
+				locationFit = True
+			else:
+				x = loc.x
+				y = loc.y
 		newLoc = Location(x, y)
 		self.robot.move(direction, newLoc)
-		return newLoc
+		return newLoc, direction
