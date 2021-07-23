@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="mlp" default="" doc="my bag file to load"/>
+  <node name="rqt_mlp" pkg="rqt_mlp" type="rqt_mlp"
+    args="$(arg mlp)"/>
+</launch>

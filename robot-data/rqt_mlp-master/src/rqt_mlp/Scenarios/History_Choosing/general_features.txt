@@ -1,0 +1,9 @@
+# of active connection
+# of messages
+consecutive messages - maxinum time
+consecutive messages - mean time
+consecutive messages - variance time
+delivered messages
+dropped messages
+messages' age
+traffic (bytes)

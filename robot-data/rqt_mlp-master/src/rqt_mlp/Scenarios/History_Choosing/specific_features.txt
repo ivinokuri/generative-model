@@ -1,0 +1,20 @@
+# of nodes' threads
+CPU host load infomation
+CPU maximun load by nodes
+CPU mean load by nodes
+CPU minimum load by nodes
+CPU standard deviation load by nodes
+joint states information
+location x
+location y
+maximun real memory usage by nodes
+maximun virtual memory usage by nodes
+mean real memory usage by nodes
+mean virtual memory usage by nodes
+memory host information (aviability & usage)
+minimum real memory usage by nodes
+minimun virtual memory usage by nodes
+standard deviation real memory usage by nodes
+standard deviation virtual memory usage by nodes
+velocity angular z
+velocity linear x

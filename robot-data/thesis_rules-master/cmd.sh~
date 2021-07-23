@@ -1,0 +1,2 @@
+python software/AnomalyDetection.py -p "available runs/simulator_gazebo/velocity attack/normal/" -n "available runs/simulator_gazebo/velocity attack/test/" -c "available runs/simulator_gazebo/velocity attack/charts/" -t 3
+

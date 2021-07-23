@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="ML" pkg="robotican_demos" type="velocity_publisher.py" output="screen" required="true"> </node> 
+</launch>

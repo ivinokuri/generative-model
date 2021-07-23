@@ -1,0 +1,14 @@
+material Custom/box
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture box.jpg
+			}
+		}
+	}
+}
+

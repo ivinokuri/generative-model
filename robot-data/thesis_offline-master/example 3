@@ -1,0 +1,1136 @@
+lab@lab:~/thesis_offline$ ./cmd.sh
+['available runs/simulator_gazebo/velocity attack/time/2/', 'available runs/simulator_gazebo/velocity attack/time/1/', 'available runs/simulator_gazebo/velocity attack/time/0.5/', 'available runs/simulator_gazebo/velocity attack/time/0.25/', 'available runs/simulator_gazebo/velocity attack/time/0.125/']
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 236/300, negative predictions: 64/300
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 3/100, negative predictions: 97/100
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 3, negatives = 97 1)positive values: positives = 99, negatives = 1 2)negative values: positives = 100, negatives = 0 3)not negative values: positives = 100, negatives = 0 4)same digits number: positives = 100, negatives = 0 5)exactly one: positives = 100, negatives = 0 6)corresponding columns: positives = 100, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 236, negatives = 64 1)positive values: positives = 300, negatives = 0 2)negative values: positives = 300, negatives = 0 3)not negative values: positives = 300, negatives = 0 4)same digits number: positives = 300, negatives = 0 5)exactly one: positives = 300, negatives = 0 6)corresponding columns: positives = 300, negatives = 0 
+negatives: 
+	how much constant columns: 710/985
+	how much correlate columns: 24/985
+
+-----training sets-----:longest average = 1.23333333333, anomalies = 64.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 3
+1_21.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.6 (1/2) (3/4) (4/6) (6/10) most negative: 4                                                       longest negative: 1     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_2.csv                         	accuracy: 0.7 (2/2) (4/4) (5/6) (7/10) most negative: 3                                                       longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_34.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.5 (1/2) (2/4) (3/6) (5/10) most negative: 5                                                       longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_31.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.8 (1/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_29.csv                        	accuracy: 0.4 (0/2) (1/4) (2/6) (4/10) most negative: 6                                                       longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_18.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_25.csv                        	accuracy: 0.7 (1/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_33.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_23.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.9 (2/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_35.csv                        	accuracy: 0.8 (0/2) (2/4) (4/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_7.csv                         	accuracy: 0.9 (2/2) (4/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_37.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_30.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_36.csv                        	accuracy: 0.9 (2/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_38.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_19.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.8 (2/2) (4/4) (4/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_6.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 9.4, anomalies = 97.0,  total warnings = 64.0,  faulty runs = 10.0,  non-faulty runs = 0.0, max threshold = 3
+accuarcy min trainings: 0.4, accuarcy min positives: 0.0, ratio: 0.0
+1_39.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_0.csv                         	accuracy: 0.1 (0/2) (0/4) (0/6) (1/10) most negative: 9 (threshold: 4 more)                                   longest negative: 7     warnings = 4.0
+1_15.csv                        	accuracy: 0.1 (0/2) (0/4) (0/6) (1/10) most negative: 9 (threshold: 5 more)                                   longest negative: 8     warnings = 5.0
+1_3.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_9.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_14.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_22.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_20.csv                        	accuracy: 0.1 (0/2) (0/4) (0/6) (1/10) most negative: 9 (threshold: 6 more)                                   longest negative: 9     warnings = 6.0
+1_17.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+1_10.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 7 more)                                  longest negative: 10    warnings = 7.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 247/300, negative predictions: 53/300
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 9/100, negative predictions: 91/100
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 9, negatives = 91 1)positive values: positives = 100, negatives = 0 2)negative values: positives = 100, negatives = 0 3)not negative values: positives = 100, negatives = 0 4)same digits number: positives = 99, negatives = 1 5)exactly one: positives = 100, negatives = 0 6)corresponding columns: positives = 100, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 247, negatives = 53 1)positive values: positives = 300, negatives = 0 2)negative values: positives = 300, negatives = 0 3)not negative values: positives = 300, negatives = 0 4)same digits number: positives = 300, negatives = 0 5)exactly one: positives = 300, negatives = 0 6)corresponding columns: positives = 300, negatives = 0 
+negatives: 
+	how much constant columns: 710/985
+	how much correlate columns: 24/985
+
+-----training sets-----:longest average = 1.0, anomalies = 53.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 2
+1_23.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.7 (1/2) (2/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_10.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.9 (2/2) (4/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.5 (1/2) (2/4) (3/6) (5/10) most negative: 5                                                       longest negative: 1     warnings = 0.0
+1_19.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_0.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_2.csv                         	accuracy: 0.8 (2/2) (4/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_4.csv                         	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_20.csv                        	accuracy: 0.8 (2/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_35.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_37.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.8 (1/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_14.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_33.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_1.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_8.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.7 (1/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_7.csv                         	accuracy: 1.0 (2/2) (4/4) (6/6) (10/10) most negative: 0                                                      longest negative: 0     warnings = 0.0
+1_29.csv                        	accuracy: 0.7 (1/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.8 (1/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.9 (2/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 1.0 (2/2) (4/4) (6/6) (10/10) most negative: 0                                                      longest negative: 0     warnings = 0.0
+1_3.csv                         	accuracy: 0.5 (2/2) (3/4) (3/6) (5/10) most negative: 5                                                       longest negative: 2     warnings = 0.0
+1_34.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_25.csv                        	accuracy: 0.7 (1/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 8.8, anomalies = 91.0,  total warnings = 69.0,  faulty runs = 9.0,  non-faulty runs = 1.0, max threshold = 2
+accuarcy min trainings: 0.5, accuarcy min positives: 0.0, ratio: 0.0
+1_6.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_31.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_38.csv                        	accuracy: 0.1 (0/2) (1/4) (1/6) (1/10) most negative: 9 (threshold: 5 more)                                   longest negative: 7     warnings = 5.0
+1_17.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_12.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_30.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_18.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_36.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_24.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 233/300, negative predictions: 67/300
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 7/100, negative predictions: 93/100
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 10, negatives = 90 1)positive values: positives = 98, negatives = 2 2)negative values: positives = 100, negatives = 0 3)not negative values: positives = 98, negatives = 2 4)same digits number: positives = 97, negatives = 3 5)exactly one: positives = 100, negatives = 0 6)corresponding columns: positives = 100, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 233, negatives = 67 1)positive values: positives = 300, negatives = 0 2)negative values: positives = 300, negatives = 0 3)not negative values: positives = 300, negatives = 0 4)same digits number: positives = 300, negatives = 0 5)exactly one: positives = 300, negatives = 0 6)corresponding columns: positives = 300, negatives = 0 
+negatives: 
+	how much constant columns: 710/985
+	how much correlate columns: 24/985
+
+-----training sets-----:longest average = 1.23333333333, anomalies = 67.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 4
+1_38.csv                        	accuracy: 0.7 (1/2) (2/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.7 (1/2) (3/4) (5/6) (7/10) most negative: 3                                                       longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.6 (2/2) (3/4) (4/6) (6/10) most negative: 4                                                       longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_3.csv                         	accuracy: 0.5 (2/2) (3/4) (3/6) (5/10) most negative: 5                                                       longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.6 (2/2) (4/4) (5/6) (6/10) most negative: 4                                                       longest negative: 4     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_8.csv                         	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.9 (2/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.5 (1/2) (2/4) (3/6) (5/10) most negative: 5                                                       longest negative: 1     warnings = 0.0
+1_25.csv                        	accuracy: 0.6 (1/2) (2/4) (3/6) (6/10) most negative: 4                                                       longest negative: 1     warnings = 0.0
+1_17.csv                        	accuracy: 1.0 (2/2) (4/4) (6/6) (10/10) most negative: 0                                                      longest negative: 0     warnings = 0.0
+1_7.csv                         	accuracy: 0.9 (2/2) (4/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_19.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.8 (1/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.7 (2/2) (4/4) (5/6) (7/10) most negative: 3                                                       longest negative: 2     warnings = 0.0
+1_35.csv                        	accuracy: 0.8 (0/2) (2/4) (4/6) (8/10) most negative: 2                                                       longest negative: 2     warnings = 0.0
+1_33.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_34.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_20.csv                        	accuracy: 0.7 (2/2) (3/4) (3/6) (7/10) most negative: 3                                                       longest negative: 2     warnings = 0.0
+1_0.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 8.4, anomalies = 93.0,  total warnings = 45.0,  faulty runs = 9.0,  non-faulty runs = 1.0, max threshold = 4
+accuarcy min trainings: 0.5, accuarcy min positives: 0.0, ratio: 0.0
+1_10.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_14.csv                        	accuracy: 0.1 (1/2) (1/4) (1/6) (1/10) most negative: 9 (threshold: 4 more)                                   longest negative: 8     warnings = 4.0
+1_30.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_27.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_2.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_12.csv                        	accuracy: 0.1 (0/2) (0/4) (1/6) (1/10) most negative: 9 (threshold: 1 more)                                   longest negative: 5     warnings = 1.0
+1_31.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_11.csv                        	accuracy: 0.4 (1/2) (2/4) (3/6) (4/10) most negative: 6                                                       longest negative: 3     warnings = 0.0
+1_29.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 6 more)                                  longest negative: 10    warnings = 6.0
+1_23.csv                        	accuracy: 0.1 (0/2) (0/4) (0/6) (1/10) most negative: 9 (threshold: 4 more)                                   longest negative: 8     warnings = 4.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 250/300, negative predictions: 50/300
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/2
+positive predictions: 12/100, negative predictions: 88/100
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 12, negatives = 88 1)positive values: positives = 99, negatives = 1 2)negative values: positives = 100, negatives = 0 3)not negative values: positives = 100, negatives = 0 4)same digits number: positives = 100, negatives = 0 5)exactly one: positives = 100, negatives = 0 6)corresponding columns: positives = 99, negatives = 1 
+trainings: 0)coverage percentage columns: positives = 250, negatives = 50 1)positive values: positives = 300, negatives = 0 2)negative values: positives = 300, negatives = 0 3)not negative values: positives = 300, negatives = 0 4)same digits number: positives = 300, negatives = 0 5)exactly one: positives = 300, negatives = 0 6)corresponding columns: positives = 300, negatives = 0 
+negatives: 
+	how much constant columns: 710/985
+	how much correlate columns: 25/985
+
+-----training sets-----:longest average = 1.0, anomalies = 50.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 2
+1_21.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_33.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_0.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.8 (1/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_36.csv                        	accuracy: 1.0 (2/2) (4/4) (6/6) (10/10) most negative: 0                                                      longest negative: 0     warnings = 0.0
+1_10.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_38.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_31.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_2.csv                         	accuracy: 0.8 (2/2) (4/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.9 (2/2) (4/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_14.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_34.csv                        	accuracy: 0.8 (2/2) (4/4) (6/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.9 (2/2) (4/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.8 (2/2) (3/4) (4/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_17.csv                        	accuracy: 1.0 (2/2) (4/4) (6/6) (10/10) most negative: 0                                                      longest negative: 0     warnings = 0.0
+1_35.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_29.csv                        	accuracy: 0.6 (0/2) (2/4) (3/6) (6/10) most negative: 4                                                       longest negative: 2     warnings = 0.0
+1_3.csv                         	accuracy: 0.5 (2/2) (3/4) (3/6) (5/10) most negative: 5                                                       longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.7 (1/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_20.csv                        	accuracy: 0.7 (2/2) (3/4) (4/6) (7/10) most negative: 3                                                       longest negative: 1     warnings = 0.0
+1_30.csv                        	accuracy: 0.9 (1/2) (3/4) (5/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_12.csv                        	accuracy: 0.9 (2/2) (4/4) (6/6) (9/10) most negative: 1                                                       longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.8 (2/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 8.2, anomalies = 88.0,  total warnings = 63.0,  faulty runs = 9.0,  non-faulty runs = 1.0, max threshold = 2
+accuarcy min trainings: 0.5, accuarcy min positives: 0.0, ratio: 0.0
+1_8.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_23.csv                        	accuracy: 0.1 (0/2) (0/4) (0/6) (1/10) most negative: 9 (threshold: 6 more)                                   longest negative: 8     warnings = 6.0
+1_37.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_9.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_7.csv                         	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_16.csv                        	accuracy: 0.1 (1/2) (1/4) (1/6) (1/10) most negative: 9 (threshold: 6 more)                                   longest negative: 8     warnings = 6.0
+1_19.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+1_4.csv                         	accuracy: 0.8 (1/2) (3/4) (5/6) (8/10) most negative: 2                                                       longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.2 (0/2) (1/4) (2/6) (2/10) most negative: 8 (threshold: 3 more)                                   longest negative: 5     warnings = 3.0
+1_32.csv                        	accuracy: 0.0 (0/2) (0/4) (0/6) (0/10) most negative: 10 (threshold: 8 more)                                  longest negative: 10    warnings = 8.0
+
+
+
+average: 0.075
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 527/607, negative predictions: 80/607
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 20/203, negative predictions: 183/203
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 20, negatives = 183 1)positive values: positives = 202, negatives = 1 2)negative values: positives = 203, negatives = 0 3)not negative values: positives = 203, negatives = 0 4)same digits number: positives = 202, negatives = 1 5)exactly one: positives = 203, negatives = 0 6)corresponding columns: positives = 198, negatives = 5 
+trainings: 0)coverage percentage columns: positives = 527, negatives = 80 1)positive values: positives = 607, negatives = 0 2)negative values: positives = 607, negatives = 0 3)not negative values: positives = 607, negatives = 0 4)same digits number: positives = 607, negatives = 0 5)exactly one: positives = 607, negatives = 0 6)corresponding columns: positives = 607, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 23/985
+
+-----training sets-----:longest average = 1.33333333333, anomalies = 80.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 4
+1_34.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_0.csv                         	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_12.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_7.csv                         	accuracy: 0.85714 (5/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.9 (4/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.80952 (5/5) (9/10) (13/15) (17/21) most negative: 2                                               longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (4/5) (8/10) (13/15) (16/20) most negative: 2                                                   longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.85 (4/5) (8/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.9 (5/5) (9/10) (13/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.9 (4/5) (9/10) (13/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_2.csv                         	accuracy: 0.7619 (5/5) (10/10) (14/15) (16/21) most negative: 4                                               longest negative: 4     warnings = 0.0
+1_38.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.85714 (4/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_30.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.66667 (5/5) (9/10) (12/15) (14/21) most negative: 5                                               longest negative: 2     warnings = 0.0
+1_15.csv                        	accuracy: 0.8 (5/5) (8/10) (12/15) (16/20) most negative: 2                                                   longest negative: 1     warnings = 0.0
+1_23.csv                        	accuracy: 0.7619 (5/5) (8/10) (12/15) (16/21) most negative: 2                                                longest negative: 2     warnings = 0.0
+1_24.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_3.csv                         	accuracy: 0.75 (5/5) (10/10) (12/15) (15/20) most negative: 5                                                 longest negative: 3     warnings = 0.0
+1_20.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_29.csv                        	accuracy: 0.85 (4/5) (8/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_8.csv                         	accuracy: 0.90476 (5/5) (9/10) (14/15) (19/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.55 (5/5) (7/10) (9/15) (11/20) most negative: 6                                                   longest negative: 3     warnings = 0.0
+
+-----positive sets-----:longest average = 14.9, anomalies = 183.0,  total warnings = 111.0,  faulty runs = 10.0,  non-faulty runs = 0.0, max threshold = 4
+accuarcy min trainings: 0.55, accuarcy min positives: 0.0, ratio: 0.0
+1_19.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_10.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_22.csv                        	accuracy: 0.1 (1/5) (2/10) (2/15) (2/20) most negative: 10 (threshold: 7 more)                                longest negative: 11    warnings = 7.0
+1_14.csv                        	accuracy: 0.4 (4/5) (4/10) (6/15) (8/20) most negative: 6 (threshold: 3 more)                                 longest negative: 7     warnings = 3.0
+1_31.csv                        	accuracy: 0.19048 (1/5) (3/10) (4/15) (4/21) most negative: 9 (threshold: 4 more)                             longest negative: 8     warnings = 4.0
+1_37.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_35.csv                        	accuracy: 0.04762 (0/5) (1/10) (1/15) (1/21) most negative: 10 (threshold: 10 more)                           longest negative: 14    warnings = 12.0
+1_26.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_33.csv                        	accuracy: 0.25 (1/5) (4/10) (4/15) (5/20) most negative: 9 (threshold: 4 more)                                longest negative: 8     warnings = 4.0
+1_17.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 529/608, negative predictions: 79/608
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 36/202, negative predictions: 166/202
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 36, negatives = 166 1)positive values: positives = 202, negatives = 0 2)negative values: positives = 202, negatives = 0 3)not negative values: positives = 202, negatives = 0 4)same digits number: positives = 201, negatives = 1 5)exactly one: positives = 202, negatives = 0 6)corresponding columns: positives = 199, negatives = 3 
+trainings: 0)coverage percentage columns: positives = 529, negatives = 79 1)positive values: positives = 608, negatives = 0 2)negative values: positives = 608, negatives = 0 3)not negative values: positives = 608, negatives = 0 4)same digits number: positives = 608, negatives = 0 5)exactly one: positives = 608, negatives = 0 6)corresponding columns: positives = 608, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 23/985
+
+-----training sets-----:longest average = 1.43333333333, anomalies = 79.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 4
+1_31.csv                        	accuracy: 0.85714 (5/5) (10/10) (15/15) (18/21) most negative: 2                                              longest negative: 3     warnings = 0.0
+1_3.csv                         	accuracy: 0.6 (5/5) (8/10) (9/15) (12/20) most negative: 6                                                    longest negative: 3     warnings = 0.0
+1_9.csv                         	accuracy: 0.8 (5/5) (10/10) (14/15) (16/20) most negative: 4                                                  longest negative: 2     warnings = 0.0
+1_7.csv                         	accuracy: 0.90476 (5/5) (10/10) (15/15) (19/21) most negative: 1                                              longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_19.csv                        	accuracy: 0.85714 (4/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.85 (4/5) (9/10) (14/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_2.csv                         	accuracy: 0.7619 (5/5) (10/10) (14/15) (16/21) most negative: 4                                               longest negative: 4     warnings = 0.0
+1_24.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.95 (4/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.85 (5/5) (9/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.8 (4/5) (8/10) (12/15) (16/20) most negative: 2                                                   longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.75 (4/5) (9/10) (12/15) (15/20) most negative: 4                                                  longest negative: 1     warnings = 0.0
+1_8.csv                         	accuracy: 0.90476 (5/5) (9/10) (14/15) (19/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_38.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_28.csv                        	accuracy: 0.9 (4/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_10.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_35.csv                        	accuracy: 0.85714 (4/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 2     warnings = 0.0
+1_6.csv                         	accuracy: 0.66667 (5/5) (9/10) (12/15) (14/21) most negative: 5                                               longest negative: 2     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (4/5) (8/10) (13/15) (16/20) most negative: 2                                                   longest negative: 2     warnings = 0.0
+1_14.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.80952 (5/5) (9/10) (13/15) (17/21) most negative: 2                                               longest negative: 2     warnings = 0.0
+1_0.csv                         	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_17.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_34.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 11.4, anomalies = 166.0,  total warnings = 78.0,  faulty runs = 7.0,  non-faulty runs = 3.0, max threshold = 4
+accuarcy min trainings: 0.6, accuarcy min positives: 0.0, ratio: 0.0
+1_25.csv                        	accuracy: 0.25 (1/5) (2/10) (2/15) (5/20) most negative: 8 (threshold: 4 more)                                longest negative: 8     warnings = 4.0
+1_13.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_16.csv                        	accuracy: 0.33333 (2/5) (4/10) (6/15) (7/21) most negative: 7                                                 longest negative: 3     warnings = 0.0
+1_27.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_30.csv                        	accuracy: 0.4 (3/5) (5/10) (7/15) (8/20) most negative: 7                                                     longest negative: 4     warnings = 0.0
+1_37.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_33.csv                        	accuracy: 0.25 (1/5) (4/10) (4/15) (5/20) most negative: 9 (threshold: 4 more)                                longest negative: 8     warnings = 4.0
+1_12.csv                        	accuracy: 0.2 (2/5) (2/10) (4/15) (4/20) most negative: 8 (threshold: 4 more)                                 longest negative: 8     warnings = 6.0
+1_29.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_23.csv                        	accuracy: 0.33333 (2/5) (3/10) (4/15) (7/21) most negative: 7                                                 longest negative: 3     warnings = 0.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 536/606, negative predictions: 70/606
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 8/204, negative predictions: 196/204
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 8, negatives = 196 1)positive values: positives = 204, negatives = 0 2)negative values: positives = 204, negatives = 0 3)not negative values: positives = 204, negatives = 0 4)same digits number: positives = 204, negatives = 0 5)exactly one: positives = 204, negatives = 0 6)corresponding columns: positives = 204, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 536, negatives = 70 1)positive values: positives = 606, negatives = 0 2)negative values: positives = 606, negatives = 0 3)not negative values: positives = 606, negatives = 0 4)same digits number: positives = 606, negatives = 0 5)exactly one: positives = 606, negatives = 0 6)corresponding columns: positives = 606, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 22/985
+
+-----training sets-----:longest average = 1.3, anomalies = 70.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 4
+1_8.csv                         	accuracy: 0.90476 (5/5) (9/10) (14/15) (19/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_25.csv                        	accuracy: 0.85 (4/5) (8/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_2.csv                         	accuracy: 0.7619 (5/5) (10/10) (14/15) (16/21) most negative: 4                                               longest negative: 4     warnings = 0.0
+1_31.csv                        	accuracy: 0.85714 (5/5) (10/10) (15/15) (18/21) most negative: 2                                              longest negative: 3     warnings = 0.0
+1_23.csv                        	accuracy: 0.7619 (5/5) (8/10) (12/15) (16/21) most negative: 2                                                longest negative: 2     warnings = 0.0
+1_6.csv                         	accuracy: 0.66667 (5/5) (9/10) (12/15) (14/21) most negative: 5                                               longest negative: 2     warnings = 0.0
+1_17.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.80952 (5/5) (9/10) (13/15) (17/21) most negative: 2                                               longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_11.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_3.csv                         	accuracy: 0.65 (5/5) (9/10) (11/15) (13/20) most negative: 6                                                  longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_10.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.9 (5/5) (9/10) (13/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_0.csv                         	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_36.csv                        	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_12.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (4/5) (8/10) (13/15) (16/20) most negative: 2                                                   longest negative: 2     warnings = 0.0
+1_34.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_33.csv                        	accuracy: 0.85 (3/5) (8/10) (13/15) (17/20) most negative: 2                                                  longest negative: 2     warnings = 0.0
+1_38.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_37.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_14.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.85 (5/5) (9/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_39.csv                        	accuracy: 0.9 (4/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 18.8, anomalies = 196.0,  total warnings = 148.0,  faulty runs = 9.0,  non-faulty runs = 1.0, max threshold = 4
+accuarcy min trainings: 0.65, accuarcy min positives: 0.0, ratio: 0.0
+1_26.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_29.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_7.csv                         	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_21.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_16.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_28.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_19.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_9.csv                         	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_35.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_30.csv                        	accuracy: 0.4 (3/5) (5/10) (7/15) (8/20) most negative: 7                                                     longest negative: 4     warnings = 0.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 528/607, negative predictions: 79/607
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/1
+positive predictions: 28/203, negative predictions: 175/203
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 28, negatives = 175 1)positive values: positives = 203, negatives = 0 2)negative values: positives = 203, negatives = 0 3)not negative values: positives = 203, negatives = 0 4)same digits number: positives = 203, negatives = 0 5)exactly one: positives = 203, negatives = 0 6)corresponding columns: positives = 203, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 528, negatives = 79 1)positive values: positives = 607, negatives = 0 2)negative values: positives = 607, negatives = 0 3)not negative values: positives = 607, negatives = 0 4)same digits number: positives = 607, negatives = 0 5)exactly one: positives = 607, negatives = 0 6)corresponding columns: positives = 607, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 22/985
+
+-----training sets-----:longest average = 1.4, anomalies = 79.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 4
+1_0.csv                         	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_23.csv                        	accuracy: 0.7619 (5/5) (8/10) (12/15) (16/21) most negative: 2                                                longest negative: 2     warnings = 0.0
+1_30.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_3.csv                         	accuracy: 0.65 (5/5) (9/10) (11/15) (13/20) most negative: 6                                                  longest negative: 2     warnings = 0.0
+1_12.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.85714 (4/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_26.csv                        	accuracy: 0.45 (3/5) (4/10) (6/15) (9/20) most negative: 6                                                    longest negative: 4     warnings = 0.0
+1_7.csv                         	accuracy: 0.90476 (5/5) (10/10) (15/15) (19/21) most negative: 1                                              longest negative: 2     warnings = 0.0
+1_38.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_31.csv                        	accuracy: 0.85714 (5/5) (10/10) (15/15) (18/21) most negative: 2                                              longest negative: 3     warnings = 0.0
+1_4.csv                         	accuracy: 0.8 (4/5) (8/10) (13/15) (16/20) most negative: 2                                                   longest negative: 2     warnings = 0.0
+1_34.csv                        	accuracy: 0.95 (5/5) (9/10) (14/15) (19/20) most negative: 1                                                  longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_14.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.9 (4/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_8.csv                         	accuracy: 0.90476 (5/5) (9/10) (14/15) (19/21) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.85 (5/5) (9/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_35.csv                        	accuracy: 0.85714 (4/5) (9/10) (14/15) (18/21) most negative: 1                                               longest negative: 2     warnings = 0.0
+1_1.csv                         	accuracy: 1.0 (5/5) (10/10) (15/15) (20/20) most negative: 0                                                  longest negative: 0     warnings = 0.0
+1_32.csv                        	accuracy: 0.80952 (5/5) (9/10) (13/15) (17/21) most negative: 2                                               longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.8 (5/5) (10/10) (14/15) (16/20) most negative: 4                                                  longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.85 (4/5) (8/10) (13/15) (17/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.9 (5/5) (10/10) (14/15) (18/20) most negative: 2                                                  longest negative: 1     warnings = 0.0
+1_10.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+1_29.csv                        	accuracy: 0.8 (4/5) (8/10) (13/15) (16/20) most negative: 2                                                   longest negative: 2     warnings = 0.0
+1_11.csv                        	accuracy: 0.95 (5/5) (10/10) (15/15) (19/20) most negative: 1                                                 longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 15.8, anomalies = 175.0,  total warnings = 121.0,  faulty runs = 9.0,  non-faulty runs = 1.0, max threshold = 4
+accuarcy min trainings: 0.45, accuarcy min positives: 0.0, ratio: 0.0
+1_17.csv                        	accuracy: 0.25 (1/5) (3/10) (4/15) (5/20) most negative: 8 (threshold: 2 more)                                longest negative: 6     warnings = 2.0
+1_6.csv                         	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_2.csv                         	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_28.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_27.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_19.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/21) most negative: 10 (threshold: 17 more)                               longest negative: 21    warnings = 17.0
+1_20.csv                        	accuracy: 0.9 (5/5) (9/10) (14/15) (18/20) most negative: 1                                                   longest negative: 1     warnings = 0.0
+1_36.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_21.csv                        	accuracy: 0.0 (0/5) (0/10) (0/15) (0/20) most negative: 10 (threshold: 16 more)                               longest negative: 20    warnings = 16.0
+1_33.csv                        	accuracy: 0.25 (1/5) (4/10) (4/15) (5/20) most negative: 9 (threshold: 4 more)                                longest negative: 8     warnings = 4.0
+
+
+
+average: 0.125
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 1029/1235, negative predictions: 206/1235
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 70/411, negative predictions: 341/411
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 70, negatives = 341 1)positive values: positives = 409, negatives = 2 2)negative values: positives = 411, negatives = 0 3)not negative values: positives = 409, negatives = 2 4)same digits number: positives = 410, negatives = 1 5)exactly one: positives = 411, negatives = 0 6)corresponding columns: positives = 410, negatives = 1 
+trainings: 0)coverage percentage columns: positives = 1029, negatives = 206 1)positive values: positives = 1235, negatives = 0 2)negative values: positives = 1235, negatives = 0 3)not negative values: positives = 1235, negatives = 0 4)same digits number: positives = 1235, negatives = 0 5)exactly one: positives = 1235, negatives = 0 6)corresponding columns: positives = 1235, negatives = 0 
+negatives: 
+	how much constant columns: 681/985
+	how much correlate columns: 28/985
+
+-----training sets-----:longest average = 2.4, anomalies = 206.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 5
+1_5.csv                         	accuracy: 0.58537 (6/10) (15/20) (19/30) (24/41) most negative: 6                                             longest negative: 5     warnings = 0.0
+1_17.csv                        	accuracy: 0.925 (9/10) (18/20) (28/30) (37/40) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_32.csv                        	accuracy: 0.83333 (10/10) (18/20) (26/30) (35/42) most negative: 2                                            longest negative: 3     warnings = 0.0
+1_18.csv                        	accuracy: 0.87805 (10/10) (19/20) (29/30) (36/41) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_9.csv                         	accuracy: 0.80488 (9/10) (19/20) (26/30) (33/41) most negative: 4                                             longest negative: 3     warnings = 0.0
+1_31.csv                        	accuracy: 0.83333 (10/10) (19/20) (29/30) (35/42) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_27.csv                        	accuracy: 0.85366 (10/10) (18/20) (26/30) (35/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_7.csv                         	accuracy: 0.85714 (10/10) (20/20) (29/30) (36/42) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_28.csv                        	accuracy: 0.73171 (7/10) (16/20) (25/30) (30/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_14.csv                        	accuracy: 0.82927 (10/10) (18/20) (26/30) (34/41) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.87805 (9/10) (19/20) (28/30) (36/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.85714 (10/10) (19/20) (28/30) (36/42) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_4.csv                         	accuracy: 0.825 (9/10) (17/20) (26/30) (33/40) most negative: 3                                               longest negative: 1     warnings = 0.0
+1_0.csv                         	accuracy: 0.63415 (6/10) (12/20) (19/30) (26/41) most negative: 4                                             longest negative: 3     warnings = 0.0
+1_20.csv                        	accuracy: 0.87805 (10/10) (18/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.82927 (7/10) (16/20) (26/30) (34/41) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_35.csv                        	accuracy: 0.83333 (9/10) (19/20) (28/30) (35/42) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_33.csv                        	accuracy: 0.87805 (8/10) (18/20) (28/30) (36/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_22.csv                        	accuracy: 0.85366 (9/10) (17/20) (26/30) (35/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.5122 (5/10) (12/20) (17/30) (21/41) most negative: 7                                              longest negative: 3     warnings = 0.0
+1_13.csv                        	accuracy: 0.92683 (10/10) (19/20) (29/30) (38/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_30.csv                        	accuracy: 0.87805 (10/10) (19/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_19.csv                        	accuracy: 0.92857 (10/10) (20/20) (29/30) (39/42) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_10.csv                        	accuracy: 0.92683 (10/10) (20/20) (30/30) (38/41) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 0.90244 (9/10) (18/20) (28/30) (37/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.87805 (10/10) (20/20) (29/30) (36/41) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_39.csv                        	accuracy: 0.90244 (9/10) (19/20) (29/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_15.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_23.csv                        	accuracy: 0.83333 (10/10) (19/20) (28/30) (35/42) most negative: 3                                            longest negative: 4     warnings = 0.0
+1_12.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 3     warnings = 0.0
+
+-----positive sets-----:longest average = 27.4, anomalies = 341.0,  total warnings = 226.0,  faulty runs = 8.0,  non-faulty runs = 2.0, max threshold = 5
+accuarcy min trainings: 0.5122, accuarcy min positives: 0.0, ratio: 0.0
+1_2.csv                         	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_3.csv                         	accuracy: 0.425 (5/10) (9/20) (13/30) (17/40) most negative: 6                                                longest negative: 4     warnings = 0.0
+1_38.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_26.csv                        	accuracy: 0.26829 (4/10) (8/20) (9/30) (11/41) most negative: 9 (threshold: 4 more)                           longest negative: 9     warnings = 4.0
+1_11.csv                        	accuracy: 0.5 (4/10) (11/20) (16/30) (20/40) most negative: 6                                                 longest negative: 4     warnings = 0.0
+1_29.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_37.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_16.csv                        	accuracy: 0.52381 (6/10) (9/20) (16/30) (22/42) most negative: 7 (threshold: 4 more)                          longest negative: 9     warnings = 4.0
+1_34.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_8.csv                         	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 1088/1234, negative predictions: 146/1234
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 173/412, negative predictions: 239/412
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 173, negatives = 239 1)positive values: positives = 412, negatives = 0 2)negative values: positives = 412, negatives = 0 3)not negative values: positives = 412, negatives = 0 4)same digits number: positives = 412, negatives = 0 5)exactly one: positives = 412, negatives = 0 6)corresponding columns: positives = 412, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 1088, negatives = 146 1)positive values: positives = 1234, negatives = 0 2)negative values: positives = 1234, negatives = 0 3)not negative values: positives = 1234, negatives = 0 4)same digits number: positives = 1234, negatives = 0 5)exactly one: positives = 1234, negatives = 0 6)corresponding columns: positives = 1234, negatives = 0 
+negatives: 
+	how much constant columns: 681/985
+	how much correlate columns: 27/985
+
+-----training sets-----:longest average = 2.0, anomalies = 146.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 5
+1_22.csv                        	accuracy: 0.87805 (9/10) (17/20) (27/30) (36/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_11.csv                        	accuracy: 0.925 (8/10) (18/20) (28/30) (37/40) most negative: 2                                               longest negative: 1     warnings = 0.0
+1_29.csv                        	accuracy: 0.90244 (8/10) (18/20) (28/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_3.csv                         	accuracy: 0.7 (7/10) (16/20) (24/30) (28/40) most negative: 6                                                 longest negative: 2     warnings = 0.0
+1_9.csv                         	accuracy: 0.87805 (10/10) (20/20) (28/30) (36/41) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.92857 (9/10) (18/20) (28/30) (39/42) most negative: 1                                             longest negative: 1     warnings = 0.0
+1_33.csv                        	accuracy: 0.87805 (8/10) (18/20) (28/30) (36/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.87805 (10/10) (18/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_4.csv                         	accuracy: 0.875 (9/10) (18/20) (28/30) (35/40) most negative: 3                                               longest negative: 1     warnings = 0.0
+1_31.csv                        	accuracy: 0.85714 (10/10) (20/20) (30/30) (36/42) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_35.csv                        	accuracy: 0.85714 (9/10) (19/20) (29/30) (36/42) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_32.csv                        	accuracy: 0.85714 (10/10) (18/20) (27/30) (36/42) most negative: 2                                            longest negative: 3     warnings = 0.0
+1_34.csv                        	accuracy: 0.90244 (9/10) (19/20) (28/30) (37/41) most negative: 1                                             longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.95122 (10/10) (20/20) (30/30) (39/41) most negative: 1                                            longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 0.95122 (9/10) (19/20) (29/30) (39/41) most negative: 1                                             longest negative: 1     warnings = 0.0
+1_7.csv                         	accuracy: 0.88095 (10/10) (20/20) (30/30) (37/42) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_19.csv                        	accuracy: 0.92857 (10/10) (20/20) (29/30) (39/42) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_27.csv                        	accuracy: 0.87805 (10/10) (18/20) (27/30) (36/41) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.85714 (10/10) (19/20) (28/30) (36/42) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_2.csv                         	accuracy: 0.88095 (9/10) (19/20) (28/30) (37/42) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.90244 (10/10) (19/20) (29/30) (37/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_30.csv                        	accuracy: 0.87805 (10/10) (19/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_26.csv                        	accuracy: 0.87805 (10/10) (20/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_12.csv                        	accuracy: 0.87805 (10/10) (20/20) (30/30) (36/41) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_5.csv                         	accuracy: 0.63415 (8/10) (17/20) (21/30) (26/41) most negative: 6                                             longest negative: 5     warnings = 0.0
+1_13.csv                        	accuracy: 0.95122 (10/10) (20/20) (30/30) (39/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_21.csv                        	accuracy: 0.97561 (10/10) (20/20) (30/30) (40/41) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_17.csv                        	accuracy: 0.95 (9/10) (19/20) (29/30) (38/40) most negative: 1                                                longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.90244 (9/10) (19/20) (29/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+
+-----positive sets-----:longest average = 15.3, anomalies = 239.0,  total warnings = 112.0,  faulty runs = 5.0,  non-faulty runs = 5.0, max threshold = 5
+accuarcy min trainings: 0.63415, accuarcy min positives: 0.0, ratio: 0.0
+1_0.csv                         	accuracy: 0.68293 (7/10) (13/20) (21/30) (28/41) most negative: 4                                             longest negative: 2     warnings = 0.0
+1_14.csv                        	accuracy: 0.4878 (8/10) (11/20) (15/30) (20/41) most negative: 7 (threshold: 2 more)                          longest negative: 7     warnings = 2.0
+1_25.csv                        	accuracy: 0.43902 (4/10) (7/20) (11/30) (18/41) most negative: 7                                              longest negative: 5     warnings = 0.0
+1_28.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_23.csv                        	accuracy: 0.52381 (7/10) (11/20) (16/30) (22/42) most negative: 6 (threshold: 1 more)                         longest negative: 6     warnings = 1.0
+1_8.csv                         	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_1.csv                         	accuracy: 0.63415 (9/10) (16/20) (21/30) (26/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_10.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_38.csv                        	accuracy: 0.53659 (5/10) (10/20) (16/30) (22/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_24.csv                        	accuracy: 0.90244 (10/10) (20/20) (30/30) (37/41) most negative: 3                                            longest negative: 3     warnings = 0.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 1101/1233, negative predictions: 132/1233
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 105/413, negative predictions: 308/413
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 105, negatives = 308 1)positive values: positives = 413, negatives = 0 2)negative values: positives = 413, negatives = 0 3)not negative values: positives = 413, negatives = 0 4)same digits number: positives = 412, negatives = 1 5)exactly one: positives = 413, negatives = 0 6)corresponding columns: positives = 413, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 1101, negatives = 132 1)positive values: positives = 1233, negatives = 0 2)negative values: positives = 1233, negatives = 0 3)not negative values: positives = 1233, negatives = 0 4)same digits number: positives = 1233, negatives = 0 5)exactly one: positives = 1233, negatives = 0 6)corresponding columns: positives = 1233, negatives = 0 
+negatives: 
+	how much constant columns: 681/985
+	how much correlate columns: 27/985
+
+-----training sets-----:longest average = 2.3, anomalies = 132.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 5
+1_17.csv                        	accuracy: 0.925 (9/10) (18/20) (28/30) (37/40) most negative: 1                                               longest negative: 1     warnings = 0.0
+1_29.csv                        	accuracy: 0.90244 (8/10) (18/20) (28/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_36.csv                        	accuracy: 0.95122 (9/10) (19/20) (29/30) (39/41) most negative: 1                                             longest negative: 1     warnings = 0.0
+1_19.csv                        	accuracy: 0.92857 (10/10) (20/20) (29/30) (39/42) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.92683 (10/10) (20/20) (29/30) (38/41) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_15.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_33.csv                        	accuracy: 0.87805 (8/10) (18/20) (28/30) (36/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_27.csv                        	accuracy: 0.85366 (10/10) (18/20) (26/30) (35/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_28.csv                        	accuracy: 0.87805 (10/10) (20/20) (30/30) (36/41) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_23.csv                        	accuracy: 0.85714 (10/10) (19/20) (28/30) (36/42) most negative: 2                                            longest negative: 4     warnings = 0.0
+1_10.csv                        	accuracy: 0.92683 (10/10) (20/20) (30/30) (38/41) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_38.csv                        	accuracy: 0.97561 (10/10) (19/20) (29/30) (40/41) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_7.csv                         	accuracy: 0.85714 (10/10) (20/20) (29/30) (36/42) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_30.csv                        	accuracy: 0.87805 (10/10) (19/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_11.csv                        	accuracy: 0.9 (7/10) (17/20) (27/30) (36/40) most negative: 3                                                 longest negative: 2     warnings = 0.0
+1_0.csv                         	accuracy: 0.95122 (10/10) (20/20) (30/30) (39/41) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.92683 (10/10) (19/20) (29/30) (38/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.95122 (10/10) (20/20) (30/30) (39/41) most negative: 1                                            longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.87805 (10/10) (20/20) (29/30) (36/41) most negative: 3                                            longest negative: 4     warnings = 0.0
+1_25.csv                        	accuracy: 0.82927 (7/10) (16/20) (26/30) (34/41) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_26.csv                        	accuracy: 0.87805 (10/10) (20/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_24.csv                        	accuracy: 0.90244 (10/10) (20/20) (30/30) (37/41) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_34.csv                        	accuracy: 0.90244 (9/10) (19/20) (28/30) (37/41) most negative: 1                                             longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.87805 (10/10) (18/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_2.csv                         	accuracy: 0.85714 (9/10) (19/20) (27/30) (36/42) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_3.csv                         	accuracy: 0.925 (10/10) (20/20) (29/30) (37/40) most negative: 2                                              longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.80952 (10/10) (17/20) (27/30) (34/42) most negative: 3                                            longest negative: 5     warnings = 0.0
+1_31.csv                        	accuracy: 0.85714 (10/10) (20/20) (30/30) (36/42) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_39.csv                        	accuracy: 0.90244 (9/10) (19/20) (29/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+
+-----positive sets-----:longest average = 29.4, anomalies = 308.0,  total warnings = 256.0,  faulty runs = 7.0,  non-faulty runs = 3.0, max threshold = 5
+accuarcy min trainings: 0.80952, accuarcy min positives: 0.0, ratio: 0.0
+1_22.csv                        	accuracy: 0.85366 (9/10) (17/20) (26/30) (35/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_6.csv                         	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_16.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_35.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_4.csv                         	accuracy: 0.875 (9/10) (18/20) (28/30) (35/40) most negative: 3                                               longest negative: 1     warnings = 0.0
+1_18.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_14.csv                        	accuracy: 0.85366 (10/10) (18/20) (27/30) (35/41) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+1_32.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 1065/1238, negative predictions: 173/1238
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.5
+positive predictions: 187/408, negative predictions: 221/408
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 187, negatives = 221 1)positive values: positives = 407, negatives = 1 2)negative values: positives = 408, negatives = 0 3)not negative values: positives = 407, negatives = 1 4)same digits number: positives = 408, negatives = 0 5)exactly one: positives = 408, negatives = 0 6)corresponding columns: positives = 408, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 1065, negatives = 173 1)positive values: positives = 1238, negatives = 0 2)negative values: positives = 1238, negatives = 0 3)not negative values: positives = 1238, negatives = 0 4)same digits number: positives = 1238, negatives = 0 5)exactly one: positives = 1238, negatives = 0 6)corresponding columns: positives = 1238, negatives = 0 
+negatives: 
+	how much constant columns: 681/985
+	how much correlate columns: 26/985
+
+-----training sets-----:longest average = 2.3, anomalies = 173.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 5
+1_27.csv                        	accuracy: 0.85366 (10/10) (18/20) (26/30) (35/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_19.csv                        	accuracy: 0.92857 (10/10) (20/20) (29/30) (39/42) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_24.csv                        	accuracy: 0.87805 (10/10) (20/20) (29/30) (36/41) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_28.csv                        	accuracy: 0.80488 (8/10) (18/20) (27/30) (33/41) most negative: 4                                             longest negative: 3     warnings = 0.0
+1_10.csv                        	accuracy: 0.92683 (10/10) (20/20) (30/30) (38/41) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_16.csv                        	accuracy: 0.92857 (9/10) (18/20) (28/30) (39/42) most negative: 1                                             longest negative: 1     warnings = 0.0
+1_37.csv                        	accuracy: 0.92683 (10/10) (19/20) (29/30) (38/41) most negative: 1                                            longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.87805 (10/10) (18/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_18.csv                        	accuracy: 0.68293 (7/10) (13/20) (20/30) (28/41) most negative: 4                                             longest negative: 2     warnings = 0.0
+1_35.csv                        	accuracy: 0.83333 (9/10) (19/20) (28/30) (35/42) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_36.csv                        	accuracy: 0.92683 (9/10) (19/20) (29/30) (38/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_30.csv                        	accuracy: 0.87805 (10/10) (19/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.80952 (10/10) (17/20) (27/30) (34/42) most negative: 3                                            longest negative: 5     warnings = 0.0
+1_7.csv                         	accuracy: 0.85714 (10/10) (20/20) (29/30) (36/42) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_6.csv                         	accuracy: 0.85714 (10/10) (19/20) (28/30) (36/42) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_0.csv                         	accuracy: 0.60976 (5/10) (11/20) (18/30) (25/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_22.csv                        	accuracy: 0.85366 (9/10) (17/20) (26/30) (35/41) most negative: 2                                             longest negative: 1     warnings = 0.0
+1_14.csv                        	accuracy: 0.85366 (10/10) (19/20) (27/30) (35/41) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_39.csv                        	accuracy: 0.90244 (9/10) (19/20) (29/30) (37/41) most negative: 2                                             longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.82927 (7/10) (16/20) (26/30) (34/41) most negative: 3                                             longest negative: 3     warnings = 0.0
+1_31.csv                        	accuracy: 0.83333 (10/10) (19/20) (29/30) (35/42) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_26.csv                        	accuracy: 0.87805 (10/10) (20/20) (28/30) (36/41) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_29.csv                        	accuracy: 0.92683 (9/10) (19/20) (29/30) (38/41) most negative: 1                                             longest negative: 2     warnings = 0.0
+1_34.csv                        	accuracy: 0.90244 (9/10) (19/20) (28/30) (37/41) most negative: 1                                             longest negative: 2     warnings = 0.0
+1_21.csv                        	accuracy: 0.97561 (10/10) (20/20) (30/30) (40/41) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_12.csv                        	accuracy: 0.85366 (10/10) (20/20) (29/30) (35/41) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_23.csv                        	accuracy: 0.85714 (10/10) (19/20) (28/30) (36/42) most negative: 2                                            longest negative: 4     warnings = 0.0
+1_9.csv                         	accuracy: 0.82927 (10/10) (20/20) (28/30) (34/41) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_11.csv                        	accuracy: 0.85 (7/10) (17/20) (27/30) (34/40) most negative: 3                                                longest negative: 3     warnings = 0.0
+1_2.csv                         	accuracy: 0.88095 (9/10) (19/20) (27/30) (37/42) most negative: 2                                             longest negative: 1     warnings = 0.0
+
+-----positive sets-----:longest average = 11.1, anomalies = 221.0,  total warnings = 73.0,  faulty runs = 2.0,  non-faulty runs = 8.0, max threshold = 5
+accuarcy min trainings: 0.60976, accuarcy min positives: 0.0, ratio: 0.0
+1_17.csv                        	accuracy: 0.6 (6/10) (13/20) (19/30) (24/40) most negative: 5                                                 longest negative: 3     warnings = 0.0
+1_3.csv                         	accuracy: 0.4 (5/10) (9/20) (12/30) (16/40) most negative: 7                                                  longest negative: 4     warnings = 0.0
+1_15.csv                        	accuracy: 0.56098 (8/10) (12/20) (17/30) (23/41) most negative: 6                                             longest negative: 5     warnings = 0.0
+1_4.csv                         	accuracy: 0.825 (9/10) (17/20) (26/30) (33/40) most negative: 3                                               longest negative: 1     warnings = 0.0
+1_1.csv                         	accuracy: 0.60976 (8/10) (15/20) (20/30) (25/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_32.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/42) most negative: 10 (threshold: 37 more)                              longest negative: 42    warnings = 37.0
+1_5.csv                         	accuracy: 0.58537 (6/10) (15/20) (19/30) (24/41) most negative: 6                                             longest negative: 5     warnings = 0.0
+1_33.csv                        	accuracy: 0.4878 (5/10) (12/20) (16/30) (20/41) most negative: 6                                              longest negative: 4     warnings = 0.0
+1_38.csv                        	accuracy: 0.53659 (5/10) (10/20) (16/30) (22/41) most negative: 5                                             longest negative: 3     warnings = 0.0
+1_13.csv                        	accuracy: 0.0 (0/10) (0/20) (0/30) (0/41) most negative: 10 (threshold: 36 more)                              longest negative: 41    warnings = 36.0
+
+
+
+average: 0.45
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 2081/2480, negative predictions: 399/2480
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 487/827, negative predictions: 340/827
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 487, negatives = 340 1)positive values: positives = 827, negatives = 0 2)negative values: positives = 827, negatives = 0 3)not negative values: positives = 827, negatives = 0 4)same digits number: positives = 827, negatives = 0 5)exactly one: positives = 827, negatives = 0 6)corresponding columns: positives = 827, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 2081, negatives = 399 1)positive values: positives = 2480, negatives = 0 2)negative values: positives = 2480, negatives = 0 3)not negative values: positives = 2480, negatives = 0 4)same digits number: positives = 2480, negatives = 0 5)exactly one: positives = 2480, negatives = 0 6)corresponding columns: positives = 2480, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 27/985
+
+-----training sets-----:longest average = 3.2, anomalies = 399.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 7
+1_17.csv                        	accuracy: 0.95062 (19/20) (38/40) (57/60) (77/81) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_21.csv                        	accuracy: 0.84337 (18/20) (37/40) (53/60) (70/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_13.csv                        	accuracy: 0.89024 (20/20) (37/40) (53/60) (73/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_9.csv                         	accuracy: 0.83133 (19/20) (38/40) (55/60) (69/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_22.csv                        	accuracy: 0.87805 (16/20) (33/40) (52/60) (72/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_7.csv                         	accuracy: 0.86905 (19/21) (39/42) (59/63) (73/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_36.csv                        	accuracy: 0.87952 (18/20) (35/40) (54/60) (73/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.84524 (20/21) (39/42) (59/63) (71/84) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_18.csv                        	accuracy: 0.84146 (20/20) (36/40) (53/60) (69/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_32.csv                        	accuracy: 0.77381 (18/21) (35/42) (54/63) (65/84) most negative: 5                                            longest negative: 5     warnings = 0.0
+1_20.csv                        	accuracy: 0.85542 (20/20) (37/40) (55/60) (71/83) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_4.csv                         	accuracy: 0.79012 (18/20) (32/40) (48/60) (64/81) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_2.csv                         	accuracy: 0.82143 (21/21) (38/42) (56/63) (69/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_0.csv                         	accuracy: 0.84337 (16/20) (34/40) (52/60) (70/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_24.csv                        	accuracy: 0.78313 (17/20) (36/40) (49/60) (65/83) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_31.csv                        	accuracy: 0.77381 (17/21) (34/42) (54/63) (65/84) most negative: 5                                            longest negative: 5     warnings = 0.0
+1_16.csv                        	accuracy: 0.85714 (18/21) (37/42) (56/63) (72/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_14.csv                        	accuracy: 0.86585 (20/20) (36/40) (55/60) (71/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_6.csv                         	accuracy: 0.89286 (21/21) (41/42) (61/63) (75/84) most negative: 2                                            longest negative: 5     warnings = 0.0
+1_39.csv                        	accuracy: 0.84146 (16/20) (32/40) (50/60) (69/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_33.csv                        	accuracy: 0.87952 (17/20) (37/40) (56/60) (73/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_30.csv                        	accuracy: 0.89024 (17/20) (36/40) (53/60) (73/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_5.csv                         	accuracy: 0.76829 (18/20) (36/40) (50/60) (63/82) most negative: 5                                            longest negative: 6     warnings = 0.0
+1_11.csv                        	accuracy: 0.79012 (16/20) (34/40) (51/60) (64/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+1_34.csv                        	accuracy: 0.84146 (19/20) (37/40) (56/60) (69/82) most negative: 8                                            longest negative: 7     warnings = 0.0
+1_37.csv                        	accuracy: 0.87805 (20/20) (36/40) (55/60) (72/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_27.csv                        	accuracy: 0.78049 (17/20) (32/40) (48/60) (64/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_35.csv                        	accuracy: 0.69048 (17/21) (32/42) (45/63) (58/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_1.csv                         	accuracy: 0.81707 (16/20) (34/40) (51/60) (67/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_38.csv                        	accuracy: 0.91463 (20/20) (37/40) (54/60) (75/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+
+-----positive sets-----:longest average = 4.8, anomalies = 340.0,  total warnings = 2.0,  faulty runs = 1.0,  non-faulty runs = 9.0, max threshold = 7
+accuarcy min trainings: 0.69048, accuarcy min positives: 0.26829, ratio: 0.388555787278
+1_15.csv                        	accuracy: 0.89157 (20/20) (40/40) (57/60) (74/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.85542 (19/20) (37/40) (56/60) (71/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_26.csv                        	accuracy: 0.6506 (12/20) (28/40) (40/60) (54/83) most negative: 6                                             longest negative: 2     warnings = 0.0
+1_23.csv                        	accuracy: 0.80952 (21/21) (38/42) (55/63) (68/84) most negative: 3                                            longest negative: 7     warnings = 0.0
+1_29.csv                        	accuracy: 0.28049 (7/20) (13/40) (18/60) (23/82) most negative: 8                                             longest negative: 6     warnings = 0.0
+1_25.csv                        	accuracy: 0.85366 (18/20) (34/40) (53/60) (70/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_19.csv                        	accuracy: 0.28571 (5/21) (12/42) (19/63) (24/84) most negative: 8                                             longest negative: 6     warnings = 0.0
+1_3.csv                         	accuracy: 0.7037 (14/20) (28/40) (42/60) (57/81) most negative: 5                                             longest negative: 2     warnings = 0.0
+1_28.csv                        	accuracy: 0.28916 (6/20) (13/40) (20/60) (24/83) most negative: 9                                             longest negative: 7     warnings = 0.0
+1_10.csv                        	accuracy: 0.26829 (3/20) (10/40) (16/60) (22/82) most negative: 9 (threshold: 2 more)                         longest negative: 9     warnings = 2.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 2067/2481, negative predictions: 414/2481
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 594/826, negative predictions: 232/826
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 594, negatives = 232 1)positive values: positives = 826, negatives = 0 2)negative values: positives = 826, negatives = 0 3)not negative values: positives = 826, negatives = 0 4)same digits number: positives = 826, negatives = 0 5)exactly one: positives = 825, negatives = 1 6)corresponding columns: positives = 826, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 2067, negatives = 414 1)positive values: positives = 2481, negatives = 0 2)negative values: positives = 2481, negatives = 0 3)not negative values: positives = 2481, negatives = 0 4)same digits number: positives = 2481, negatives = 0 5)exactly one: positives = 2481, negatives = 0 6)corresponding columns: positives = 2481, negatives = 0 
+negatives: 
+	how much constant columns: 686/985
+	how much correlate columns: 27/985
+
+-----training sets-----:longest average = 3.4, anomalies = 414.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 7
+1_37.csv                        	accuracy: 0.90244 (20/20) (37/40) (56/60) (74/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_34.csv                        	accuracy: 0.84146 (19/20) (37/40) (56/60) (69/82) most negative: 8                                            longest negative: 7     warnings = 0.0
+1_26.csv                        	accuracy: 0.66265 (12/20) (28/40) (40/60) (55/83) most negative: 6                                            longest negative: 2     warnings = 0.0
+1_31.csv                        	accuracy: 0.78571 (17/21) (34/42) (54/63) (66/84) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_27.csv                        	accuracy: 0.80488 (17/20) (32/40) (49/60) (66/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_38.csv                        	accuracy: 0.91463 (20/20) (38/40) (55/60) (75/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_12.csv                        	accuracy: 0.83133 (19/20) (37/40) (55/60) (69/83) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_24.csv                        	accuracy: 0.83133 (17/20) (36/40) (52/60) (69/83) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_7.csv                         	accuracy: 0.88095 (19/21) (40/42) (60/63) (74/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_29.csv                        	accuracy: 0.89024 (19/20) (38/40) (57/60) (73/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_19.csv                        	accuracy: 0.82143 (17/21) (38/42) (56/63) (69/84) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_36.csv                        	accuracy: 0.85542 (18/20) (35/40) (53/60) (71/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_2.csv                         	accuracy: 0.84524 (21/21) (40/42) (58/63) (71/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_33.csv                        	accuracy: 0.87952 (18/20) (38/40) (57/60) (73/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_28.csv                        	accuracy: 0.81928 (18/20) (35/40) (52/60) (68/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_22.csv                        	accuracy: 0.87805 (16/20) (33/40) (52/60) (72/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_1.csv                         	accuracy: 0.81707 (17/20) (36/40) (52/60) (67/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_17.csv                        	accuracy: 0.91358 (19/20) (38/40) (56/60) (74/81) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.79518 (19/20) (37/40) (52/60) (66/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_11.csv                        	accuracy: 0.77778 (16/20) (34/40) (50/60) (63/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+1_14.csv                        	accuracy: 0.89024 (20/20) (38/40) (57/60) (73/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_4.csv                         	accuracy: 0.77778 (18/20) (31/40) (46/60) (63/81) most negative: 4                                            longest negative: 2     warnings = 0.0
+1_13.csv                        	accuracy: 0.87805 (20/20) (37/40) (52/60) (72/82) most negative: 4                                            longest negative: 2     warnings = 0.0
+1_18.csv                        	accuracy: 0.89024 (20/20) (37/40) (55/60) (73/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_0.csv                         	accuracy: 0.79518 (16/20) (34/40) (50/60) (66/83) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_32.csv                        	accuracy: 0.7619 (18/21) (35/42) (54/63) (64/84) most negative: 6                                             longest negative: 7     warnings = 0.0
+1_20.csv                        	accuracy: 0.83133 (20/20) (37/40) (55/60) (69/83) most negative: 6                                            longest negative: 6     warnings = 0.0
+1_6.csv                         	accuracy: 0.88095 (21/21) (40/42) (60/63) (74/84) most negative: 2                                            longest negative: 5     warnings = 0.0
+1_35.csv                        	accuracy: 0.70238 (17/21) (32/42) (45/63) (59/84) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_21.csv                        	accuracy: 0.84337 (18/20) (37/40) (53/60) (70/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+
+-----positive sets-----:longest average = 3.6, anomalies = 232.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 10.0, max threshold = 7
+accuarcy min trainings: 0.66265, accuarcy min positives: 0.29762, ratio: 0.449136044669
+1_30.csv                        	accuracy: 0.87805 (17/20) (36/40) (53/60) (72/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_16.csv                        	accuracy: 0.85714 (18/21) (37/42) (56/63) (72/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.7561 (18/20) (36/40) (49/60) (62/82) most negative: 6                                             longest negative: 6     warnings = 0.0
+1_3.csv                         	accuracy: 0.7037 (14/20) (28/40) (42/60) (57/81) most negative: 5                                             longest negative: 2     warnings = 0.0
+1_10.csv                        	accuracy: 0.30488 (5/20) (12/40) (18/60) (25/82) most negative: 8                                             longest negative: 4     warnings = 0.0
+1_15.csv                        	accuracy: 0.89157 (20/20) (40/40) (57/60) (74/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_8.csv                         	accuracy: 0.29762 (7/21) (14/42) (20/63) (25/84) most negative: 7                                             longest negative: 7     warnings = 0.0
+1_39.csv                        	accuracy: 0.85366 (16/20) (33/40) (51/60) (70/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_23.csv                        	accuracy: 0.83333 (21/21) (38/42) (56/63) (70/84) most negative: 3                                            longest negative: 6     warnings = 0.0
+1_25.csv                        	accuracy: 0.81707 (18/20) (33/40) (50/60) (67/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 2153/2485, negative predictions: 332/2485
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 404/822, negative predictions: 418/822
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 404, negatives = 418 1)positive values: positives = 822, negatives = 0 2)negative values: positives = 822, negatives = 0 3)not negative values: positives = 822, negatives = 0 4)same digits number: positives = 822, negatives = 0 5)exactly one: positives = 822, negatives = 0 6)corresponding columns: positives = 822, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 2153, negatives = 332 1)positive values: positives = 2485, negatives = 0 2)negative values: positives = 2485, negatives = 0 3)not negative values: positives = 2485, negatives = 0 4)same digits number: positives = 2485, negatives = 0 5)exactly one: positives = 2485, negatives = 0 6)corresponding columns: positives = 2485, negatives = 0 
+negatives: 
+	how much constant columns: 685/985
+	how much correlate columns: 27/985
+
+-----training sets-----:longest average = 3.03333333333, anomalies = 332.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 6
+1_11.csv                        	accuracy: 0.83951 (17/20) (36/40) (55/60) (68/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+1_32.csv                        	accuracy: 0.77381 (18/21) (35/42) (54/63) (65/84) most negative: 5                                            longest negative: 5     warnings = 0.0
+1_2.csv                         	accuracy: 0.86905 (21/21) (42/42) (60/63) (73/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_22.csv                        	accuracy: 0.89024 (16/20) (34/40) (53/60) (73/82) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_6.csv                         	accuracy: 0.89286 (21/21) (41/42) (61/63) (75/84) most negative: 2                                            longest negative: 5     warnings = 0.0
+1_16.csv                        	accuracy: 0.90476 (20/21) (39/42) (60/63) (76/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_21.csv                        	accuracy: 0.85542 (18/20) (38/40) (54/60) (71/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.85366 (18/20) (38/40) (55/60) (70/82) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_28.csv                        	accuracy: 0.86747 (18/20) (38/40) (56/60) (72/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_39.csv                        	accuracy: 0.86585 (16/20) (34/40) (52/60) (71/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_23.csv                        	accuracy: 0.89286 (21/21) (40/42) (60/63) (75/84) most negative: 2                                            longest negative: 6     warnings = 0.0
+1_31.csv                        	accuracy: 0.82143 (18/21) (36/42) (57/63) (69/84) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_17.csv                        	accuracy: 0.96296 (20/20) (39/40) (58/60) (78/81) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_13.csv                        	accuracy: 0.90244 (20/20) (37/40) (55/60) (74/82) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_35.csv                        	accuracy: 0.70238 (17/21) (32/42) (45/63) (59/84) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_9.csv                         	accuracy: 0.86747 (19/20) (39/40) (57/60) (72/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_0.csv                         	accuracy: 0.86747 (17/20) (36/40) (54/60) (72/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_8.csv                         	accuracy: 0.84524 (20/21) (39/42) (59/63) (71/84) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_7.csv                         	accuracy: 0.89286 (20/21) (41/42) (61/63) (75/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_25.csv                        	accuracy: 0.85366 (18/20) (35/40) (55/60) (70/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.86747 (19/20) (38/40) (57/60) (72/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_4.csv                         	accuracy: 0.83951 (18/20) (33/40) (51/60) (68/81) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_30.csv                        	accuracy: 0.91463 (17/20) (36/40) (55/60) (75/82) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_19.csv                        	accuracy: 0.88095 (18/21) (39/42) (59/63) (74/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_24.csv                        	accuracy: 0.85542 (17/20) (36/40) (54/60) (71/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_15.csv                        	accuracy: 0.90361 (20/20) (40/40) (58/60) (75/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_1.csv                         	accuracy: 0.90244 (18/20) (37/40) (57/60) (74/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_27.csv                        	accuracy: 0.84146 (17/20) (34/40) (52/60) (69/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_20.csv                        	accuracy: 0.86747 (20/20) (37/40) (57/60) (72/83) most negative: 5                                            longest negative: 6     warnings = 0.0
+1_18.csv                        	accuracy: 0.90244 (20/20) (37/40) (56/60) (74/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+
+-----positive sets-----:longest average = 5.1, anomalies = 418.0,  total warnings = 7.0,  faulty runs = 1.0,  non-faulty runs = 9.0, max threshold = 6
+accuarcy min trainings: 0.70238, accuarcy min positives: 0.27711, ratio: 0.394530026481
+1_26.csv                        	accuracy: 0.6747 (12/20) (28/40) (41/60) (56/83) most negative: 6                                             longest negative: 2     warnings = 0.0
+1_29.csv                        	accuracy: 0.30488 (7/20) (14/40) (19/60) (25/82) most negative: 8                                             longest negative: 6     warnings = 0.0
+1_33.csv                        	accuracy: 0.87952 (18/20) (38/40) (57/60) (73/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_36.csv                        	accuracy: 0.27711 (6/20) (11/40) (18/60) (23/83) most negative: 8                                             longest negative: 6     warnings = 0.0
+1_38.csv                        	accuracy: 0.29268 (6/20) (13/40) (19/60) (24/82) most negative: 8                                             longest negative: 6     warnings = 0.0
+1_37.csv                        	accuracy: 0.29268 (7/20) (12/40) (18/60) (24/82) most negative: 8                                             longest negative: 5     warnings = 0.0
+1_34.csv                        	accuracy: 0.28049 (7/20) (13/40) (20/60) (23/82) most negative: 10 (threshold: 7 more)                        longest negative: 13    warnings = 7.0
+1_14.csv                        	accuracy: 0.90244 (20/20) (39/40) (58/60) (74/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_10.csv                        	accuracy: 0.30488 (5/20) (12/40) (18/60) (25/82) most negative: 8                                             longest negative: 4     warnings = 0.0
+1_3.csv                         	accuracy: 0.7037 (14/20) (28/40) (42/60) (57/81) most negative: 5                                             longest negative: 3     warnings = 0.0
+
+
+
+negatives_paths: empty
+{}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 2064/2479, negative predictions: 415/2479
+
+positives directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 436/828, negative predictions: 392/828
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 436, negatives = 392 1)positive values: positives = 828, negatives = 0 2)negative values: positives = 828, negatives = 0 3)not negative values: positives = 827, negatives = 1 4)same digits number: positives = 828, negatives = 0 5)exactly one: positives = 827, negatives = 1 6)corresponding columns: positives = 828, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 2064, negatives = 415 1)positive values: positives = 2479, negatives = 0 2)negative values: positives = 2479, negatives = 0 3)not negative values: positives = 2479, negatives = 0 4)same digits number: positives = 2479, negatives = 0 5)exactly one: positives = 2479, negatives = 0 6)corresponding columns: positives = 2479, negatives = 0 
+negatives: 
+	how much constant columns: 686/985
+	how much correlate columns: 26/985
+
+-----training sets-----:longest average = 3.2, anomalies = 415.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 30.0, max threshold = 6
+1_25.csv                        	accuracy: 0.82927 (18/20) (34/40) (52/60) (68/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_20.csv                        	accuracy: 0.84337 (20/20) (37/40) (57/60) (70/83) most negative: 6                                            longest negative: 6     warnings = 0.0
+1_2.csv                         	accuracy: 0.83333 (20/21) (40/42) (58/63) (70/84) most negative: 5                                            longest negative: 5     warnings = 0.0
+1_11.csv                        	accuracy: 0.77778 (13/20) (32/40) (50/60) (63/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+1_19.csv                        	accuracy: 0.84524 (16/21) (37/42) (57/63) (71/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_7.csv                         	accuracy: 0.88095 (19/21) (40/42) (60/63) (74/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_29.csv                        	accuracy: 0.87805 (19/20) (38/40) (57/60) (72/82) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_10.csv                        	accuracy: 0.91463 (20/20) (39/40) (58/60) (75/82) most negative: 2                                            longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.84337 (19/20) (38/40) (56/60) (70/83) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_15.csv                        	accuracy: 0.87952 (20/20) (39/40) (57/60) (73/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_23.csv                        	accuracy: 0.83333 (19/21) (37/42) (56/63) (70/84) most negative: 2                                            longest negative: 6     warnings = 0.0
+1_14.csv                        	accuracy: 0.85366 (17/20) (35/40) (54/60) (70/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.92683 (20/20) (39/40) (58/60) (76/82) most negative: 2                                            longest negative: 3     warnings = 0.0
+1_0.csv                         	accuracy: 0.81928 (17/20) (35/40) (51/60) (68/83) most negative: 3                                            longest negative: 5     warnings = 0.0
+1_28.csv                        	accuracy: 0.80723 (17/20) (35/40) (52/60) (67/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_4.csv                         	accuracy: 0.79012 (17/20) (31/40) (47/60) (64/81) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_26.csv                        	accuracy: 0.6747 (12/20) (27/40) (40/60) (56/83) most negative: 6                                             longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.83333 (19/21) (38/42) (58/63) (70/84) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_36.csv                        	accuracy: 0.83133 (16/20) (32/40) (51/60) (69/83) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_22.csv                        	accuracy: 0.82927 (12/20) (29/40) (48/60) (68/82) most negative: 4                                            longest negative: 2     warnings = 0.0
+1_13.csv                        	accuracy: 0.85366 (19/20) (36/40) (53/60) (70/82) most negative: 4                                            longest negative: 2     warnings = 0.0
+1_16.csv                        	accuracy: 0.89286 (19/21) (38/42) (59/63) (75/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_24.csv                        	accuracy: 0.85542 (17/20) (36/40) (54/60) (71/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_39.csv                        	accuracy: 0.86585 (16/20) (34/40) (52/60) (71/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_17.csv                        	accuracy: 0.91358 (19/20) (38/40) (56/60) (74/81) most negative: 2                                            longest negative: 1     warnings = 0.0
+1_34.csv                        	accuracy: 0.84146 (18/20) (36/40) (55/60) (69/82) most negative: 7                                            longest negative: 4     warnings = 0.0
+1_3.csv                         	accuracy: 0.65432 (12/20) (25/40) (39/60) (53/81) most negative: 6                                            longest negative: 3     warnings = 0.0
+1_33.csv                        	accuracy: 0.85542 (18/20) (37/40) (56/60) (71/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_27.csv                        	accuracy: 0.84146 (16/20) (34/40) (52/60) (69/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_35.csv                        	accuracy: 0.67857 (16/21) (30/42) (43/63) (57/84) most negative: 4                                            longest negative: 3     warnings = 0.0
+
+-----positive sets-----:longest average = 4.7, anomalies = 392.0,  total warnings = 8.0,  faulty runs = 3.0,  non-faulty runs = 7.0, max threshold = 6
+accuarcy min trainings: 0.65432, accuarcy min positives: 0.20482, ratio: 0.313027264947
+1_21.csv                        	accuracy: 0.3253 (6/20) (13/40) (20/60) (27/83) most negative: 8                                              longest negative: 4     warnings = 0.0
+1_38.csv                        	accuracy: 0.78049 (11/20) (27/40) (45/60) (64/82) most negative: 6                                            longest negative: 2     warnings = 0.0
+1_6.csv                         	accuracy: 0.2619 (7/21) (11/42) (17/63) (22/84) most negative: 8 (threshold: 1 more)                          longest negative: 7     warnings = 1.0
+1_5.csv                         	accuracy: 0.76829 (17/20) (35/40) (49/60) (63/82) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_32.csv                        	accuracy: 0.2381 (6/21) (10/42) (15/63) (20/84) most negative: 8 (threshold: 1 more)                          longest negative: 7     warnings = 2.0
+1_30.csv                        	accuracy: 0.89024 (16/20) (35/40) (54/60) (73/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_9.csv                         	accuracy: 0.20482 (3/20) (9/40) (13/60) (17/83) most negative: 9 (threshold: 3 more)                          longest negative: 9     warnings = 5.0
+1_1.csv                         	accuracy: 0.79268 (16/20) (34/40) (50/60) (65/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_31.csv                        	accuracy: 0.75 (16/21) (33/42) (51/63) (63/84) most negative: 4                                               longest negative: 5     warnings = 0.0
+1_18.csv                        	accuracy: 0.26829 (7/20) (11/40) (16/60) (22/82) most negative: 9                                             longest negative: 6     warnings = 0.0
+
+
+
+average: 0.875
+accuracy array: [0.26829, 0.29762, 0.27711, 0.20482]
+minimum accuracy: 0.20482
+{'coverage percentage columns': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e73c368>, 'positive values': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e40b368>, 'negative values': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e75a320>, 'not negative values': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e73cb00>, 'same digits number': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e40b5a8>, 'exactly one': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e73c440>, 'corresponding columns': <RuleBasedAnomaly.NegPos instance at 0x7f0f1e73cf38>}
+trainings directory: available runs/simulator_gazebo/velocity attack/time/0.25
+positive predictions: 2794/3307, negative predictions: 513/3307
+
+positives directory: available runs/simulator_gazebo/velocity attack/normal/type1/0.25
+positive predictions: 1226/2065, negative predictions: 839/2065
+
+negatives directory: available runs/simulator_gazebo/velocity attack/test/0.25
+positive predictions: 14/2447, negative predictions: 2433/2447
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 0)coverage percentage columns: positives = 1226, negatives = 839 1)positive values: positives = 2064, negatives = 1 2)negative values: positives = 2065, negatives = 0 3)not negative values: positives = 2064, negatives = 1 4)same digits number: positives = 2063, negatives = 2 5)exactly one: positives = 2065, negatives = 0 6)corresponding columns: positives = 2065, negatives = 0 
+trainings: 0)coverage percentage columns: positives = 2794, negatives = 513 1)positive values: positives = 3307, negatives = 0 2)negative values: positives = 3307, negatives = 0 3)not negative values: positives = 3307, negatives = 0 4)same digits number: positives = 3307, negatives = 0 5)exactly one: positives = 3307, negatives = 0 6)corresponding columns: positives = 3307, negatives = 0 
+negatives: 0)coverage percentage columns: positives = 33, negatives = 2414 1)positive values: positives = 2422, negatives = 25 2)negative values: positives = 2447, negatives = 0 3)not negative values: positives = 1816, negatives = 631 4)same digits number: positives = 2293, negatives = 154 5)exactly one: positives = 2375, negatives = 72 6)corresponding columns: positives = 2352, negatives = 95 
+	how much constant columns: 685/985
+	how much correlate columns: 26/985
+
+-----training sets-----:longest average = 3.125, anomalies = 513.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 40.0, max threshold = 7
+1_38.csv                        	accuracy: 0.92683 (20/20) (38/40) (55/60) (76/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_4.csv                         	accuracy: 0.81481 (18/20) (32/40) (49/60) (66/81) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_25.csv                        	accuracy: 0.85366 (18/20) (34/40) (53/60) (70/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_6.csv                         	accuracy: 0.89286 (21/21) (41/42) (61/63) (75/84) most negative: 2                                            longest negative: 5     warnings = 0.0
+1_15.csv                        	accuracy: 0.89157 (20/20) (40/40) (57/60) (74/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_28.csv                        	accuracy: 0.81928 (18/20) (35/40) (52/60) (68/83) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_12.csv                        	accuracy: 0.85542 (19/20) (37/40) (56/60) (71/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_30.csv                        	accuracy: 0.89024 (17/20) (36/40) (53/60) (73/82) most negative: 3                                            longest negative: 1     warnings = 0.0
+1_22.csv                        	accuracy: 0.87805 (16/20) (33/40) (52/60) (72/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_37.csv                        	accuracy: 0.90244 (20/20) (37/40) (56/60) (74/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_0.csv                         	accuracy: 0.84337 (16/20) (34/40) (52/60) (70/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_35.csv                        	accuracy: 0.70238 (17/21) (32/42) (45/63) (59/84) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_16.csv                        	accuracy: 0.85714 (18/21) (37/42) (56/63) (72/84) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_18.csv                        	accuracy: 0.90244 (20/20) (37/40) (56/60) (74/82) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_36.csv                        	accuracy: 0.87952 (18/20) (35/40) (54/60) (73/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_5.csv                         	accuracy: 0.76829 (18/20) (36/40) (50/60) (63/82) most negative: 5                                            longest negative: 6     warnings = 0.0
+1_11.csv                        	accuracy: 0.79012 (16/20) (34/40) (51/60) (64/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+1_10.csv                        	accuracy: 0.92683 (20/20) (39/40) (58/60) (76/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_8.csv                         	accuracy: 0.84524 (20/21) (39/42) (59/63) (71/84) most negative: 5                                            longest negative: 4     warnings = 0.0
+1_19.csv                        	accuracy: 0.84524 (17/21) (38/42) (56/63) (71/84) most negative: 3                                            longest negative: 3     warnings = 0.0
+1_26.csv                        	accuracy: 0.66265 (12/20) (28/40) (40/60) (55/83) most negative: 6                                            longest negative: 2     warnings = 0.0
+1_24.csv                        	accuracy: 0.83133 (17/20) (36/40) (52/60) (69/83) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_14.csv                        	accuracy: 0.89024 (20/20) (38/40) (57/60) (73/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_21.csv                        	accuracy: 0.84337 (18/20) (37/40) (53/60) (70/83) most negative: 2                                            longest negative: 2     warnings = 0.0
+1_32.csv                        	accuracy: 0.77381 (18/21) (35/42) (54/63) (65/84) most negative: 5                                            longest negative: 5     warnings = 0.0
+1_9.csv                         	accuracy: 0.83133 (19/20) (38/40) (55/60) (69/83) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_7.csv                         	accuracy: 0.88095 (19/21) (40/42) (60/63) (74/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+1_2.csv                         	accuracy: 0.84524 (21/21) (40/42) (58/63) (71/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+1_27.csv                        	accuracy: 0.80488 (17/20) (32/40) (49/60) (66/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_39.csv                        	accuracy: 0.85366 (16/20) (33/40) (51/60) (70/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_23.csv                        	accuracy: 0.84524 (21/21) (39/42) (57/63) (71/84) most negative: 3                                            longest negative: 6     warnings = 0.0
+1_34.csv                        	accuracy: 0.84146 (19/20) (37/40) (56/60) (69/82) most negative: 8                                            longest negative: 7     warnings = 0.0
+1_29.csv                        	accuracy: 0.89024 (19/20) (38/40) (57/60) (73/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+1_31.csv                        	accuracy: 0.78571 (17/21) (34/42) (54/63) (66/84) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_1.csv                         	accuracy: 0.84146 (17/20) (36/40) (53/60) (69/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_3.csv                         	accuracy: 0.7037 (14/20) (28/40) (42/60) (57/81) most negative: 5                                             longest negative: 2     warnings = 0.0
+1_13.csv                        	accuracy: 0.89024 (20/20) (37/40) (53/60) (73/82) most negative: 3                                            longest negative: 2     warnings = 0.0
+1_17.csv                        	accuracy: 0.95062 (19/20) (38/40) (57/60) (77/81) most negative: 1                                            longest negative: 1     warnings = 0.0
+1_20.csv                        	accuracy: 0.85542 (20/20) (37/40) (55/60) (71/83) most negative: 4                                            longest negative: 5     warnings = 0.0
+1_33.csv                        	accuracy: 0.89157 (18/20) (38/40) (57/60) (74/83) most negative: 3                                            longest negative: 3     warnings = 0.0
+
+-----positive sets-----:longest average = 4.88, anomalies = 839.0,  total warnings = 12.0,  faulty runs = 4.0,  non-faulty runs = 21.0, max threshold = 7
+accuarcy min trainings: 0.66265, accuarcy min positives: 0.22892, ratio: 0.345461404965
+2_17.csv                        	accuracy: 0.28049 (7/20) (13/40) (19/60) (23/82) most negative: 9 (threshold: 3 more)                         longest negative: 10    warnings = 3.0
+2_14.csv                        	accuracy: 0.84146 (19/20) (32/40) (50/60) (69/82) most negative: 4                                            longest negative: 3     warnings = 0.0
+2_0.csv                         	accuracy: 0.82927 (15/20) (33/40) (52/60) (68/82) most negative: 4                                            longest negative: 6     warnings = 0.0
+2_19.csv                        	accuracy: 0.3253 (6/20) (13/40) (20/60) (27/83) most negative: 7                                              longest negative: 4     warnings = 0.0
+2_6.csv                         	accuracy: 0.89024 (19/20) (36/40) (56/60) (73/82) most negative: 4                                            longest negative: 2     warnings = 0.0
+2_10.csv                        	accuracy: 0.28916 (7/20) (12/40) (18/60) (24/83) most negative: 8                                             longest negative: 5     warnings = 0.0
+2_13.csv                        	accuracy: 0.62963 (17/20) (29/40) (44/60) (51/81) most negative: 7                                            longest negative: 5     warnings = 0.0
+2_1.csv                         	accuracy: 0.71951 (18/20) (31/40) (45/60) (59/82) most negative: 5                                            longest negative: 3     warnings = 0.0
+2_5.csv                         	accuracy: 0.22892 (7/20) (10/40) (16/60) (19/83) most negative: 9 (threshold: 1 more)                         longest negative: 8     warnings = 1.0
+2_2.csv                         	accuracy: 0.85366 (18/20) (36/40) (54/60) (70/82) most negative: 3                                            longest negative: 4     warnings = 0.0
+2_18.csv                        	accuracy: 0.89157 (19/20) (37/40) (55/60) (74/83) most negative: 2                                            longest negative: 3     warnings = 0.0
+2_9.csv                         	accuracy: 0.85714 (18/21) (38/42) (59/63) (72/84) most negative: 4                                            longest negative: 2     warnings = 0.0
+2_15.csv                        	accuracy: 0.25301 (7/20) (13/40) (19/60) (21/83) most negative: 10 (threshold: 7 more)                        longest negative: 14    warnings = 7.0
+2_23.csv                        	accuracy: 0.93902 (20/20) (38/40) (55/60) (77/82) most negative: 2                                            longest negative: 1     warnings = 0.0
+2_4.csv                         	accuracy: 0.32143 (8/21) (15/42) (21/63) (27/84) most negative: 8                                             longest negative: 6     warnings = 0.0
+2_16.csv                        	accuracy: 0.82143 (19/21) (36/42) (56/63) (69/84) most negative: 4                                            longest negative: 4     warnings = 0.0
+2_22.csv                        	accuracy: 0.2561 (5/20) (11/40) (17/60) (21/82) most negative: 9                                              longest negative: 7     warnings = 0.0
+2_21.csv                        	accuracy: 0.90244 (18/20) (38/40) (54/60) (74/82) most negative: 2                                            longest negative: 2     warnings = 0.0
+2_20.csv                        	accuracy: 0.84524 (21/21) (41/42) (56/63) (71/84) most negative: 5                                            longest negative: 3     warnings = 0.0
+2_11.csv                        	accuracy: 0.85542 (20/20) (37/40) (54/60) (71/83) most negative: 3                                            longest negative: 2     warnings = 0.0
+2_7.csv                         	accuracy: 0.89024 (20/20) (38/40) (56/60) (73/82) most negative: 2                                            longest negative: 3     warnings = 0.0
+2_12.csv                        	accuracy: 0.3012 (7/20) (13/40) (19/60) (25/83) most negative: 8                                              longest negative: 6     warnings = 0.0
+2_24.csv                        	accuracy: 0.28916 (6/20) (13/40) (19/60) (24/83) most negative: 8                                             longest negative: 6     warnings = 0.0
+2_3.csv                         	accuracy: 0.2439 (5/20) (10/40) (14/60) (20/82) most negative: 9 (threshold: 1 more)                          longest negative: 8     warnings = 1.0
+2_8.csv                         	accuracy: 0.29268 (5/20) (11/40) (18/60) (24/82) most negative: 9                                             longest negative: 5     warnings = 0.0
+
+-----negative sets-----:longest average = 84.6, anomalies = 2433.0,  total warnings = 2165.0,  faulty runs = 25.0,  non-faulty runs = 0.0, max threshold = 7
+1_4.csv                         	accuracy: 0.01111 (0/22) (0/44) (0/66) (1/90) most negative: 10 (below min accuracy) (threshold: 60 more)     longest negative: 67    warnings = 75.0
+1_6.csv                         	accuracy: 0.0 (0/24) (0/48) (0/72) (0/96) most negative: 10 (below min accuracy) (threshold: 89 more)         longest negative: 96    warnings = 89.0
+1_15.csv                        	accuracy: 0.0 (0/24) (0/48) (0/72) (0/97) most negative: 10 (below min accuracy) (threshold: 90 more)         longest negative: 97    warnings = 90.0
+1_12.csv                        	accuracy: 0.0 (0/23) (0/46) (0/69) (0/94) most negative: 10 (below min accuracy) (threshold: 87 more)         longest negative: 94    warnings = 87.0
+1_22.csv                        	accuracy: 0.0 (0/25) (0/50) (0/75) (0/103) most negative: 10 (below min accuracy) (threshold: 96 more)        longest negative: 103   warnings = 96.0
+1_0.csv                         	accuracy: 0.02062 (0/24) (1/48) (2/72) (2/97) most negative: 10 (below min accuracy) (threshold: 29 more)     longest negative: 36    warnings = 74.0
+1_16.csv                        	accuracy: 0.01099 (0/22) (0/44) (1/66) (1/91) most negative: 10 (below min accuracy) (threshold: 55 more)     longest negative: 62    warnings = 76.0
+1_18.csv                        	accuracy: 0.02083 (0/24) (1/48) (2/72) (2/96) most negative: 10 (below min accuracy) (threshold: 30 more)     longest negative: 37    warnings = 73.0
+1_5.csv                         	accuracy: 0.0 (0/24) (0/48) (0/72) (0/99) most negative: 10 (below min accuracy) (threshold: 92 more)         longest negative: 99    warnings = 92.0
+1_11.csv                        	accuracy: 0.01149 (0/21) (0/42) (0/63) (1/87) most negative: 10 (below min accuracy) (threshold: 66 more)     longest negative: 73    warnings = 72.0
+1_10.csv                        	accuracy: 0.0 (0/22) (0/44) (0/66) (0/89) most negative: 10 (below min accuracy) (threshold: 82 more)         longest negative: 89    warnings = 82.0
+1_8.csv                         	accuracy: 0.0 (0/23) (0/46) (0/69) (0/92) most negative: 10 (below min accuracy) (threshold: 85 more)         longest negative: 92    warnings = 85.0
+1_19.csv                        	accuracy: 0.0 (0/42) (0/84) (0/126) (0/168) most negative: 10 (below min accuracy) (threshold: 161 more)      longest negative: 168   warnings = 161.0
+1_24.csv                        	accuracy: 0.0 (0/26) (0/52) (0/78) (0/105) most negative: 10 (below min accuracy) (threshold: 98 more)        longest negative: 105   warnings = 98.0
+1_14.csv                        	accuracy: 0.0 (0/24) (0/48) (0/72) (0/98) most negative: 10 (below min accuracy) (threshold: 91 more)         longest negative: 98    warnings = 91.0
+1_21.csv                        	accuracy: 0.02151 (0/23) (0/46) (1/69) (2/93) most negative: 10 (below min accuracy) (threshold: 58 more)     longest negative: 65    warnings = 70.0
+1_9.csv                         	accuracy: 0.01136 (1/22) (1/44) (1/66) (1/88) most negative: 10 (below min accuracy) (threshold: 78 more)     longest negative: 85    warnings = 78.0
+1_7.csv                         	accuracy: 0.0098 (0/25) (1/50) (1/75) (1/102) most negative: 10 (below min accuracy) (threshold: 45 more)     longest negative: 52    warnings = 87.0
+1_2.csv                         	accuracy: 0.01099 (0/22) (1/44) (1/66) (1/91) most negative: 10 (below min accuracy) (threshold: 50 more)     longest negative: 57    warnings = 76.0
+1_23.csv                        	accuracy: 0.0 (0/25) (0/50) (0/75) (0/100) most negative: 10 (below min accuracy) (threshold: 93 more)        longest negative: 100   warnings = 93.0
+1_1.csv                         	accuracy: 0.0 (0/23) (0/46) (0/69) (0/94) most negative: 10 (below min accuracy) (threshold: 87 more)         longest negative: 94    warnings = 87.0
+1_3.csv                         	accuracy: 0.0 (0/23) (0/46) (0/69) (0/95) most negative: 10 (below min accuracy) (threshold: 88 more)         longest negative: 95    warnings = 88.0
+1_13.csv                        	accuracy: 0.0 (0/23) (0/46) (0/69) (0/92) most negative: 10 (below min accuracy) (threshold: 85 more)         longest negative: 92    warnings = 85.0
+1_17.csv                        	accuracy: 0.01053 (0/23) (0/46) (0/69) (1/95) most negative: 10 (below min accuracy) (threshold: 70 more)     longest negative: 77    warnings = 80.0
+1_20.csv                        	accuracy: 0.01053 (0/23) (0/46) (0/69) (1/95) most negative: 10 (below min accuracy) (threshold: 75 more)     longest negative: 82    warnings = 80.0
+
+
+
+time & average: [('available runs/simulator_gazebo/velocity attack/time/2/', 0.075000000000000011), ('available runs/simulator_gazebo/velocity attack/time/1/', 0.125), ('available runs/simulator_gazebo/velocity attack/time/0.5/', 0.45000000000000001), ('available runs/simulator_gazebo/velocity attack/time/0.25/', 0.875)]
+None
+lab@lab:~/thesis_offline$ 
+

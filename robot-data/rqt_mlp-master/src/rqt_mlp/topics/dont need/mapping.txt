@@ -1,0 +1,4 @@
+/map
+/scan
+/kinect2/qhd/image_color/compressed
+/kinect2/qhd/image_color/theora

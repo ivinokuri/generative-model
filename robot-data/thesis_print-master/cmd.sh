@@ -1,0 +1,1 @@
+python software/AnomalyDetection.py -p "available runs/manipulation scenarios/gripping_without/normal/" -n "available runs/manipulation scenarios/gripping_without/test/" -c "available runs/manipulation scenarios/gripping_without/charts/" -t 3

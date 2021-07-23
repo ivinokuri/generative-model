@@ -1,0 +1,1 @@
+python software/AnomalyDetection.py -p "available runs/navigation scenarios/velocity attack/normal/" -n "available runs/navigation scenarios/velocity attack/test/" -c "available runs/navigation scenarios/velocity attack/charts/" -t 3

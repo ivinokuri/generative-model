@@ -1,0 +1,9 @@
+/gazebo/link_states
+/kinect2/qhd/image_color
+/kinect2/qhd/image_depth_rect
+/kinect2/qhd/points
+/map
+/move_base/global_costmap/costmap_updates
+/my_find_object/bw
+/my_find_object/hsv_filterd
+/my_find_object/result

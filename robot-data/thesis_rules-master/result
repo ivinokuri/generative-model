@@ -1,0 +1,58 @@
+ubuntu16@ubuntu16:~/Github/thesis_rules$ ./cmd.sh
+starting
+{}
+max threshold 5
+trainings directory: available runs/robil2_gazebo/stuck/normal/type1
+positive predictions: 2143/2558, negative predictions: 415/2558
+
+
+
+Role-Based Anomaly Detection: percentage=0.01, coverage=0.98
+positives: 
+trainings: 0)coverage percentage columns: positives = 2143, negatives = 415 1)positive values: positives = 2558, negatives = 0 2)negative values: positives = 2558, negatives = 0 3)not negative values: positives = 2558, negatives = 0 4)same digits number: positives = 2558, negatives = 0 5)exactly one: positives = 2558, negatives = 0 6)corresponding columns: positives = 2558, negatives = 0 
+negatives: 
+	how much constant columns: 707/974
+	how much correlate columns: 31/974
+
+------------------------ training sets ------------------------
+longest average = 2.23076923077, anomalies = 415.0,  total warnings = 0.0,  faulty runs = 0.0,  non-faulty runs = 39.0
+26.csv                          	accuracy: 0.90769	longest negative: 2	warnings = 0.0
+29.csv                          	accuracy: 0.87692	longest negative: 2	warnings = 0.0
+34.csv                          	accuracy: 0.75362	longest negative: 5	warnings = 0.0
+10.csv                          	accuracy: 0.86364	longest negative: 2	warnings = 0.0
+13.csv                          	accuracy: 0.86567	longest negative: 3	warnings = 0.0
+11.csv                          	accuracy: 1.0    	longest negative: 0	warnings = 0.0
+2.csv                           	accuracy: 0.83077	longest negative: 2	warnings = 0.0
+30.csv                          	accuracy: 0.81356	longest negative: 2	warnings = 0.0
+5.csv                           	accuracy: 0.77465	longest negative: 2	warnings = 0.0
+21.csv                          	accuracy: 0.88525	longest negative: 2	warnings = 0.0
+18.csv                          	accuracy: 0.90323	longest negative: 2	warnings = 0.0
+19.csv                          	accuracy: 0.93333	longest negative: 1	warnings = 0.0
+35.csv                          	accuracy: 0.84615	longest negative: 2	warnings = 0.0
+25.csv                          	accuracy: 0.86885	longest negative: 2	warnings = 0.0
+8.csv                           	accuracy: 0.7377 	longest negative: 3	warnings = 0.0
+22.csv                          	accuracy: 0.84286	longest negative: 2	warnings = 0.0
+15.csv                          	accuracy: 0.79104	longest negative: 2	warnings = 0.0
+3.csv                           	accuracy: 0.92537	longest negative: 1	warnings = 0.0
+28.csv                          	accuracy: 0.88525	longest negative: 1	warnings = 0.0
+32.csv                          	accuracy: 0.92537	longest negative: 2	warnings = 0.0
+31.csv                          	accuracy: 0.88732	longest negative: 1	warnings = 0.0
+38.csv                          	accuracy: 0.7971 	longest negative: 2	warnings = 0.0
+23.csv                          	accuracy: 0.77049	longest negative: 4	warnings = 0.0
+37.csv                          	accuracy: 0.9    	longest negative: 2	warnings = 0.0
+27.csv                          	accuracy: 0.50685	longest negative: 5	warnings = 0.0
+4.csv                           	accuracy: 0.75   	longest negative: 3	warnings = 0.0
+6.csv                           	accuracy: 0.92537	longest negative: 1	warnings = 0.0
+24.csv                          	accuracy: 0.76389	longest negative: 4	warnings = 0.0
+33.csv                          	accuracy: 0.74603	longest negative: 2	warnings = 0.0
+20.csv                          	accuracy: 0.9    	longest negative: 2	warnings = 0.0
+9.csv                           	accuracy: 0.83824	longest negative: 2	warnings = 0.0
+39.csv                          	accuracy: 0.92188	longest negative: 2	warnings = 0.0
+7.csv                           	accuracy: 0.7619 	longest negative: 2	warnings = 0.0
+14.csv                          	accuracy: 0.8254 	longest negative: 3	warnings = 0.0
+36.csv                          	accuracy: 0.73973	longest negative: 3	warnings = 0.0
+17.csv                          	accuracy: 0.83582	longest negative: 3	warnings = 0.0
+1.csv                           	accuracy: 0.85294	longest negative: 2	warnings = 0.0
+16.csv                          	accuracy: 0.91803	longest negative: 2	warnings = 0.0
+12.csv                          	accuracy: 0.88889	longest negative: 2	warnings = 0.0
+
