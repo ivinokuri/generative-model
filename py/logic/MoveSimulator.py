@@ -50,6 +50,8 @@ class MoveSimulator:
 		print('Next interval')
 		return nextInter
 
+	# Improve planning
+	# Gen in julia
 	@staticmethod
 	def randomDirection():
 		return random.choice([MoveDirection.FORWARD, 
