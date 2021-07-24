@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py/model/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/generative-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generative-model.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generative Model Test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Generative Model Test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/DataAnalysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot-data/thesis-master/available runs/navigation scenarios/move_base fault/normal/type1/building_normal4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/thesis-master/available runs/navigation scenarios/move_base fault/normal/type1/building_normal4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/normal/type1/building_normal1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/normal/type1/building_normal1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/test/building_mb_s14_r03_0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/test/building_mb_s14_r03_0.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1626529282932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
+    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1627128151072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1624710830531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py" />
   </component>
   <component name="FileEditorManager">
@@ -37,8 +37,8 @@
       <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py/model/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="26" />
               <folding>
                 <element signature="e#23#54#0" expanded="true" />
               </folding>
@@ -82,6 +82,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -105,6 +106,7 @@
         <option value="$PROJECT_DIR$/py/main.py" />
         <option value="$PROJECT_DIR$/Generative Model Test.ipynb" />
         <option value="$PROJECT_DIR$/py/model/model.py" />
+        <option value="$PROJECT_DIR$/py/DataAnalysis.ipynb" />
       </list>
     </option>
   </component>
@@ -118,6 +120,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-10" />
     <option name="y" value="25" />
     <option name="width" value="1922" />
     <option name="height" value="1526" />
@@ -218,23 +221,37 @@
       <option name="project" value="LOCAL" />
       <updated>1624710369851</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sync">
+      <created>1627041946830</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627041946831</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge branch 'master' of https://github.com/ivinokuri/generative-model&#10;&#10;# Conflicts:&#10;#&#9;py/model/model.py">
+      <created>1627042070403</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627042070403</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1922" height="1526" extended-state="0" />
+    <frame x="-10" y="25" width="1922" height="1526" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005319" side_tool="true" weight="0.32958537" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32958537" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32958537" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.18973999" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32958537" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32958537" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994681" weight="0.32958537" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22712766" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.35212767" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.17234042" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39985946" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -250,6 +267,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -257,7 +300,9 @@
     <MESSAGE value="package fixing" />
     <MESSAGE value="fix pubsub" />
     <MESSAGE value="fix system clock" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix system clock" />
+    <MESSAGE value="sync" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/ivinokuri/generative-model&#10;&#10;# Conflicts:&#10;#&#9;py/model/model.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ivinokuri/generative-model&#10;&#10;# Conflicts:&#10;#&#9;py/model/model.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,16 +532,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/primitives.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -542,10 +577,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/rosDiagnostic-master/ros_diagnostic_msgs/msg/cpuload.msg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_rules-master/available runs/simulator_gazebo/velocity attack/charts/1_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_rules-master/available runs/simulator_gazebo/velocity attack/charts/1_11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/charts/building_mb_s14_r03_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/test/building_mb_s14_r03_0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_offline-master/available runs/simulator_gazebo/velocity attack/normal/type1/0.5/2_0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DataAnalysis.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/py/model/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="e#23#54#0" expanded="true" />
           </folding>
