@@ -102,6 +102,14 @@ def main():
 
     print(h)
     print(l)
+    fig, axs = plt.subplots(2, 1, figsize=(15, 16))
+    axs[0].set_title('Train')
+    axs[0].legend()
+    axs[1].plot(range(len(h)), h, label="Train loss")
+    axs[1].plot(range(len(l)), l, label="Test loss")
+    axs[1].set_title('Test')
+    plt.legend()
+    plt.show()
 
 
 if __name__ == "__main__":
