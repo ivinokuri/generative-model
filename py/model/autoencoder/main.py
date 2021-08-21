@@ -10,13 +10,21 @@ from sklearn.preprocessing import MinMaxScaler
 from torch.autograd import Variable
 from tqdm import tqdm
 import os
+from sklearn.decomposition import PCA
+import datetime
+
 print(os.getcwd())
-# os.makedirs(os.getcwd() + '\\res')
 
+# CONSTS
+TEST_PURPOSE = False
+
+USE_PCA = True
+EPOCHS = 100
 scalers = {}
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
+
+
 def normalize_data(original_data):
     norm_data = original_data
     for i in original_data.columns:
@@ -27,9 +35,9 @@ def normalize_data(original_data):
         norm_data[i] = s_s
     return norm_data
 
-def unnormalize_data(original_data, reconstructed_data):
+def unnormalize_data(columns, reconstructed_data):
     restored_data = []
-    for (i, name) in enumerate(original_data.columns):
+    for (i, name) in enumerate(columns):
         restored_data.append(np.array(scalers['scaler_' + name].inverse_transform(reconstructed_data[:,i].reshape(-1, 1))).flatten())
     return np.array(restored_data)
 
@@ -65,12 +73,12 @@ def sliding_windows(data, seq_length):
 
     return np.array(x), np.array(y)
 
-def train(model, train_data, test_data):
+def train(model, train_data, test_data, current_run_dir=None):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     objective = nn.MSELoss().to(device)
     history = []
     test_losses = []
-    for e in tqdm(range(100)):
+    for e in tqdm(range(EPOCHS)):
         model.train()
         loss = 0
         test_loss = 0
@@ -93,6 +101,7 @@ def train(model, train_data, test_data):
             test_loss = objective(reconstruction, x)
             test_losses.append(test_loss.item())
         # if e % 10 == 0:
+        torch.save(model.state_dict(), "res/" + current_run_dir + "/epoch_" + str(e) + ".model")
         print("================================")
         print('Epoch: ', e);
         print("Loss: ", loss.item())
@@ -108,17 +117,52 @@ def predict(model, dataset):
     reconstruction = model(x)
   return reconstruction.squeeze(0)
 
+def use_pca(norm_data, DATA, n_components=0.90):
+    pca = PCA(n_components=n_components)
+    pca.fit_transform(norm_data)
+    n_pcs = pca.n_components_
+    most_important = [np.abs(pca.components_[i]).argmax() for i in range(n_pcs)]
+    initial_feature_names = DATA.columns
+    most_important_column_names = [initial_feature_names[most_important[i]] for i in range(n_pcs)]
+    print('Most important columns number ', len(most_important_column_names))
+    print('Most important columns', most_important_column_names)
+    NEW_DATA = norm_data[most_important_column_names].values
+    return NEW_DATA, most_important_column_names
+
 def main():
+    current_run_dir = str(datetime.datetime.now())
+    os.mkdir(os.getcwd() + '/res/' + current_run_dir)
     DATA = pandas.read_csv('../../../rnn/merged.csv')
-    n_features = len(DATA.columns)
+    norm_data, columns = DATA.values, DATA.columns
+    n_features = len(columns)
+    if USE_PCA:
+        norm_data, columns = use_pca(normalize_data(DATA.copy()), DATA)
+        n_features = len(columns)
+    else:
+        norm_data, columns = normalize_data(DATA.copy()).values, DATA.columns
+        n_features = len(DATA.columns)
+
     print(n_features)
-    norm_data = normalize_data(DATA.copy()).values
-    print(norm_data[0])
-    autoencoder = Autoencoder(2, n_features, 35, n_features, 60, n_features).to(device)
+    if TEST_PURPOSE:
+        norm_data = norm_data[:200]
+
+    lstm_stacks = 2
+    autoencoder_input = n_features
+    encoder_hidden_layers = int(n_features/2)
+    decoder_input = n_features
+    seq_len = 60
+    autoencoder_output = n_features
+
+    autoencoder = Autoencoder(lstm_stacks,
+                              autoencoder_input,
+                              encoder_hidden_layers,
+                              decoder_input,
+                              seq_len,
+                              autoencoder_output).to(device)
     train_size = np.int(len(norm_data) * 0.8)
     train_data, test_data = norm_data[:train_size], norm_data[train_size:]
     train_x, train_y = sliding_windows(train_data, 60)
-    h, l = train(autoencoder, train_x, test_data)
+    h, l = train(autoencoder, train_x, test_data, current_run_dir)
 
     print(h)
     print(l)
@@ -130,18 +174,29 @@ def main():
     axs.legend()
     plt.legend()
     plt.show()
-    torch.save(autoencoder.state_dict(), "my_model.model")
+    torch.save(autoencoder.state_dict(), "res/" + current_run_dir + "/final.model")
     reconstruction = predict(autoencoder, test_data)
-    reconstruction = unnormalize_data(DATA, reconstruction.cpu().numpy())
+    reconstruction = unnormalize_data(columns, reconstruction.cpu().numpy())
 
-    original = DATA.values[:len(test_data)]
+    original = DATA[columns].values[:len(test_data)]
     for i in range(len(reconstruction)):
-        plt.figure(figsize=(20, 20))
-        plt.plot(range(len(reconstruction[i])), reconstruction[i], label="Reconstructed " + DATA.columns[i])
-        plt.plot(range(len(original[:,i])), original[:,i], label="Original " + DATA.columns[i])
+        plt.figure(figsize=(30, 10))
+        plt.plot(range(len(reconstruction[i])), reconstruction[i], label="Reconstructed " + columns[i])
+        plt.plot(range(len(original[:,i])), original[:,i], label="Original " + columns[i])
         plt.legend()
-        plt.savefig(os.getcwd() + '\\res\\' + str(i))
+        # plt.show()
+        plt.savefig(os.getcwd() + '/res/' + current_run_dir + '/' + str(i))
         plt.close()
 
+    file = open(os.getcwd() + '/res/' + current_run_dir + '/model_params.txt', "w+")
+    file.writelines([
+        'lstm_stacks='+str(lstm_stacks),
+        '\n\rautoencoder_input='+str(autoencoder_input),
+        '\n\rencoder_hidden_layers='+str(encoder_hidden_layers),
+        '\n\rdecoder_input='+str(decoder_input),
+        '\n\rseq_len='+str(seq_len),
+        '\n\rautoencoder_output=' + str(autoencoder_output)
+    ])
+    file.close()
 if __name__ == "__main__":
     main()
