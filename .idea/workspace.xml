@@ -24,16 +24,77 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/autoencoder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/rnn/data-adapter.py" afterDir="false" />
     </list>
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1628250698842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
-    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1629548715333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1629139941090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
+    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1629139954085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rnn" />
+    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1629655324250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="model_params.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/res/21-08-2021_201019/model_params.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pubsub.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveSimulator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,14 +107,134 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/py/model/autoencoder/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectId" id="1wP4RHqh8gnpyhrDAmAIPvoykOt" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="autoencoder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="autoencoder" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="autoencoder" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="21-08-2021_201019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+              <item name="move_base fault" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+              <item name="move_base fault" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/py/model/autoencoder/res" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,6 +244,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -83,9 +276,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -105,9 +295,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.model" />
@@ -184,20 +371,54 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1680" height="982" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005319" side_tool="true" weight="0.32958537" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.18885097" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3287827" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287827" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994681" weight="0.3287827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23443224" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.18681319" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39985946" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="package fixing" />
@@ -209,62 +430,50 @@
     <option name="LAST_COMMIT_MESSAGE" value="adding excel files and processing notebook with graphs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1374" y="435" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629549285529">
-      <screen x="0" y="0" width="3840" height="1560" />
-    </state>
-    <state x="1374" y="435" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1560@0.0.3840.1560" timestamp="1629549285529" />
     <state x="1658" y="582" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628458647012">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
     <state x="1658" y="582" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1560@0.0.3840.1560" timestamp="1628458647012" />
-    <state x="1629" y="375" key="#main" timestamp="1629549277812">
+    <state x="1675" y="483" key="#xdebugger.evaluate" timestamp="1628453019409">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state x="1629" y="375" key="#main/0.0.3840.1560@0.0.3840.1560" timestamp="1629549277812" />
-    <state x="1675" y="483" key="#xdebugger.evaluate" timestamp="1629565508168">
-      <screen x="0" y="0" width="3840" height="1560" />
-    </state>
-    <state x="1675" y="483" key="#xdebugger.evaluate/0.0.3840.1560@0.0.3840.1560" timestamp="1629565508168" />
+    <state x="1675" y="483" key="#xdebugger.evaluate/0.0.3840.1560@0.0.3840.1560" timestamp="1628453019409" />
     <state x="1700" y="520" key="FileChooserDialogImpl" timestamp="1628457986421">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
     <state x="1700" y="520" key="FileChooserDialogImpl/0.0.3840.1560@0.0.3840.1560" timestamp="1628457986421" />
-    <state width="3797" height="423" key="GridCell.Tab.0.bottom" timestamp="1629565817281">
+    <state width="3797" height="424" key="GridCell.Tab.0.bottom" timestamp="1628458941553">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1629565817281" />
-    <state width="3797" height="423" key="GridCell.Tab.0.center" timestamp="1629565817281">
+    <state width="3797" height="424" key="GridCell.Tab.0.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1628458941553" />
+    <state width="3797" height="424" key="GridCell.Tab.0.center" timestamp="1628458941553">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.center/0.0.3840.1560@0.0.3840.1560" timestamp="1629565817281" />
-    <state width="3797" height="423" key="GridCell.Tab.0.left" timestamp="1629565817280">
+    <state width="3797" height="424" key="GridCell.Tab.0.center/0.0.3840.1560@0.0.3840.1560" timestamp="1628458941553" />
+    <state width="3797" height="424" key="GridCell.Tab.0.left" timestamp="1628458941553">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.left/0.0.3840.1560@0.0.3840.1560" timestamp="1629565817280" />
-    <state width="3797" height="423" key="GridCell.Tab.0.right" timestamp="1629565817281">
+    <state width="3797" height="424" key="GridCell.Tab.0.left/0.0.3840.1560@0.0.3840.1560" timestamp="1628458941553" />
+    <state width="3797" height="424" key="GridCell.Tab.0.right" timestamp="1628458941553">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.right/0.0.3840.1560@0.0.3840.1560" timestamp="1629565817281" />
-    <state width="3797" height="341" key="GridCell.Tab.1.bottom" timestamp="1629565707287">
+    <state width="3797" height="424" key="GridCell.Tab.0.right/0.0.3840.1560@0.0.3840.1560" timestamp="1628458941553" />
+    <state width="3797" height="341" key="GridCell.Tab.1.bottom" timestamp="1628453285269">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1629565707287" />
-    <state width="3797" height="341" key="GridCell.Tab.1.center" timestamp="1629565707287">
+    <state width="3797" height="341" key="GridCell.Tab.1.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1628453285269" />
+    <state width="3797" height="341" key="GridCell.Tab.1.center" timestamp="1628453285269">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.center/0.0.3840.1560@0.0.3840.1560" timestamp="1629565707287" />
-    <state width="3797" height="341" key="GridCell.Tab.1.left" timestamp="1629565707287">
+    <state width="3797" height="341" key="GridCell.Tab.1.center/0.0.3840.1560@0.0.3840.1560" timestamp="1628453285269" />
+    <state width="3797" height="341" key="GridCell.Tab.1.left" timestamp="1628453285269">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.left/0.0.3840.1560@0.0.3840.1560" timestamp="1629565707287" />
-    <state width="3797" height="341" key="GridCell.Tab.1.right" timestamp="1629565707287">
+    <state width="3797" height="341" key="GridCell.Tab.1.left/0.0.3840.1560@0.0.3840.1560" timestamp="1628453285269" />
+    <state width="3797" height="341" key="GridCell.Tab.1.right" timestamp="1628453285269">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.right/0.0.3840.1560@0.0.3840.1560" timestamp="1629565707287" />
-    <state x="1421" y="425" key="SettingsEditor" timestamp="1629549295005">
-      <screen x="0" y="0" width="3840" height="1560" />
-    </state>
-    <state x="1421" y="425" key="SettingsEditor/0.0.3840.1560@0.0.3840.1560" timestamp="1629549295005" />
+    <state width="3797" height="341" key="GridCell.Tab.1.right/0.0.3840.1560@0.0.3840.1560" timestamp="1628453285269" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,6 +481,11 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/system/pubsub.py</url>
           <line>28</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/model/autoencoder/main.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/autoencoder/main.py</url>
@@ -294,6 +508,286 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1629565817270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1628458941546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/py/system/SystemClock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/SystemClock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/SystemClock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/env/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/logic/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/robot/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/env/world.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/random.py" />
+    <entry file="file://$PROJECT_DIR$/py/system/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/threading.py" />
+    <entry file="file://$PROJECT_DIR$/py/env/location.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/system/SystemClock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/primitives.py" />
+    <entry file="file://$PROJECT_DIR$/data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generative Model Test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/matplotlib/pyplot.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/distributions/conjugate.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/poutine/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/infer/svi.py" />
+    <entry file="file://$PROJECT_DIR$/robot-data/rosDiagnostic-master/ros_diagnostic_msgs/msg/cpuload.msg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_rules-master/available runs/simulator_gazebo/velocity attack/charts/1_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_rules-master/available runs/simulator_gazebo/velocity attack/charts/1_11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/charts/building_mb_s14_r03_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_offline-master/available runs/simulator_gazebo/velocity attack/normal/type1/0.5/2_0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/DataAnalysis.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/decoder.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/test/building_mb_s14_r03_0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn/merged_test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn/data-adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/res/21-08-2021_201019/train_test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/res/21-08-2021_201019/model_params.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

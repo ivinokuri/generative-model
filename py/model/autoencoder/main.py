@@ -154,7 +154,12 @@ def main():
         n_features = len(DATA.columns)
     anomaly_norm_data = normalize_data(ANOMALY_DATA.copy())[columns].values
 
+    norm_data = norm_data[:, :2]
+    columns = columns[:2]
+    anomaly_norm_data = anomaly_norm_data[:, :2]
+    n_features = len(columns)
     print(n_features)
+
     if TEST_PURPOSE:
         norm_data = norm_data[:200]
 
