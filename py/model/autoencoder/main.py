@@ -21,7 +21,7 @@ print(os.sep)
 TEST_PURPOSE = False
 
 USE_PCA = True
-EPOCHS = 100
+EPOCHS = 10
 scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
@@ -178,7 +178,7 @@ def main():
                               autoencoder_output).to(device)
     train_size = np.int(len(norm_data) * 0.8)
     train_data, test_data = norm_data[:train_size], norm_data[train_size:]
-    train_x, train_y = sliding_windows(train_data, 60)
+    train_x, train_y = sliding_windows(train_data, seq_len)
     h, l, a = train(autoencoder, train_x, test_data, anomaly_norm_data, current_run_dir)
 
     print(h)
