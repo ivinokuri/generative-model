@@ -9,6 +9,8 @@ onlyfiles += [PATH + '2/' + f for f in listdir(PATH + '2') if isfile(join(PATH +
 onlyfiles += [PATH + '3/' + f for f in listdir(PATH + '3') if isfile(join(PATH + '3', f))]
 onlyfiles += [PATH + '4/' + f for f in listdir(PATH + '4') if isfile(join(PATH + '4', f))]
 
+# PATH = '../robot-data/thesis_print-master/available runs/navigation scenarios/move_base fault/test'
+# onlyfiles = [PATH + '/' + f for f in listdir(PATH) if isfile(join(PATH, f))]
 
 print(onlyfiles)
 

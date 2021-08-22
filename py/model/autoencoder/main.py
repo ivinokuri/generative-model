@@ -15,6 +15,8 @@ import datetime
 
 print(os.getcwd())
 
+print(os.sep)
+
 # CONSTS
 TEST_PURPOSE = False
 
@@ -73,15 +75,17 @@ def sliding_windows(data, seq_length):
 
     return np.array(x), np.array(y)
 
-def train(model, train_data, test_data, current_run_dir=None):
+def train(model, train_data, test_data, anomaly_norm_data, current_run_dir=None):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     objective = nn.MSELoss().to(device)
     history = []
     test_losses = []
+    anomaly_losses = []
     for e in tqdm(range(EPOCHS)):
         model.train()
         loss = 0
         test_loss = 0
+        anomaly_loss = 0
         for i in tqdm(range(len(train_data))):
             x = train_data[i]
             x = torch.Tensor(np.array([x])).to(device)
@@ -100,14 +104,20 @@ def train(model, train_data, test_data, current_run_dir=None):
             reconstruction = model(x)
             test_loss = objective(reconstruction, x)
             test_losses.append(test_loss.item())
+            # anomaly
+            x = torch.Tensor(np.array([anomaly_norm_data])).to(device)
+            reconstruction = model(x)
+            anomaly_loss = objective(reconstruction, x)
+            anomaly_losses.append(anomaly_loss.item())
         # if e % 10 == 0:
-        torch.save(model.state_dict(), "res/" + current_run_dir + "/epoch_" + str(e) + ".model")
+        torch.save(model.state_dict(), "res" + os.sep + current_run_dir + os.sep + "epoch_" + str(e) + ".model")
         print("================================")
         print('Epoch: ', e);
         print("Loss: ", loss.item())
         print("Test Loss: ", test_loss.item())
+        print("Anomaly Loss: ", anomaly_loss.item())
         print("================================")
-    return history, test_losses
+    return history, test_losses, anomaly_losses
 
 def predict(model, dataset):
   predictions = []
@@ -130,9 +140,10 @@ def use_pca(norm_data, DATA, n_components=0.90):
     return NEW_DATA, most_important_column_names
 
 def main():
-    current_run_dir = str(datetime.datetime.now())
-    os.mkdir(os.getcwd() + '/res/' + current_run_dir)
+    current_run_dir = datetime.datetime.now().strftime("%d-%m-%Y_%H%M%S")
+    os.mkdir(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir)
     DATA = pandas.read_csv('../../../rnn/merged.csv')
+    ANOMALY_DATA = pandas.read_csv('../../../rnn/merged_test.csv')
     norm_data, columns = DATA.values, DATA.columns
     n_features = len(columns)
     if USE_PCA:
@@ -141,6 +152,7 @@ def main():
     else:
         norm_data, columns = normalize_data(DATA.copy()).values, DATA.columns
         n_features = len(DATA.columns)
+    anomaly_norm_data = normalize_data(ANOMALY_DATA.copy())[columns].values
 
     print(n_features)
     if TEST_PURPOSE:
@@ -162,7 +174,7 @@ def main():
     train_size = np.int(len(norm_data) * 0.8)
     train_data, test_data = norm_data[:train_size], norm_data[train_size:]
     train_x, train_y = sliding_windows(train_data, 60)
-    h, l = train(autoencoder, train_x, test_data, current_run_dir)
+    h, l, a = train(autoencoder, train_x, test_data, anomaly_norm_data, current_run_dir)
 
     print(h)
     print(l)
@@ -170,11 +182,14 @@ def main():
 
     axs.plot(range(len(h)), h, label="Train loss")
     axs.plot(range(len(l)), l, label="Test loss")
+    axs.plot(range(len(a)), a, label="Anomaly loss")
     axs.set_title('Losses')
     axs.legend()
     plt.legend()
+    plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'train_test')
     plt.show()
-    torch.save(autoencoder.state_dict(), "res/" + current_run_dir + "/final.model")
+    plt.close()
+    torch.save(autoencoder.state_dict(), "res" + os.sep + current_run_dir + os.sep + "final.model")
     reconstruction = predict(autoencoder, test_data)
     reconstruction = unnormalize_data(columns, reconstruction.cpu().numpy())
 
@@ -184,11 +199,11 @@ def main():
         plt.plot(range(len(reconstruction[i])), reconstruction[i], label="Reconstructed " + columns[i])
         plt.plot(range(len(original[:,i])), original[:,i], label="Original " + columns[i])
         plt.legend()
-        # plt.show()
-        plt.savefig(os.getcwd() + '/res/' + current_run_dir + '/' + str(i))
+        plt.show()
+        plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + str(i))
         plt.close()
 
-    file = open(os.getcwd() + '/res/' + current_run_dir + '/model_params.txt', "w+")
+    file = open(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'model_params.txt', "w+")
     file.writelines([
         'lstm_stacks='+str(lstm_stacks),
         '\n\rautoencoder_input='+str(autoencoder_input),
