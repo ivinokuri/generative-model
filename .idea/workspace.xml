@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/generative-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generative-model.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/autoencoder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/main.py" afterDir="false" />
     </list>
@@ -131,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624702921418</updated>
       <workItem from="1628346881030" duration="15854000" />
-      <workItem from="1629655523403" duration="530000" />
+      <workItem from="1629655523403" duration="1213000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -222,22 +220,22 @@
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
     <state x="1700" y="520" key="FileChooserDialogImpl/0.0.3840.1560@0.0.3840.1560" timestamp="1628457986421" />
-    <state width="3797" height="423" key="GridCell.Tab.0.bottom" timestamp="1629656003910">
+    <state width="3797" height="423" key="GridCell.Tab.0.bottom" timestamp="1629659950836">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1629656003910" />
-    <state width="3797" height="423" key="GridCell.Tab.0.center" timestamp="1629656003909">
+    <state width="3797" height="423" key="GridCell.Tab.0.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1629659950836" />
+    <state width="3797" height="423" key="GridCell.Tab.0.center" timestamp="1629659950835">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.center/0.0.3840.1560@0.0.3840.1560" timestamp="1629656003909" />
-    <state width="3797" height="423" key="GridCell.Tab.0.left" timestamp="1629656003909">
+    <state width="3797" height="423" key="GridCell.Tab.0.center/0.0.3840.1560@0.0.3840.1560" timestamp="1629659950835" />
+    <state width="3797" height="423" key="GridCell.Tab.0.left" timestamp="1629659950835">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.left/0.0.3840.1560@0.0.3840.1560" timestamp="1629656003909" />
-    <state width="3797" height="423" key="GridCell.Tab.0.right" timestamp="1629656003910">
+    <state width="3797" height="423" key="GridCell.Tab.0.left/0.0.3840.1560@0.0.3840.1560" timestamp="1629659950835" />
+    <state width="3797" height="423" key="GridCell.Tab.0.right" timestamp="1629659950835">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.right/0.0.3840.1560@0.0.3840.1560" timestamp="1629656003910" />
+    <state width="3797" height="423" key="GridCell.Tab.0.right/0.0.3840.1560@0.0.3840.1560" timestamp="1629659950835" />
     <state width="3797" height="341" key="GridCell.Tab.1.bottom" timestamp="1628453285269">
       <screen x="0" y="0" width="3840" height="1560" />
     </state>
@@ -288,6 +286,6 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1629656003889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1629656060243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
 </project>

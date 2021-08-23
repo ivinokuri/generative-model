@@ -1,0 +1,6 @@
+lstm_stacks=2
+autoencoder_input=2
+encoder_hidden_layers=1
+decoder_input=2
+seq_len=60
+autoencoder_output=2

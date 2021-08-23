@@ -21,7 +21,7 @@ print(os.sep)
 TEST_PURPOSE = False
 
 USE_PCA = True
-EPOCHS = 10
+EPOCHS = 100
 scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
