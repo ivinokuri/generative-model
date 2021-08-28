@@ -30,7 +30,11 @@ print(device)
 def normalize_data(original_data):
     norm_data = original_data
     for i in original_data.columns:
-        scaler = MinMaxScaler(feature_range=(-1, 1))
+        scaler = None
+        if ('scaler_' + i) not in scalers:
+            scaler = MinMaxScaler(feature_range=(-1, 1))
+        else:
+            scaler = scalers['scaler_' + i]
         s_s = scaler.fit_transform(norm_data[i].values.reshape(-1, 1))
         s_s = np.reshape(s_s, len(s_s))
         scalers['scaler_' + i] = scaler
@@ -131,13 +135,32 @@ def use_pca(norm_data, DATA, n_components=0.90):
     pca = PCA(n_components=n_components)
     pca.fit_transform(norm_data)
     n_pcs = pca.n_components_
-    most_important = [np.abs(pca.components_[i]).argmax() for i in range(n_pcs)]
+    most_important = [[pca.components_[i].argmax(), pca.components_[i].max()] for i in range(n_pcs)]
+    most_important = sorted(most_important, key=lambda a_entry: -a_entry[1])
     initial_feature_names = DATA.columns
-    most_important_column_names = [initial_feature_names[most_important[i]] for i in range(n_pcs)]
+    most_important_column_names = [initial_feature_names[most_important[i][0]] for i in range(n_pcs)]
     print('Most important columns number ', len(most_important_column_names))
     print('Most important columns', most_important_column_names)
     NEW_DATA = norm_data[most_important_column_names].values
     return NEW_DATA, most_important_column_names
+
+def ploy_data(norm_data, anomaly_norm_data, current_run_dir, title="Data"):
+    fig, axs = plt.subplots(1, figsize=(10, 10))
+    axs.scatter(norm_data[:,0], norm_data[:,1], label="Normal", color="g")
+    axs.scatter(anomaly_norm_data[:,0], anomaly_norm_data[:,1], label="Anomaly", color="r")
+    axs.set_title(title)
+    axs.legend()
+    plt.legend()
+    plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + title.replace("/", "_"))
+    plt.show()
+    plt.close()
+
+def filter_column_indexs(columns, other_columns):
+    filtered = []
+    for c in other_columns:
+        if c in columns:
+            filtered.append(columns.index(c))
+    return filtered
 
 def main():
     current_run_dir = datetime.datetime.now().strftime("%d-%m-%Y_%H%M%S")
@@ -150,18 +173,36 @@ def main():
         norm_data, columns = use_pca(normalize_data(DATA.copy()), DATA)
         n_features = len(columns)
     else:
-        norm_data, columns = normalize_data(DATA.copy()).values, DATA.columns
+        norm_data, columns = normalize_data(DATA.copy()).values, list(DATA.columns.values)
         n_features = len(DATA.columns)
-    anomaly_norm_data = normalize_data(ANOMALY_DATA.copy())[columns].values
+
+    anomaly_columns = ANOMALY_DATA.columns
+    # find intersected columns
+    inter_columns = np.intersect1d(columns, anomaly_columns)
+    inter_columns = [x for _, x in sorted(zip(columns, inter_columns), key=lambda pair: pair[0])]
+    anomaly_norm_data = normalize_data(ANOMALY_DATA.copy())[inter_columns].values
+    # take only data with intersected columns
+    filtered_index = filter_column_indexs(columns, inter_columns)
+    norm_data = norm_data[:, filtered_index]
+    columns = inter_columns
+
+    for i in range(len(norm_data[0]) - 2):
+        nd = norm_data[:, i:i+2]
+        a_nd = anomaly_norm_data[:, i:i+2]
+        c = ', '.join(columns[i:i+2])
+        ploy_data(nd, a_nd, current_run_dir, c)
 
     norm_data = norm_data[:, :2]
     columns = columns[:2]
     anomaly_norm_data = anomaly_norm_data[:, :2]
     n_features = len(columns)
     print(n_features)
+    ploy_data(norm_data, anomaly_norm_data, current_run_dir, ', '.join(columns))
+
 
     if TEST_PURPOSE:
         norm_data = norm_data[:200]
+
 
     lstm_stacks = 2
     autoencoder_input = n_features
