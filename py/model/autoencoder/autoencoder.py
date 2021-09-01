@@ -1,12 +1,9 @@
 
-import numpy as np
 import torch
 from torch import nn
-from torch.autograd import Variable
-from torch.nn import functional as tf
 
-from model.autoencoder.decoder import Decoder
-from model.autoencoder.encoder import Encoder
+from decoder import Decoder
+from encoder import Encoder
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

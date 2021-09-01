@@ -133,10 +133,19 @@ def predict(model, dataset):
 
 def use_pca(norm_data, DATA, n_components=0.90):
     pca = PCA(n_components=n_components)
-    pca.fit_transform(norm_data)
+    new_data = pca.fit_transform(norm_data)
     n_pcs = pca.n_components_
-    most_important = [[pca.components_[i].argmax(), pca.components_[i].max()] for i in range(n_pcs)]
-    most_important = sorted(most_important, key=lambda a_entry: -a_entry[1])
+    most_important = [[np.abs(pca.components_[i]).argmax(), pca.components_[i].max()] for i in range(n_pcs)]
+    most_important = sorted(most_important , key=lambda a_entry: -a_entry[1])
+
+
+    two_cols = new_data[:, :2]#pca.components_[:2, :]
+    fig, axs = plt.subplots(1, figsize=(10, 10))
+    axs.plot(abs(two_cols.T), ".")
+
+    plt.show()
+    plt.close()
+
     initial_feature_names = DATA.columns
     most_important_column_names = [initial_feature_names[most_important[i][0]] for i in range(n_pcs)]
     print('Most important columns number ', len(most_important_column_names))
@@ -204,60 +213,60 @@ def main():
         norm_data = norm_data[:200]
 
 
-    lstm_stacks = 2
-    autoencoder_input = n_features
-    encoder_hidden_layers = int(n_features/2)
-    decoder_input = n_features
-    seq_len = 60
-    autoencoder_output = n_features
-
-    autoencoder = Autoencoder(lstm_stacks,
-                              autoencoder_input,
-                              encoder_hidden_layers,
-                              decoder_input,
-                              seq_len,
-                              autoencoder_output).to(device)
-    train_size = np.int(len(norm_data) * 0.8)
-    train_data, test_data = norm_data[:train_size], norm_data[train_size:]
-    train_x, train_y = sliding_windows(train_data, seq_len)
-    h, l, a = train(autoencoder, train_x, test_data, anomaly_norm_data, current_run_dir)
-
-    print(h)
-    print(l)
-    fig, axs = plt.subplots(1)
-
-    axs.plot(range(len(h)), h, label="Train loss")
-    axs.plot(range(len(l)), l, label="Test loss")
-    axs.plot(range(len(a)), a, label="Anomaly loss")
-    axs.set_title('Losses')
-    axs.legend()
-    plt.legend()
-    plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'train_test')
-    plt.show()
-    plt.close()
-    torch.save(autoencoder.state_dict(), "res" + os.sep + current_run_dir + os.sep + "final.model")
-    reconstruction = predict(autoencoder, test_data)
-    reconstruction = unnormalize_data(columns, reconstruction.cpu().numpy())
-
-    original = DATA[columns].values[:len(test_data)]
-    for i in range(len(reconstruction)):
-        plt.figure(figsize=(30, 10))
-        plt.plot(range(len(reconstruction[i])), reconstruction[i], label="Reconstructed " + columns[i])
-        plt.plot(range(len(original[:,i])), original[:,i], label="Original " + columns[i])
-        plt.legend()
-        plt.show()
-        plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + str(i))
-        plt.close()
-
-    file = open(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'model_params.txt', "w+")
-    file.writelines([
-        'lstm_stacks='+str(lstm_stacks),
-        '\n\rautoencoder_input='+str(autoencoder_input),
-        '\n\rencoder_hidden_layers='+str(encoder_hidden_layers),
-        '\n\rdecoder_input='+str(decoder_input),
-        '\n\rseq_len='+str(seq_len),
-        '\n\rautoencoder_output=' + str(autoencoder_output)
-    ])
-    file.close()
+    # lstm_stacks = 2
+    # autoencoder_input = n_features
+    # encoder_hidden_layers = int(n_features/2)
+    # decoder_input = n_features
+    # seq_len = 60
+    # autoencoder_output = n_features
+    #
+    # autoencoder = Autoencoder(lstm_stacks,
+    #                           autoencoder_input,
+    #                           encoder_hidden_layers,
+    #                           decoder_input,
+    #                           seq_len,
+    #                           autoencoder_output).to(device)
+    # train_size = np.int(len(norm_data) * 0.8)
+    # train_data, test_data = norm_data[:train_size], norm_data[train_size:]
+    # train_x, train_y = sliding_windows(train_data, seq_len)
+    # h, l, a = train(autoencoder, train_x, test_data, anomaly_norm_data, current_run_dir)
+    #
+    # print(h)
+    # print(l)
+    # fig, axs = plt.subplots(1)
+    #
+    # axs.plot(range(len(h)), h, label="Train loss")
+    # axs.plot(range(len(l)), l, label="Test loss")
+    # axs.plot(range(len(a)), a, label="Anomaly loss")
+    # axs.set_title('Losses')
+    # axs.legend()
+    # plt.legend()
+    # plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'train_test')
+    # plt.show()
+    # plt.close()
+    # torch.save(autoencoder.state_dict(), "res" + os.sep + current_run_dir + os.sep + "final.model")
+    # reconstruction = predict(autoencoder, test_data)
+    # reconstruction = unnormalize_data(columns, reconstruction.cpu().numpy())
+    #
+    # original = DATA[columns].values[:len(test_data)]
+    # for i in range(len(reconstruction)):
+    #     plt.figure(figsize=(30, 10))
+    #     plt.plot(range(len(reconstruction[i])), reconstruction[i], label="Reconstructed " + columns[i])
+    #     plt.plot(range(len(original[:,i])), original[:,i], label="Original " + columns[i])
+    #     plt.legend()
+    #     plt.show()
+    #     plt.savefig(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + str(i))
+    #     plt.close()
+    #
+    # file = open(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir + os.sep + 'model_params.txt', "w+")
+    # file.writelines([
+    #     'lstm_stacks='+str(lstm_stacks),
+    #     '\n\rautoencoder_input='+str(autoencoder_input),
+    #     '\n\rencoder_hidden_layers='+str(encoder_hidden_layers),
+    #     '\n\rdecoder_input='+str(decoder_input),
+    #     '\n\rseq_len='+str(seq_len),
+    #     '\n\rautoencoder_output=' + str(autoencoder_output)
+    # ])
+    # file.close()
 if __name__ == "__main__":
     main()

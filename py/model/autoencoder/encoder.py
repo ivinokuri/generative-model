@@ -1,9 +1,8 @@
 
 import torch
 from torch import nn
-from torch.autograd import Variable
 
-from model.autoencoder.utils import init_hidden
+from utils import init_hidden
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

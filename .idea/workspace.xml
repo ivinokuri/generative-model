@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py/model/autoencoder/DataAnalyzing.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/generative-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/generative-model.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/autoencoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/encoder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/autoencoder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/main.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +37,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1628250698842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
-    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1630156998508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1629139941090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
+    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1629139954085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rnn" />
+    <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1630481588278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -52,13 +57,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="encoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/encoder.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="model_params.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/res/21-08-2021_201019/model_params.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
               <folding>
-                <element signature="e#1#13#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,46 +86,55 @@
       <file leaf-file-name="autoencoder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="86" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="86" />
-              <folding>
-                <element signature="e#1#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decoder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="decoder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py/model/autoencoder/decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-              <folding>
-                <element signature="e#1#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+      <file leaf-file-name="encoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="66" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="66" />
-              <folding>
-                <element signature="e#23#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
+      <file leaf-file-name="pubsub.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/system/pubsub.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="847">
-              <caret line="260" column="16" selection-start-line="205" selection-end-line="260" selection-end-column="16" />
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/robot/robot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveSimulator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,6 +158,9 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/py/model/autoencoder/main.py" />
+        <option value="$PROJECT_DIR$/py/model/autoencoder/autoencoder.py" />
+        <option value="$PROJECT_DIR$/py/model/autoencoder/encoder.py" />
+        <option value="$PROJECT_DIR$/py/model/autoencoder/decoder.py" />
       </list>
     </option>
   </component>
@@ -142,13 +173,17 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="1680" />
+    <option name="height" value="982" />
+  </component>
   <component name="ProjectId" id="1wP4RHqh8gnpyhrDAmAIPvoykOt" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,20 +212,58 @@
             <path>
               <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
               <item name="generative-model" type="462c0819:PsiDirectoryNode" />
-              <item name="py" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="autoencoder" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
               <item name="generative-model" type="462c0819:PsiDirectoryNode" />
-              <item name="rnn" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+              <item name="move_base fault" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="thesis_print-master" type="462c0819:PsiDirectoryNode" />
+              <item name="available runs" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation scenarios" type="462c0819:PsiDirectoryNode" />
+              <item name="move_base fault" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -337,49 +410,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1925" height="1526" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1680" height="982" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005319" side_tool="true" weight="0.32958537" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.18885097" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32958537" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32958537" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.18973999" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="7" visible="true" weight="0.32958537" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994681" weight="0.32958537" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23420075" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748474" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.3297929" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.38874137" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3028083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3106114" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3106114" />
       <window_info anchor="bottom" id="Thumbnails" order="8" weight="0.32958537" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23482428" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.30298188" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.18973999" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32958537" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005319" side_tool="true" weight="0.32958537" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4994681" weight="0.32958537" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32958537" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -476,16 +535,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/autoencoder/main.py</url>
-          <line>180</line>
-          <option name="timeStamp" value="8" />
+          <line>148</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/autoencoder/main.py</url>
-          <line>199</line>
-          <option name="timeStamp" value="9" />
+          <line>145</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -519,6 +578,41 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>two_cols</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new_data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pca.n_components_</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>most_important</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pca.components_[:2, :]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pca.components_[:,:2]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pca.components_</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>len(inter_columns)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -528,51 +622,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>columns.size</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>anomaly_columns.size</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>columns.values</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>columns</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(norm_data[0])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>norm_data</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>[columns.index(e) for e in inter_columns]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py/logic/MoveSimulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="49" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -671,13 +723,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="257" selection-start-line="257" selection-end-line="257" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/random.py" />
     <entry file="file://$PROJECT_DIR$/py/system/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -685,13 +731,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="1050" selection-start-line="1050" selection-end-line="1050" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/threading.py" />
     <entry file="file://$PROJECT_DIR$/py/env/location.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -703,6 +743,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -727,13 +770,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/primitives.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/primitives.py" />
     <entry file="file://$PROJECT_DIR$/data.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -744,27 +781,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/distributions/conjugate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="208" column="13" lean-forward="true" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/poutine/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/infer/svi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/distributions/conjugate.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/poutine/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pyro/infer/svi.py" />
     <entry file="file://$PROJECT_DIR$/robot-data/rosDiagnostic-master/ros_diagnostic_msgs/msg/cpuload.msg">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -790,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/model/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -804,64 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/torch/nn/modules/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="195" column="81" lean-forward="true" selection-start-line="195" selection-start-column="81" selection-end-line="195" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="726" selection-start-line="726" selection-end-line="726" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/sklearn/decomposition/_pca.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2987">
-          <caret line="324" column="44" lean-forward="true" selection-start-line="324" selection-start-column="44" selection-end-line="324" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="86" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="86" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-439">
-          <caret line="584" column="21" selection-start-line="584" selection-start-column="15" selection-end-line="584" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/torch/nn/modules/rnn.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/torch/nn/modules/module.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/sklearn/decomposition/_pca.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/matplotlib/pyplot.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -875,30 +833,52 @@
     <entry file="file://$PROJECT_DIR$/.idea/generative-model.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pandas/core/indexing.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.6/site-packages/pandas/core/indexing.py" />
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="1324" column="20" lean-forward="true" selection-start-line="1324" selection-start-column="20" selection-end-line="1324" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/utils.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/default/lib/python3.8/site-packages/sklearn/decomposition/_pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="66" />
-          <folding>
-            <element signature="e#23#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="416">
+          <caret line="367" column="13" selection-start-line="367" selection-start-column="8" selection-end-line="367" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="847">
-          <caret line="260" column="16" selection-start-line="205" selection-end-line="260" selection-end-column="16" />
+        <state relative-caret-position="350">
+          <caret line="176" column="48" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
