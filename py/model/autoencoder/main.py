@@ -80,13 +80,14 @@ def sliding_windows(data, seq_length):
     return np.array(x), np.array(y)
 
 def train(model, train_data, test_data, anomaly_norm_data, current_run_dir=None):
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    # optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.SGD(model.parameters(), lr=0.0001)
     objective = nn.MSELoss().to(device)
     history = []
     test_losses = []
     anomaly_losses = []
     for e in tqdm(range(EPOCHS)):
-        model.train()
+        model.train().to(device)
         loss = 0
         test_loss = 0
         anomaly_loss = 0
@@ -100,10 +101,10 @@ def train(model, train_data, test_data, anomaly_norm_data, current_run_dir=None)
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1)
             optimizer.step()
             if i % 1000 == 0:
-                print("\n========== \nEpoch: ", e, " Seq: ", i, "\n=============")
+                print("\n========== \nEpoch: ", e, " Seq: ", i, "Loss: ", loss.item(), "\n=============")
         history.append(loss.item())
         with torch.no_grad():
-            model.eval()
+            model.eval().to(device)
             x = torch.Tensor(np.array([test_data])).to(device)
             reconstruction = model(x)
             test_loss = objective(reconstruction, x)
@@ -212,7 +213,6 @@ def main():
     if TEST_PURPOSE:
         norm_data = norm_data[:200]
 
-
     lstm_stacks = 2
     autoencoder_input = n_features
     encoder_hidden_layers = int(n_features/2)
@@ -301,7 +301,7 @@ def main_2():
     autoencoder_input = n_features
     encoder_hidden_layers = int(n_features/2)
     decoder_input = n_features
-    seq_len = 60
+    seq_len = 200
     autoencoder_output = n_features
 
     autoencoder = Autoencoder(lstm_stacks,
