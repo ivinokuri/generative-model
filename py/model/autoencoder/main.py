@@ -175,8 +175,8 @@ def filter_column_indexs(columns, other_columns):
 def main():
     current_run_dir = datetime.datetime.now().strftime("%d-%m-%Y_%H%M%S")
     os.mkdir(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir)
-    DATA = pandas.read_csv('../../../rnn/merged.csv')
-    ANOMALY_DATA = pandas.read_csv('../../../rnn/merged_test.csv')
+    DATA = pandas.read_csv('../../../data-adaptation/merged.csv')
+    ANOMALY_DATA = pandas.read_csv('../../../data-adaptation/merged_test.csv')
     norm_data, columns = DATA.values, DATA.columns
     n_features = len(columns)
     if USE_PCA:
@@ -273,8 +273,8 @@ def main():
 def main_2():
     current_run_dir = datetime.datetime.now().strftime("%d-%m-%Y_%H%M%S")
     os.mkdir(os.getcwd() + os.sep + 'res' + os.sep + current_run_dir)
-    DATA = pandas.read_csv('../../../rnn/merged.csv')
-    ANOMALY_DATA = pandas.read_csv('../../../rnn/merged_test.csv')
+    DATA = pandas.read_csv('../../../data-adaptation/merged.csv')
+    ANOMALY_DATA = pandas.read_csv('../../../data-adaptation/merged_test.csv')
 
     columns = DATA.columns
     anomaly_columns = ANOMALY_DATA.columns
