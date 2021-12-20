@@ -20,50 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/py/model/stan/ProbabilisticModelExperiments_build.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py/model/stan/ProbabilisticModelExperiments_cans.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py/model/stan/ProbabilisticModelExperiments_corr.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/py/sim/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/normal/merged_normal_build.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/normal/merged_normal_cans.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/normal/merged_normal_corr.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_laser_fault_build.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_laser_fault_cans.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_laser_fault_corr.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_obs_cans.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_obs_corr.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_software_fault.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot-data/new_data/test/merged_velocity_attack.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/env/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/env/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/env/location.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/env/location.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/env/world.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/env/world.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/logic/MoveSimulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/logic/MoveSimulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/logic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/logic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/DataAnalyzing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/DataAnalyzing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/ProbabilisticModelExperiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/ProbabilisticModelExperiments.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/autoencoder/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/stan/fit_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/fit_2.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/stan/fit_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/fit_3.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/stan/fit_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/fit_4.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/stan/fit_5.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/fit_5.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/autoencoder/stan/model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/robot/RobotComponents.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/robot/RobotComponents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/robot/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/robot/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/robot/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/robot/robot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/system/SystemClock.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/system/SystemClock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/system/UserInput.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/system/UserInput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/system/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/system/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/system/pubsub.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/system/pubsub.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/system/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/sim/system/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data-adaptation/data-adapter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/data_example.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data-adaptation/data_example.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/merged.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data-adaptation/merged.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/merged.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data-adaptation/merged.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rnn/merged_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data-adaptation/merged_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +32,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1629139941090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
-    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1629139954085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rnn" />
+    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1640028276316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1630481588278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
   <component name="DatabaseView">
@@ -88,6 +49,22 @@
     <expand />
     <select />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="data-adapter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robot-data/new_data/data-adapter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="134" column="27" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -99,8 +76,118 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="JupyterTrust" id="37894636-a39e-46f4-a856-9c1240d1c4f5" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="25" />
+    <option name="width" value="1680" />
+    <option name="height" value="978" />
+  </component>
   <component name="ProjectId" id="1wP4RHqh8gnpyhrDAmAIPvoykOt" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="data-adaptation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="stan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="new_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="new_data" type="462c0819:PsiDirectoryNode" />
+              <item name="normal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="new_data" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="robot-data" type="462c0819:PsiDirectoryNode" />
+              <item name="new_data" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="pick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (stanenv) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -119,19 +206,32 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/robot-data/new_data/test/pick" />
+      <recent name="$PROJECT_DIR$/robot-data/new_data/normal/pick" />
+      <recent name="$PROJECT_DIR$/py/model/autoencoder" />
+      <recent name="$PROJECT_DIR$/py/model/stan" />
+      <recent name="$PROJECT_DIR$/py/sim" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/py/model/stan" />
       <recent name="$PROJECT_DIR$/robot-data/new_data" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/py/model/autoencoder" />
-      <recent name="$PROJECT_DIR$/py/model/stan" />
-      <recent name="$PROJECT_DIR$/py/sim" />
-      <recent name="$PROJECT_DIR$/robot-data/new_data" />
-    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.data-adapter">
-    <configuration name="data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,9 +249,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -171,9 +268,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -193,9 +287,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.model" />
@@ -210,7 +301,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -278,8 +369,35 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1680" height="978" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914287" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32914287" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -296,12 +414,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="package fixing" />
@@ -398,5 +525,63 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pystan/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10230">
+          <caret line="683" column="14" selection-start-line="683" selection-start-column="8" selection-end-line="683" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pystan/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="683" column="14" selection-start-line="683" selection-start-column="8" selection-end-line="683" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-adaptation/data-adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/new_data/data-adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="134" column="27" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

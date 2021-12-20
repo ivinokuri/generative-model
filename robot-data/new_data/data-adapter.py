@@ -88,8 +88,54 @@ def merge_anomaly_velocity_attack():
     merge_and_save(onlyfiles, MERGED_NAME)
 
 
-merge_normal_data()
-merge_anomaly_laser_fault()
-merge_anomaly_obs()
-merge_anomaly_software_fault()
-merge_anomaly_velocity_attack()
+def merge_pick_normal():
+    MERGED_NAME = './normal/merged_normal_pick.csv'
+    PATH = './normal/pick/1/'
+    onlyfiles = [PATH + f for f in listdir(PATH) if isfile(join(PATH, f))]
+    onlyfiles.sort(key=sort_predicate)
+    merge_and_save(onlyfiles, MERGED_NAME)
+
+
+def merge_pick_anomaly_miss_cup():
+    MERGED_NAME = './test/merged_pick_miss_cup.csv'
+    PATH = './test/pick/miss_cup/'
+    onlyfiles = [PATH + f for f in listdir(PATH) if isfile(join(PATH, f))]
+    onlyfiles.sort(key=sort_predicate)
+    merge_and_save(onlyfiles, MERGED_NAME)
+
+
+def merge_pick_anomaly_restrict_vision():
+    MERGED_NAME = './test/merged_pick_restrict_vision.csv'
+    PATH = './test/pick/restricted_vision/'
+    onlyfiles = [PATH + f for f in listdir(PATH) if isfile(join(PATH, f))]
+    onlyfiles.sort(key=sort_predicate)
+    merge_and_save(onlyfiles, MERGED_NAME)
+
+
+def merge_pick_anomaly_stolen():
+    MERGED_NAME = './test/merged_pick_stolen.csv'
+    PATH = './test/pick/stolen/'
+    onlyfiles = [PATH + f for f in listdir(PATH) if isfile(join(PATH, f))]
+    onlyfiles.sort(key=sort_predicate)
+    merge_and_save(onlyfiles, MERGED_NAME)
+
+
+def merge_pick_anomaly_stuck():
+    MERGED_NAME = './test/merged_pick_stuck.csv'
+    PATH = './test/pick/stuck/'
+    onlyfiles = [PATH + f for f in listdir(PATH) if isfile(join(PATH, f))]
+    onlyfiles.sort(key=sort_predicate)
+    merge_and_save(onlyfiles, MERGED_NAME)
+
+
+merge_pick_normal()
+merge_pick_anomaly_miss_cup()
+merge_pick_anomaly_restrict_vision()
+merge_pick_anomaly_stuck()
+merge_pick_anomaly_stolen()
+
+# merge_normal_data()
+# merge_anomaly_laser_fault()
+# merge_anomaly_obs()
+# merge_anomaly_software_fault()
+# merge_anomaly_velocity_attack()
