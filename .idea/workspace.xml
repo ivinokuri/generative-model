@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/py/model/stan/stan/multi_fit_pick_miss_cup_autoencoder_2.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/stan/stan/encoder_model.ml/saved_model.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/stan/stan/encoder_model.ml/variables/variables.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/stan/stan/encoder_model.ml/variables/variables.index" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
