@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/py/model/stan/stan/multi_fit_pick_miss_cup_autoencoder_2.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/stan/stan/multi_fit_pick_miss_cup_autoencoder_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/stan/multi_fit_pick_miss_cup_autoencoder_2_249.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627135724243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add trained multidim gmm">
+      <created>1641316984055</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641316984055</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -410,53 +417,8 @@
     <MESSAGE value="sync" />
     <MESSAGE value="Merge branch 'master' of https://github.com/ivinokuri/generative-model&#10;&#10;# Conflicts:&#10;#&#9;py/model/model.py" />
     <MESSAGE value="adding excel files and processing notebook with graphs" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding excel files and processing notebook with graphs" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1675" y="483" key="#xdebugger.evaluate" timestamp="1632218036276">
-      <screen x="0" y="0" width="3840" height="1560" />
-    </state>
-    <state x="1675" y="483" key="#xdebugger.evaluate/0.0.3840.1560@0.0.3840.1560" timestamp="1632218036276" />
-    <state width="1891" height="441" key="GridCell.Tab.0.bottom" timestamp="1639825885953">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1632827459311" />
-    <state width="1891" height="441" key="GridCell.Tab.0.bottom/0.25.3840.1522@0.25.3840.1522" timestamp="1639825885953" />
-    <state width="1891" height="441" key="GridCell.Tab.0.center" timestamp="1639825885953">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.center/0.0.3840.1560@0.0.3840.1560" timestamp="1632827459310" />
-    <state width="1891" height="441" key="GridCell.Tab.0.center/0.25.3840.1522@0.25.3840.1522" timestamp="1639825885953" />
-    <state width="1891" height="441" key="GridCell.Tab.0.left" timestamp="1639825885952">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.left/0.0.3840.1560@0.0.3840.1560" timestamp="1632827459310" />
-    <state width="1891" height="441" key="GridCell.Tab.0.left/0.25.3840.1522@0.25.3840.1522" timestamp="1639825885952" />
-    <state width="1891" height="441" key="GridCell.Tab.0.right" timestamp="1639825885953">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="423" key="GridCell.Tab.0.right/0.0.3840.1560@0.0.3840.1560" timestamp="1632827459310" />
-    <state width="1891" height="441" key="GridCell.Tab.0.right/0.25.3840.1522@0.25.3840.1522" timestamp="1639825885953" />
-    <state width="1911" height="541" key="GridCell.Tab.1.bottom" timestamp="1639755759932">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.bottom/0.0.3840.1560@0.0.3840.1560" timestamp="1632218551082" />
-    <state width="1911" height="541" key="GridCell.Tab.1.bottom/0.25.3840.1522@0.25.3840.1522" timestamp="1639755759932" />
-    <state width="1911" height="541" key="GridCell.Tab.1.center" timestamp="1639755759932">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.center/0.0.3840.1560@0.0.3840.1560" timestamp="1632218551081" />
-    <state width="1911" height="541" key="GridCell.Tab.1.center/0.25.3840.1522@0.25.3840.1522" timestamp="1639755759932" />
-    <state width="1911" height="541" key="GridCell.Tab.1.left" timestamp="1639755759932">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.left/0.0.3840.1560@0.0.3840.1560" timestamp="1632218551081" />
-    <state width="1911" height="541" key="GridCell.Tab.1.left/0.25.3840.1522@0.25.3840.1522" timestamp="1639755759932" />
-    <state width="1911" height="541" key="GridCell.Tab.1.right" timestamp="1639755759932">
-      <screen x="0" y="25" width="3840" height="1522" />
-    </state>
-    <state width="3797" height="341" key="GridCell.Tab.1.right/0.0.3840.1560@0.0.3840.1560" timestamp="1632218551082" />
-    <state width="1911" height="541" key="GridCell.Tab.1.right/0.25.3840.1522@0.25.3840.1522" timestamp="1639755759932" />
+    <MESSAGE value="add trained multidim gmm" />
+    <option name="LAST_COMMIT_MESSAGE" value="add trained multidim gmm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
