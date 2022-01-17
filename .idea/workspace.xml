@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/stan/StanAutoencoder_pick_miss_cup.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
     <option name="width" value="1680" />
     <option name="height" value="978" />
@@ -371,7 +368,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1680" height="978" extended-state="0" />
+    <frame x="-1" y="25" width="1680" height="978" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
