@@ -25,8 +25,8 @@ class TopicsCountDataset(Dataset):
     def __getitem__(self, index):
         sequence, label = self.sequences[index]
         return dict(
-            sequence=Tensor(sequence.to_numpy()),
-            label=Tensor(label.float())
+            sequence=Tensor(sequence),
+            label=Tensor(label)
         )
 
 class TopicsCountDatamodel(pl.LightningDataModule):
@@ -59,8 +59,8 @@ class TopicsCountDatamodel(pl.LightningDataModule):
         # Create test train tuples
         train_size = int(len(self.train_test_data.values) * 0.8)
         x, y = self._sliding_windows(self.train_test_data.values, window_size)
-        self.train = TopicsCountDataset(zip(x[:train_size], y[:train_size]))
-        self.test = TopicsCountDataset(zip(x[train_size], y[train_size]))
+        self.train = TopicsCountDataset(list(zip(x[:train_size], y[:train_size])))
+        self.test = TopicsCountDataset(list(zip(x[train_size], y[train_size])))
 
         # Create val tuples
         x, y = self._sliding_windows(self.val_data.values, window_size)
@@ -102,7 +102,7 @@ class TopicsCountDatamodel(pl.LightningDataModule):
         x = []
         y = []
         for i in range(len(data) - window_size):
-            _x = data[i:(i + window_size)]
+            _x = data[:(i + window_size)]
             _y = data[i + window_size]
             x.append(_x)
             y.append(_y)
@@ -179,7 +179,10 @@ def main():
     datamodel = TopicsCountDatamodel(normal_data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
                                      anormaly_data_path="../../../robot-data/new_data/test/merged_pick_miss_cup_count.csv")
     datamodel.setup()
-    print(datamodel.train_dataloader())
+    for item in datamodel.train_dataloader():
+        print(item['sequence'].shape)
+        print(item['label'].shape)
+        break
 
 
 
