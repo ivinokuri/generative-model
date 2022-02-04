@@ -4,6 +4,10 @@ import torch
 from torch import nn, Tensor, optim
 from torch.utils.data import Dataset, DataLoader
 import pytorch_lightning as pl
+from pytorch_lightning import Trainer
+from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_lightning.callbacks import ModelCheckpoint
+from pytorch_lightning.callbacks import EarlyStopping
 from torch.autograd import Variable
 
 from sklearn.preprocessing import MinMaxScaler
@@ -13,6 +17,10 @@ import pandas
 scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
+
+N_EPOCHS = 8
+BATCH_SIZE=10
+HIDDEN_SIZE=30
 
 class TopicsCountDataset(Dataset):
 
@@ -26,7 +34,7 @@ class TopicsCountDataset(Dataset):
         sequence, label = self.sequences[index]
         return dict(
             sequence=Tensor(sequence),
-            label=Tensor(label)
+            label=Tensor(np.array(label))
         )
 
 class TopicsCountDatamodel(pl.LightningDataModule):
@@ -70,10 +78,10 @@ class TopicsCountDatamodel(pl.LightningDataModule):
         return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=2)
 
     def val_dataloader(self):
-        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=2)
+        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=2)
 
     def test_dataloader(self):
-        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=2)
+        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=2)
 
     def normalize_data(self, data):
         norm_data = data
@@ -98,11 +106,23 @@ class TopicsCountDatamodel(pl.LightningDataModule):
         return np.array(restored_data)
 
     @staticmethod
-    def _sliding_windows(data, window_size=10):
+    def _expanding_windows(data, window_size=10):
         x = []
         y = []
         for i in range(len(data) - window_size):
             _x = data[:(i + window_size)]
+            _y = data[i + window_size]
+            x.append(_x)
+            y.append(_y)
+
+        return np.array(x), np.array(y)
+
+    @staticmethod
+    def _sliding_windows(data, window_size=10):
+        x = []
+        y = []
+        for i in range(len(data) - window_size):
+            _x = data[i:(i + window_size)]
             _y = data[i + window_size]
             x.append(_x)
             y.append(_y)
@@ -136,8 +156,7 @@ class TopicCountPredictor(nn.Module):
         out, (h_t, c_t) = self.lstm(input_data)
         return out, (h_t, c_t)
 
-
-class TopicCountPredictorModule(pl.LightningDataModule):
+class TopicCountPredictorModule(pl.LightningModule):
 
     def __init__(self, features: int, hidden_size: int, num_layers: int):
         super().__init__()
@@ -155,21 +174,21 @@ class TopicCountPredictorModule(pl.LightningDataModule):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output = self(sequence, labels)
-        self.log("Training loss", loss, prog_bar=True, logger=True)
+        self.log("train_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
     def validation_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output = self(sequence, labels)
-        self.log("Validation loss", loss, prog_bar=True, logger=True)
+        self.log("val_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
     def test_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output = self(sequence, labels)
-        self.log("Test loss", loss, prog_bar=True, logger=True)
+        self.log("test_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
     def configure_optimizers(self):
@@ -178,11 +197,29 @@ class TopicCountPredictorModule(pl.LightningDataModule):
 def main():
     datamodel = TopicsCountDatamodel(normal_data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
                                      anormaly_data_path="../../../robot-data/new_data/test/merged_pick_miss_cup_count.csv")
-    datamodel.setup()
+    datamodel.setup(batch_size=BATCH_SIZE)
+
+    n_features = 0
     for item in datamodel.train_dataloader():
         print(item['sequence'].shape)
         print(item['label'].shape)
+        n_features = item['label'].shape[1]
         break
+
+    model = TopicCountPredictorModule(features=n_features, hidden_size=int(n_features/4), num_layers=2)
+    checkpoint_callback = ModelCheckpoint(dirpath='checkpoints', filename='{epoch}-{val_loss:.2f}-',
+                                                       save_top_k=1,
+                                                       verbose=True, monitor='val_loss', mode='min')
+    logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
+    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=2)
+    trainer = Trainer(logger=logger,
+                      checkpoint_callback=checkpoint_callback,
+                      callbacks=[early_stopping_callback],
+                      max_epochs=N_EPOCHS,
+                      gpus=torch.cuda.device_count(),
+                      progress_bar_refresh_rate=30)
+    trainer.fit(model, datamodule=datamodel)
+
 
 
 
