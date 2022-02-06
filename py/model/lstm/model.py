@@ -18,7 +18,7 @@ scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
-N_EPOCHS = 8
+N_EPOCHS = 30
 BATCH_SIZE=10
 HIDDEN_SIZE=30
 
@@ -37,51 +37,50 @@ class TopicsCountDataset(Dataset):
             label=Tensor(np.array(label))
         )
 
-class TopicsCountDatamodel(pl.LightningDataModule):
+class TopicsCountDatamodule(pl.LightningDataModule):
 
-    def __init__(self, normal_data_path: str = "", anormaly_data_path: str = ""):
+    def __init__(self, normal_data_path: str = "", anormaly_data_path: str = "", batch_size=10, window_size=10, normalize=True):
         super().__init__()
         self.normal_data_path = normal_data_path
         self.anomaly_data_path = anormaly_data_path
-        self.train_test_data = []
-        self.val_data = []
+        self.batch_size = batch_size
+        self.window_size = window_size
+        self.normalize = True
 
+        self.train_test_data = pandas.read_csv(self.normal_data_path)
+        self.val_data = pandas.read_csv(self.anomaly_data_path)
+        self.n_features = len(self.train_test_data.columns)
         self.train = None
         self.test = None
         self.val = None
 
-        self.batch_size = 0
         self.scalers = {}
-        self.prepare_data()
 
-    def setup(self, batch_size=10, window_size=10, normalize=True):
-        # load
-        self.train_test_data = pandas.read_csv(self.normal_data_path)
-        self.val_data = pandas.read_csv(self.anomaly_data_path)
-        self.batch_size = batch_size
+    def setup(self, stage=""):
+        print(stage)
         # normalize
-        if normalize:
+        if self.normalize:
             self.train_test_data = self.normalize_data(self.train_test_data)
             self.val_data = self.normalize_data(self.val_data)
 
         # Create test train tuples
         train_size = int(len(self.train_test_data.values) * 0.8)
-        x, y = self._sliding_windows(self.train_test_data.values, window_size)
-        self.train = TopicsCountDataset(list(zip(x[:train_size], y[:train_size])))
-        self.test = TopicsCountDataset(list(zip(x[train_size], y[train_size])))
+        x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
+        self.train = TopicsCountDataset(x_y_tupes[:train_size])
+        self.test = TopicsCountDataset(x_y_tupes[train_size:])
 
         # Create val tuples
-        x, y = self._sliding_windows(self.val_data.values, window_size)
-        self.val = TopicsCountDataset(zip(x, y))
+        x_y_tupes = self._sliding_windows(self.val_data.values, self.window_size)
+        self.val = TopicsCountDataset(x_y_tupes)
 
     def train_dataloader(self):
-        return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=2)
-
-    def val_dataloader(self):
-        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=2)
+        return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=1)
 
     def test_dataloader(self):
-        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=2)
+        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=1)
+
+    def val_dataloader(self):
+        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
 
     def normalize_data(self, data):
         norm_data = data
@@ -119,15 +118,13 @@ class TopicsCountDatamodel(pl.LightningDataModule):
 
     @staticmethod
     def _sliding_windows(data, window_size=10):
-        x = []
-        y = []
+        x_y_tupes = []
         for i in range(len(data) - window_size):
             _x = data[i:(i + window_size)]
             _y = data[i + window_size]
-            x.append(_x)
-            y.append(_y)
+            x_y_tupes.append((_x, _y))
 
-        return np.array(x), np.array(y)
+        return x_y_tupes
 
 class TopicCountPredictor(nn.Module):
 
@@ -142,8 +139,11 @@ class TopicCountPredictor(nn.Module):
         self.features = features
         self.hidden_size = hidden_size
         self.num_layers = num_layers
-        self.lstm = nn.LSTM(num_layers=num_layers, input_size=features,
-                            hidden_size=hidden_size, batch_first=True, dropout=0.2).to(device)
+        self.lstm = nn.LSTM(num_layers=num_layers,
+                            input_size=features,
+                            hidden_size=hidden_size,
+                            batch_first=True, dropout=0.2).to(device)
+        self.linear = nn.Linear(in_features=hidden_size, out_features=features).to(device)
 
 
     def forward(self, input_data: torch.Tensor):
@@ -152,9 +152,10 @@ class TopicCountPredictor(nn.Module):
         Args:
             input_data: (torch.Tensor): tensor of input daa
         """
-
+        self.lstm.flatten_parameters()
         out, (h_t, c_t) = self.lstm(input_data)
-        return out, (h_t, c_t)
+        pred = self.linear(h_t[1:])
+        return pred, (h_t, c_t)
 
 class TopicCountPredictorModule(pl.LightningModule):
 
@@ -164,30 +165,30 @@ class TopicCountPredictorModule(pl.LightningModule):
         self.criteria = nn.MSELoss()
 
     def forward(self, x, y=None):
-        output = self.model(x)
+        output, (h, c) = self.model(x)
         loss = 0
         if y is not None:
-            loss = self.criteria(output, y.unsqueeze(dim=1))
-        return loss, output
+            loss = self.criteria(output.squeeze(), y)
+        return loss, output, (h, c)
 
     def training_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
-        loss, output = self(sequence, labels)
+        loss, output, _ = self(sequence, labels)
         self.log("train_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
     def validation_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
-        loss, output = self(sequence, labels)
+        loss, output, _= self(sequence, labels)
         self.log("val_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
     def test_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
-        loss, output = self(sequence, labels)
+        loss, output, _ = self(sequence, labels)
         self.log("test_loss", loss, prog_bar=True, logger=True)
         return {"loss": loss}
 
@@ -195,32 +196,32 @@ class TopicCountPredictorModule(pl.LightningModule):
         return optim.AdamW(self.parameters(), lr=0.0001)
 
 def main():
-    datamodel = TopicsCountDatamodel(normal_data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
+    datamodule = TopicsCountDatamodule(normal_data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
                                      anormaly_data_path="../../../robot-data/new_data/test/merged_pick_miss_cup_count.csv")
-    datamodel.setup(batch_size=BATCH_SIZE)
 
-    n_features = 0
-    for item in datamodel.train_dataloader():
-        print(item['sequence'].shape)
-        print(item['label'].shape)
-        n_features = item['label'].shape[1]
-        break
+    n_features = datamodule.n_features
 
     model = TopicCountPredictorModule(features=n_features, hidden_size=int(n_features/4), num_layers=2)
-    checkpoint_callback = ModelCheckpoint(dirpath='checkpoints', filename='{epoch}-{val_loss:.2f}-',
-                                                       save_top_k=1,
-                                                       verbose=True, monitor='val_loss', mode='min')
+
+    checkpoint_callback = ModelCheckpoint(dirpath='checkpoints',
+                                          filename='{epoch}-{val_loss:.3f}',
+                                          save_top_k=1,
+                                          verbose=True,
+                                          monitor='val_loss',
+                                          mode='min')
+
     logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
     early_stopping_callback = EarlyStopping(monitor='val_loss', patience=2)
     trainer = Trainer(logger=logger,
-                      checkpoint_callback=checkpoint_callback,
-                      callbacks=[early_stopping_callback],
+                      enable_checkpointing=True,
+                      # checkpoint_callback=checkpoint_callback,
+                      callbacks=[checkpoint_callback, early_stopping_callback],
                       max_epochs=N_EPOCHS,
-                      gpus=torch.cuda.device_count(),
-                      progress_bar_refresh_rate=30)
-    trainer.fit(model, datamodule=datamodel)
+                      gpus=torch.cuda.device_count())
+    trainer.fit(model, datamodule=datamodule)
 
-
+    prediction = trainer.predict(model, datamodule=datamodule)
+    print(prediction)
 
 
 if __name__ == '__main__':
