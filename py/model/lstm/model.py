@@ -8,7 +8,8 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks import EarlyStopping
-from torch.autograd import Variable
+from argparse import ArgumentParser
+from tqdm import tqdm
 
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
@@ -18,7 +19,7 @@ scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
-N_EPOCHS = 30
+N_EPOCHS = 50
 BATCH_SIZE=10
 HIDDEN_SIZE=30
 
@@ -39,20 +40,21 @@ class TopicsCountDataset(Dataset):
 
 class TopicsCountDatamodule(pl.LightningDataModule):
 
-    def __init__(self, normal_data_path: str = "", anormaly_data_path: str = "", batch_size=10, window_size=10, normalize=True):
+    def __init__(self, data_path: str = "", batch_size=10,
+                 window_size=10,
+                 normalize=True):
         super().__init__()
-        self.normal_data_path = normal_data_path
-        self.anomaly_data_path = anormaly_data_path
+        self.normal_data_path = data_path
         self.batch_size = batch_size
         self.window_size = window_size
         self.normalize = True
 
         self.train_test_data = pandas.read_csv(self.normal_data_path)
-        self.val_data = pandas.read_csv(self.anomaly_data_path)
         self.n_features = len(self.train_test_data.columns)
         self.train = None
         self.test = None
         self.val = None
+        self.predict = None
 
         self.scalers = {}
 
@@ -61,17 +63,20 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         # normalize
         if self.normalize:
             self.train_test_data = self.normalize_data(self.train_test_data)
-            self.val_data = self.normalize_data(self.val_data)
 
-        # Create test train tuples
-        train_size = int(len(self.train_test_data.values) * 0.8)
-        x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
-        self.train = TopicsCountDataset(x_y_tupes[:train_size])
-        self.test = TopicsCountDataset(x_y_tupes[train_size:])
+        if stage == 'predict':
+            x_y_tupes = self._sliding_windows(self.train_test_data.values, 1)
+            self.predict = TopicsCountDataset(x_y_tupes)
+        else:
+            # Create test train tuples
+            train_size = int(len(self.train_test_data.values) * 0.8)
+            x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
+            self.train = TopicsCountDataset(x_y_tupes[:train_size])
+            self.test = TopicsCountDataset(x_y_tupes[train_size:])
+            # Create val tuples
+            x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
+            self.val = TopicsCountDataset(x_y_tupes)
 
-        # Create val tuples
-        x_y_tupes = self._sliding_windows(self.val_data.values, self.window_size)
-        self.val = TopicsCountDataset(x_y_tupes)
 
     def train_dataloader(self):
         return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=1)
@@ -80,6 +85,9 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=1)
 
     def val_dataloader(self):
+        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
+
+    def predict_dataloader(self):
         return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
 
     def normalize_data(self, data):
@@ -159,8 +167,9 @@ class TopicCountPredictor(nn.Module):
 
 class TopicCountPredictorModule(pl.LightningModule):
 
-    def __init__(self, features: int, hidden_size: int, num_layers: int):
+    def __init__(self, features: int, hidden_size: int, num_layers: int, lr=0.001):
         super().__init__()
+        self.lr = lr
         self.model = TopicCountPredictor(features, hidden_size, num_layers)
         self.criteria = nn.MSELoss()
 
@@ -193,36 +202,66 @@ class TopicCountPredictorModule(pl.LightningModule):
         return {"loss": loss}
 
     def configure_optimizers(self):
-        return optim.AdamW(self.parameters(), lr=0.0001)
+        return optim.AdamW(self.parameters(), lr=self.lr)
 
-def main():
-    datamodule = TopicsCountDatamodule(normal_data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
-                                     anormaly_data_path="../../../robot-data/new_data/test/merged_pick_miss_cup_count.csv")
-
+def main(parsed_args):
+    datamodule = TopicsCountDatamodule(
+        data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
+        batch_size=parsed_args.batch_size, window_size=parsed_args.window_size)
     n_features = datamodule.n_features
-
-    model = TopicCountPredictorModule(features=n_features, hidden_size=int(n_features/4), num_layers=2)
-
     checkpoint_callback = ModelCheckpoint(dirpath='checkpoints',
-                                          filename='{epoch}-{val_loss:.3f}',
+                                          # filename='{epoch}-{val_loss:.3f}',
+                                          filename='best-checkpoint',
                                           save_top_k=1,
                                           verbose=True,
                                           monitor='val_loss',
                                           mode='min')
 
     logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
-    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=2)
+    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=10)
     trainer = Trainer(logger=logger,
                       enable_checkpointing=True,
-                      # checkpoint_callback=checkpoint_callback,
                       callbacks=[checkpoint_callback, early_stopping_callback],
                       max_epochs=N_EPOCHS,
                       gpus=torch.cuda.device_count())
-    trainer.fit(model, datamodule=datamodule)
+    if parsed_args.train:
 
-    prediction = trainer.predict(model, datamodule=datamodule)
-    print(prediction)
+        model = TopicCountPredictorModule(features=n_features,
+                                          hidden_size=parsed_args.hidden_states,
+                                          num_layers=parsed_args.layers,
+                                          lr=parsed_args.lr)
+
+        trainer.fit(model, datamodule=datamodule)
+
+    trained_model = TopicCountPredictorModule.load_from_checkpoint('checkpoints/best-checkpoint.ckpt',
+                                                                   features=n_features,
+                                                                   hidden_size=parsed_args.hidden_states,
+                                                                   num_layers=parsed_args.layers
+                                                                   )
+    trained_model.freeze()
+    datamodule.setup('predict')
+    predict_set = datamodule.predict
+    predictions = []
+    labels = []
+    for item in tqdm(predict_set):
+        sequence = item['sequence']
+        label = item['label']
+        _, output, _ = trained_model(sequence.unsqueeze(dim=0))
+        predictions.append(output.squeeze())
+        labels.append(label)
+
 
 
 if __name__ == '__main__':
-    main()
+    parser = ArgumentParser()
+    parser = Trainer.add_argparse_args(parser)
+    parser.add_argument("--train", type=bool, default=True, help="Retrain model pass True")
+    parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
+    parser.add_argument("--batch_size", type=int, default=10, help="batch size")
+    parser.add_argument("--window_size", type=int, default=10, help="window size")
+    parser.add_argument("--hidden_states", type=int, default=20, help="Number of hidden states")
+    parser.add_argument("--layers", type=int, default=2, help="Number of layers")
+
+    parsed_args, _ = parser.parse_known_args()
+
+    main(parsed_args)
