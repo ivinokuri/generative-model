@@ -22,26 +22,8 @@
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/lstm/checkpoints/best-checkpoint.ckpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_0/events.out.tfevents.1644342222.Igors-MacBook-Pro.local.27057.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_0/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/events.out.tfevents.1644342683.Igors-MacBook-Pro.local.31260.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_2/events.out.tfevents.1644342744.Igors-MacBook-Pro.local.31796.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_2/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_3/events.out.tfevents.1644342782.Igors-MacBook-Pro.local.32167.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_3/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_4/events.out.tfevents.1644342818.Igors-MacBook-Pro.local.32437.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_4/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_5/events.out.tfevents.1644342840.Igors-MacBook-Pro.local.32709.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_5/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_6/events.out.tfevents.1644342908.Igors-MacBook-Pro.local.33244.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_6/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_7/events.out.tfevents.1644344121.Igors-MacBook-Pro.local.43247.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_7/hparams.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/lstm/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/lstm/model.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,31 +48,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="191" column="77" selection-start-line="191" selection-start-column="77" selection-end-line="191" selection-end-column="77" />
-              <folding>
-                <element signature="e#24#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -248,18 +205,6 @@
       <recent name="$PROJECT_DIR$/robot-data/new_data" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.model (1)">
     <configuration name="data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -279,6 +224,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -298,6 +246,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -317,6 +268,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
@@ -336,6 +290,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.model" />
@@ -352,7 +309,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -469,9 +426,6 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914287" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
       <list>
@@ -487,21 +441,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="package fixing" />
@@ -539,24 +483,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>183</line>
-          <option name="timeStamp" value="3" />
+          <line>206</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
-    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1643990326775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
+    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1644586184645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
   <component name="debuggerHistoryManager">

@@ -15,12 +15,13 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import pandas
+import os
 
 scalers = {}
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
-N_EPOCHS = 50
+N_EPOCHS = 100
 BATCH_SIZE=10
 HIDDEN_SIZE=30
 
@@ -78,16 +79,16 @@ class TopicsCountDatamodule(pl.LightningDataModule):
 
 
     def train_dataloader(self):
-        return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=1)
+        return DataLoader(self.train, batch_size=self.batch_size, shuffle=False, num_workers=0)
 
     def test_dataloader(self):
-        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=1)
+        return DataLoader(self.test, batch_size=self.batch_size, shuffle=False, num_workers=0)
 
     def val_dataloader(self):
-        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
+        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=0)
 
-    def predict_dataloader(self):
-        return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
+    # def predict_dataloader(self):
+    #     return DataLoader(self.val, batch_size=self.batch_size, shuffle=False, num_workers=1)
 
     def normalize_data(self, data):
         norm_data = data
@@ -146,6 +147,7 @@ class TopicCountPredictor(nn.Module):
                             batch_first=True, dropout=0.2).to(device)
         self.linear = nn.Linear(in_features=hidden_size, out_features=features).to(device)
 
+
     def forward(self, input_data: torch.Tensor):
         self.lstm.flatten_parameters()
         out, (h_t, c_t) = self.lstm(input_data)
@@ -195,6 +197,32 @@ class TopicCountPredictorModule(pl.LightningModule):
     def configure_optimizers(self):
         return optim.AdamW(self.parameters(), lr=self.lr)
 
+
+class LossAggregateCallback(pl.Callback):
+
+    def __init__(self):
+        self.train_losses = []
+        self.validation_losses = []
+
+    def on_train_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        self.train_losses.append(trainer.logged_metrics['train_loss_epoch'])
+
+    def on_validation_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        self.validation_losses.append(trainer.logged_metrics['val_loss'])
+
+    def on_fit_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        fig, axs = plt.subplots(1)
+        axs.plot(range(len(self.train_losses)), self.train_losses, label="Train loss")
+        axs.plot(range(len(self.validation_losses)), self.validation_losses, label="Validation loss")
+        axs.set_title('Loss')
+        axs.legend()
+        plt.legend()
+        if not os.path.isdir('./plots'):
+            os.mkdir('./plots')
+        plt.savefig('plots/loss.png')
+        plt.show()
+        plt.close()
+
 def main(parsed_args):
 
     datamodule = TopicsCountDatamodule(
@@ -204,7 +232,6 @@ def main(parsed_args):
         normalize=parsed_args.norm)
     n_features = datamodule.n_features
     checkpoint_callback = ModelCheckpoint(dirpath='checkpoints',
-                                          # filename='{epoch}-{val_loss:.3f}',
                                           filename='best-checkpoint',
                                           save_top_k=1,
                                           verbose=True,
@@ -213,9 +240,10 @@ def main(parsed_args):
 
     logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
     early_stopping_callback = EarlyStopping(monitor='val_loss', patience=10)
+    loss_callback = LossAggregateCallback()
     trainer = Trainer(logger=logger,
                       enable_checkpointing=True,
-                      callbacks=[checkpoint_callback, early_stopping_callback],
+                      callbacks=[checkpoint_callback, early_stopping_callback, loss_callback],
                       max_epochs=N_EPOCHS,
                       gpus=torch.cuda.device_count())
     if parsed_args.train:
@@ -228,37 +256,37 @@ def main(parsed_args):
 
         trainer.fit(model, datamodule=datamodule)
 
-    trained_model = TopicCountPredictorModule.load_from_checkpoint('checkpoints/best-checkpoint.ckpt',
-                                                                   features=n_features,
-                                                                   hidden_size=parsed_args.hidden_states,
-                                                                   num_layers=parsed_args.layers)
-    trained_model.freeze()
-    datamodule.setup('predict')
-    predict_set = datamodule.predict
-    predictions = []
-    labels = []
-    for item in tqdm(predict_set):
-        sequence = item['sequence']
-        label = item['label']
-        _, output, _ = trained_model(sequence.unsqueeze(dim=0))
-        predictions.append(output.squeeze().numpy())
-        labels.append(label.numpy())
-
-    labels = np.array(labels).T
-    predictions = np.array(predictions).T
-    for i in range(len(labels)):
-        fig, axs = plt.subplots(1)
-        p = predictions[i]
-        l = labels[i]
-        axs.plot(range(len(p)), p, label="Predicted")
-        axs.plot(range(len(l)), l, label="Original")
-        axs.set_title('predictions')
-        axs.legend()
-        plt.legend()
-        plt.savefig('plots/' + str(i) + '.png')
-        plt.show()
-        plt.close()
-        i+=1
+    # trained_model = TopicCountPredictorModule.load_from_checkpoint('checkpoints/best-checkpoint.ckpt',
+    #                                                                features=n_features,
+    #                                                                hidden_size=parsed_args.hidden_states,
+    #                                                                num_layers=parsed_args.layers)
+    # trained_model.freeze()
+    # datamodule.setup('predict')
+    # predict_set = datamodule.predict
+    # predictions = []
+    # labels = []
+    # for item in tqdm(predict_set):
+    #     sequence = item['sequence']
+    #     label = item['label']
+    #     _, output, _ = trained_model(sequence.unsqueeze(dim=0))
+    #     predictions.append(output.squeeze().numpy())
+    #     labels.append(label.numpy())
+    #
+    # labels = np.array(labels).T
+    # predictions = np.array(predictions).T
+    # for i in range(len(labels)):
+    #     fig, axs = plt.subplots(1)
+    #     p = predictions[i]
+    #     l = labels[i]
+    #     axs.plot(range(len(p)), p, label="Predicted")
+    #     axs.plot(range(len(l)), l, label="Original")
+    #     axs.set_title('predictions')
+    #     axs.legend()
+    #     plt.legend()
+    #     plt.savefig('plots/' + str(i) + '.png')
+    #     plt.show()
+    #     plt.close()
+    #     i+=1
 
 
 
@@ -267,7 +295,7 @@ if __name__ == '__main__':
     parser = Trainer.add_argparse_args(parser)
     parser.add_argument("--train", type=bool, default=True, help="Retrain model pass True")
     parser.add_argument("--norm", type=bool, default=False, help="Normalizing data")
-    parser.add_argument("--loss", type=str, default='mse', help="Loss function")
+    parser.add_argument("--loss", type=str, default='mse', help="Loss function (mse, pois)")
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
     parser.add_argument("--batch_size", type=int, default=10, help="batch size")
     parser.add_argument("--window_size", type=int, default=10, help="window size")
