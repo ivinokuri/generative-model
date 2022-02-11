@@ -10,6 +10,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks import EarlyStopping
 from argparse import ArgumentParser
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
@@ -47,7 +48,7 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         self.normal_data_path = data_path
         self.batch_size = batch_size
         self.window_size = window_size
-        self.normalize = True
+        self.normalize = normalize
 
         self.train_test_data = pandas.read_csv(self.normal_data_path)
         self.n_features = len(self.train_test_data.columns)
@@ -72,10 +73,8 @@ class TopicsCountDatamodule(pl.LightningDataModule):
             train_size = int(len(self.train_test_data.values) * 0.8)
             x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
             self.train = TopicsCountDataset(x_y_tupes[:train_size])
+            self.val = TopicsCountDataset(x_y_tupes[train_size:])
             self.test = TopicsCountDataset(x_y_tupes[train_size:])
-            # Create val tuples
-            x_y_tupes = self._sliding_windows(self.train_test_data.values, self.window_size)
-            self.val = TopicsCountDataset(x_y_tupes)
 
 
     def train_dataloader(self):
@@ -137,12 +136,6 @@ class TopicsCountDatamodule(pl.LightningDataModule):
 class TopicCountPredictor(nn.Module):
 
     def __init__(self, features: int, hidden_size: int, num_layers: int):
-        """
-        Initialize the model.
-        Args:
-            config:
-            input_size: (int): size of the input
-        """
         super(TopicCountPredictor, self).__init__()
         self.features = features
         self.hidden_size = hidden_size
@@ -153,13 +146,7 @@ class TopicCountPredictor(nn.Module):
                             batch_first=True, dropout=0.2).to(device)
         self.linear = nn.Linear(in_features=hidden_size, out_features=features).to(device)
 
-
     def forward(self, input_data: torch.Tensor):
-        """
-        Run forward computation.
-        Args:
-            input_data: (torch.Tensor): tensor of input daa
-        """
         self.lstm.flatten_parameters()
         out, (h_t, c_t) = self.lstm(input_data)
         pred = self.linear(h_t[1:])
@@ -167,11 +154,15 @@ class TopicCountPredictor(nn.Module):
 
 class TopicCountPredictorModule(pl.LightningModule):
 
-    def __init__(self, features: int, hidden_size: int, num_layers: int, lr=0.001):
+    def __init__(self, features: int, hidden_size: int, num_layers: int, lr=0.001, loss="mse"):
         super().__init__()
         self.lr = lr
+        self.loss = loss
         self.model = TopicCountPredictor(features, hidden_size, num_layers)
-        self.criteria = nn.MSELoss()
+        if loss == 'mse':
+            self.criteria = nn.MSELoss()
+        elif loss == 'pois':
+            self.criteria = nn.PoissonNLLLoss()
 
     def forward(self, x, y=None):
         output, (h, c) = self.model(x)
@@ -184,30 +175,33 @@ class TopicCountPredictorModule(pl.LightningModule):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output, _ = self(sequence, labels)
-        self.log("train_loss", loss, prog_bar=True, logger=True)
-        return {"loss": loss}
+        self.log("train_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
 
     def validation_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output, _= self(sequence, labels)
-        self.log("val_loss", loss, prog_bar=True, logger=True)
-        return {"loss": loss}
+        self.log("val_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
 
     def test_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output, _ = self(sequence, labels)
-        self.log("test_loss", loss, prog_bar=True, logger=True)
-        return {"loss": loss}
+        self.log("test_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
 
     def configure_optimizers(self):
         return optim.AdamW(self.parameters(), lr=self.lr)
 
 def main(parsed_args):
+
     datamodule = TopicsCountDatamodule(
         data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
-        batch_size=parsed_args.batch_size, window_size=parsed_args.window_size)
+        batch_size=parsed_args.batch_size,
+        window_size=parsed_args.window_size,
+        normalize=parsed_args.norm)
     n_features = datamodule.n_features
     checkpoint_callback = ModelCheckpoint(dirpath='checkpoints',
                                           # filename='{epoch}-{val_loss:.3f}',
@@ -229,15 +223,15 @@ def main(parsed_args):
         model = TopicCountPredictorModule(features=n_features,
                                           hidden_size=parsed_args.hidden_states,
                                           num_layers=parsed_args.layers,
-                                          lr=parsed_args.lr)
+                                          lr=parsed_args.lr,
+                                          loss=parsed_args.loss)
 
         trainer.fit(model, datamodule=datamodule)
 
     trained_model = TopicCountPredictorModule.load_from_checkpoint('checkpoints/best-checkpoint.ckpt',
                                                                    features=n_features,
                                                                    hidden_size=parsed_args.hidden_states,
-                                                                   num_layers=parsed_args.layers
-                                                                   )
+                                                                   num_layers=parsed_args.layers)
     trained_model.freeze()
     datamodule.setup('predict')
     predict_set = datamodule.predict
@@ -247,8 +241,24 @@ def main(parsed_args):
         sequence = item['sequence']
         label = item['label']
         _, output, _ = trained_model(sequence.unsqueeze(dim=0))
-        predictions.append(output.squeeze())
-        labels.append(label)
+        predictions.append(output.squeeze().numpy())
+        labels.append(label.numpy())
+
+    labels = np.array(labels).T
+    predictions = np.array(predictions).T
+    for i in range(len(labels)):
+        fig, axs = plt.subplots(1)
+        p = predictions[i]
+        l = labels[i]
+        axs.plot(range(len(p)), p, label="Predicted")
+        axs.plot(range(len(l)), l, label="Original")
+        axs.set_title('predictions')
+        axs.legend()
+        plt.legend()
+        plt.savefig('plots/' + str(i) + '.png')
+        plt.show()
+        plt.close()
+        i+=1
 
 
 
@@ -256,6 +266,8 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser = Trainer.add_argparse_args(parser)
     parser.add_argument("--train", type=bool, default=True, help="Retrain model pass True")
+    parser.add_argument("--norm", type=bool, default=False, help="Normalizing data")
+    parser.add_argument("--loss", type=str, default='mse', help="Loss function")
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
     parser.add_argument("--batch_size", type=int, default=10, help="batch size")
     parser.add_argument("--window_size", type=int, default=10, help="window size")
