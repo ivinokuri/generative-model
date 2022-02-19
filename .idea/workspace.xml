@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/py/model/lstm/plots/loss-40hidden.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/checkpoints/best-checkpoint-v1.ckpt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/lstm/checkpoints/best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_0/events.out.tfevents.1644585691.Igors-Mac-mini.local.31153.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_0/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/events.out.tfevents.1644586191.Igors-Mac-mini.local.31232.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/hparams.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/lstm/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/lstm/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/plots/loss.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +316,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -324,6 +331,7 @@
       <workItem from="1632216572181" duration="3332000" />
       <workItem from="1632732973268" duration="4348000" />
       <workItem from="1639753387018" duration="7083000" />
+      <workItem from="1645273136157" duration="5634000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -426,6 +434,9 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914287" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
       <list>
@@ -483,20 +494,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>82</line>
+          <line>104</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>206</line>
+          <line>229</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
+          <line>323</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
+          <line>314</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
-    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1644586184645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
+    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1645281950903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
   <component name="debuggerHistoryManager">
