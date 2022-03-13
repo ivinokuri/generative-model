@@ -8,6 +8,7 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks import EarlyStopping
+from pytorch_forecasting.metrics import NegativeBinomialDistributionLoss
 from argparse import ArgumentParser
 from tqdm import tqdm
 import matplotlib.pyplot as plt
@@ -250,8 +251,9 @@ def main(parsed_args):
     now = datetime.now()
     global date_time
     date_time = now.strftime("%m-%d-%Y_%H-%M-%S")
+    fileName = 'merged_normal_pick_count.csv'
     datamodule = TopicsCountDatamodule(
-        data_path="../../../robot-data/new_data/normal/merged_normal_pick_count.csv",
+        data_path="../../../robot-data/new_data/normal/" + fileName,
         test_path="../../../robot-data/new_data/test/merged_pick_miss_cup_count.csv",
         batch_size=parsed_args.batch_size,
         window_size=parsed_args.window_size,
@@ -317,7 +319,7 @@ def main(parsed_args):
     axs.plot(range(len(anomaly_losses)), anomaly_losses, color="r", alpha=0.7, label="Anomaly Loss")
     axs.legend()
     plt.legend()
-    plt.savefig('plots/anomaly_loss_' + date_time + '.png')
+    plt.savefig('plots/anomaly_loss_' + fileName + '_' + date_time + '.png')
     plt.show()
     plt.close()
 
@@ -328,7 +330,7 @@ def main(parsed_args):
                                 label="Anomaly loss$")
     axs.legend()
     plt.legend()
-    plt.savefig('plots/hist_loss_' + date_time + '.png')
+    plt.savefig('plots/hist_loss_' + fileName + '_' + date_time + '.png')
     plt.show()
     plt.close()
 
@@ -342,7 +344,7 @@ if __name__ == '__main__':
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
     parser.add_argument("--batch_size", type=int, default=10, help="batch size")
     parser.add_argument("--window_size", type=int, default=10, help="window size")
-    parser.add_argument("--hidden_states", type=int, default=None, help="Number of hidden states")
+    parser.add_argument("--hidden_states", type=int, default=158, help="Number of hidden states")
     parser.add_argument("--layers", type=int, default=2, help="Number of layers")
 
     parsed_args, _ = parser.parse_known_args()

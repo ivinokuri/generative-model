@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/py/model/lstm/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/lstm/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/lstm/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +33,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/generative_model$model.coverage" NAME="model Coverage Results" MODIFIED="1629139941090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model" />
-    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1643134896494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
-    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1644522351702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
+    <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1647199898969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
+    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1647201062557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1630481588278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
   </component>
   <component name="DatabaseView">
@@ -49,64 +52,56 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="train_poisson.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dtolpin/time_sequence_prediction/train_poisson.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4509">
-                  <caret line="12" column="17" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/py/model/lstm/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/py/model/lstm/README.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="train_poisson.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dtolpin/time_sequence_prediction/train_poisson.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
+              <folding>
+                <element signature="e#24#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data-adapter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robot-data/new_data/data-adapter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py/model/lstm/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="240">
+                <caret line="16" selection-start-line="16" selection-end-line="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,11 +122,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" />
         <option value="$PROJECT_DIR$/py/model/autoencoder/encoder.py" />
         <option value="$PROJECT_DIR$/py/model/lstm/utils.py" />
-        <option value="$PROJECT_DIR$/py/model/lstm/model.py" />
         <option value="$PROJECT_DIR$/py/model/lstm/README.md" />
+        <option value="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" />
+        <option value="$PROJECT_DIR$/py/model/lstm/model.py" />
       </list>
     </option>
   </component>
@@ -148,10 +143,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="25" />
-    <option name="width" value="1680" />
-    <option name="height" value="978" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="38" />
+    <option name="width" value="1728" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectId" id="1wP4RHqh8gnpyhrDAmAIPvoykOt" />
   <component name="ProjectView">
@@ -165,6 +160,11 @@
             <path>
               <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
               <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="data-adaptation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
@@ -183,6 +183,14 @@
               <item name="py" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="lstm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="generative-model" type="462c0819:PsiDirectoryNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="lstm" type="462c0819:PsiDirectoryNode" />
+              <item name="plots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="generative-model" type="b2602c69:ProjectViewProjectNode" />
@@ -455,7 +463,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2560" height="1008" extended-state="6" />
+    <frame x="0" y="38" width="1728" height="1032" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -463,41 +471,27 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914287" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32914287" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32914287" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22983426" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23749007" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32831" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.1883746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19572954" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.12576313" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3469751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22588523" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.12576313" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914287" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32914287" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914287" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.23085715" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32914287" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -526,6 +520,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="package fixing" />
@@ -563,23 +560,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>104</line>
+          <line>105</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>229</line>
+          <line>230</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>323</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/lstm/model.py</url>
-          <line>314</line>
-          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -639,55 +626,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="117" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pytorch_lightning/core/datamodule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6960">
-          <caret line="473" selection-start-line="473" selection-end-line="473" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/autoencoder/autoencoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="117" selection-start-line="20" selection-start-column="106" selection-end-line="20" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pystan/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10230">
@@ -709,9 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-adaptation/data-adapter.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot-data/new_data/normal/merged_normal_build.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -721,16 +656,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot-data/new_data/normal/merged_normal_pick_count.csv">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot-data/new_data/data-adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/py/model/model.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,13 +709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-737911580/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="5758" column="12" lean-forward="true" selection-start-line="5758" selection-start-column="12" selection-end-line="5758" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-737911580/builtins.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pytorch_lightning/core/datamodule.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -868,30 +787,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/11.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/11.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/0.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/1.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/3.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/4.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/6.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/7.png" />
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/8.png" />
     <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/torch/nn/modules/linear.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
@@ -903,9 +806,7 @@
     <entry file="file://$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_0/hparams.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/hparams.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/logs/topic-counts/version_1/hparams.yaml" />
     <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pytorch_lightning/loggers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -920,24 +821,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/dtolpin/time_sequence_prediction/train_poisson.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/pytorch_lightning/core/lightning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="1773" column="39" lean-forward="true" selection-start-line="1773" selection-start-column="39" selection-end-line="1773" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/anomaly_loss_03-13-2022_20-54-13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/loss_03-13-2022_20-54-13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-adaptation/data-adapter.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot-data/new_data/data-adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4509">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py/model/lstm/README.md">
+    <entry file="file://$USER_HOME$/anaconda3/envs/stanenv/lib/python3.7/site-packages/torch/nn/modules/loss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="803">
+          <caret line="294" column="33" selection-start-line="294" selection-start-column="17" selection-end-line="294" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/hist_loss_03-13-2022_20-54-13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/plots/anomaly_loss_02-19-2022_16-45-52.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="16" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py/model/lstm/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="186" column="28" selection-start-line="186" selection-start-column="28" selection-end-line="186" selection-end-column="28" />
+          <folding>
+            <element signature="e#24#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
