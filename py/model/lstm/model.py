@@ -8,7 +8,6 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.callbacks import EarlyStopping
-from pytorch_forecasting.metrics import NegativeBinomialDistributionLoss
 from argparse import ArgumentParser
 from tqdm import tqdm
 import matplotlib.pyplot as plt
