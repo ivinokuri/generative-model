@@ -19,6 +19,7 @@ import os
 import glob
 from datetime import datetime
 from utils import list_files
+from autoencoder import Autoencoder
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
@@ -44,7 +45,7 @@ class TopicsCountDataset(Dataset):
         sequence, label = self.sequences[index]
         return dict(
             sequence=Tensor(sequence),
-            label=Tensor(np.array(label))
+            label=Tensor(label)
         )
     
 class TopicsCountDatamodule(pl.LightningDataModule):
@@ -61,6 +62,7 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         self.batch_size = batch_size
         self.window_size = window_size
         self.normalize = normalize
+        self.n_features = 0
 
         self.train_val_data = []
         self.validation_data = []
@@ -79,6 +81,7 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         data_files = list_files(self.normal_data_path)
         for f in data_files:
             file_data = pandas.read_csv(f)
+            self.n_features = len(file_data.columns)
             if self.normalize:
                 _, tail = os.path.split(f)
                 file_data = self.normalize_data(file_data, name=tail)
@@ -100,7 +103,7 @@ class TopicsCountDatamodule(pl.LightningDataModule):
             self.test_data.append(x_y_tuples)
 
     def setup(self, stage='') -> None:
-        if stage == 'train':
+        if stage == 'fit':
             for (t, v) in self.train_val_data:
                 self.train.append(TopicsCountDataset(t))
                 self.val.append(TopicsCountDataset(v))
@@ -149,14 +152,92 @@ class TopicsCountDatamodule(pl.LightningDataModule):
     @staticmethod
     def _sliding_windows(data, window_size=10):
         x_y_tupes = []
-        for i in range(len(data) - window_size):
+        for i in range(len(data) - window_size - 1):
             _x = data[i:(i + window_size)]
-            _y = data[i + window_size]
+            _y = data[i+1: i + window_size + 1]
             x_y_tupes.append((_x, _y))
 
         return x_y_tupes
 
+class TopicCountAutoencoderModule(pl.LightningModule):
+
+    def __init__(self, features: int, lr: float=0.001, loss: str="mse"):
+        super().__init__()
+        self.lr = lr
+        self.loss = loss
+        self.model = Autoencoder(features, int(features/4), features)
+        if loss == 'mse':
+            self.criteria = nn.MSELoss()
+
+    def forward(self, x, y=None):
+        output = self.model(x)
+        loss = 0
+        if y is not None:
+            loss = self.criteria(output, y)
+        return loss, output
+
+    def training_step(self, batch, index):
+        sequence = batch[index]["sequence"]
+        labels = batch[index]["label"]
+        loss, output = self(sequence, labels)
+        self.log("train_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
+
+    def validation_step(self, batch, index, subindex):
+        sequence = batch["sequence"]
+        labels = batch["label"]
+        loss, output = self(sequence, labels)
+        self.log("val_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
+
+    def test_step(self, batch, index):
+        sequence = batch[index]["sequence"]
+        labels = batch[index]["label"]
+        loss, output = self(sequence, labels)
+        self.log("test_loss", loss, prog_bar=True, logger=True, on_epoch=True)
+        return loss
+
+    def configure_optimizers(self):
+        return optim.AdamW(self.parameters(), lr=self.lr)
+
+    def get_criteria(self):
+        return self.criteria
+
+
+class LossAggregateCallback(pl.Callback):
+
+    def __init__(self):
+        self.train_losses = []
+        self.validation_losses = []
+
+    def on_train_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        self.train_losses.append([trainer.logged_metrics[v].item() for v in trainer.logged_metrics])
+
+    def on_validation_start(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        print('hello')
+
+    def on_validation_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        self.validation_losses.append([trainer.logged_metrics[v].item() for v in trainer.logged_metrics])
+
+    def on_fit_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+        global date_time
+        fig, axs = plt.subplots(1)
+        axs.plot(range(len(self.train_losses)), self.train_losses, label="Train loss")
+        axs.plot(range(len(self.validation_losses)), self.validation_losses, label="Validation loss")
+        axs.set_title('Loss')
+        axs.legend()
+        plt.legend()
+        if not os.path.isdir('./plots'):
+            os.mkdir('./plots')
+        plt.savefig('plots/loss_' + date_time + '.png')
+        plt.show()
+        plt.close()
+
+
 def main(parsed_args):
+    now = datetime.now()
+    global date_time
+    date_time = now.strftime("%m-%d-%Y_%H-%M-%S")
     datamodule = TopicsCountDatamodule(
         data_dir_path="../../../robot-data/new_data/normal/pick/counts_only/",
         test_dir_path="../../../robot-data/new_data/test/pick/miss_cup_counts/",
@@ -164,15 +245,27 @@ def main(parsed_args):
         window_size=parsed_args.window_size,
         normalize=parsed_args.norm)
     datamodule.prepare_data()
-    datamodule.setup('train')
-    trainLoader = datamodule.train_dataloader()
-    for batch in trainLoader:
-        for b in batch:
-            print(b)
+    n_features = datamodule.n_features
+    checkpoint_callback = ModelCheckpoint(dirpath='checkpoints',
+                                          filename='best-checkpoint',
+                                          save_top_k=1,
+                                          verbose=False,
+                                          monitor='val_loss',
+                                          mode='min')
 
-    valLoader = datamodule.val_dataloader()
-    datamodule.setup('test')
-    testLoader = datamodule.test_dataloader()
+    logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
+    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=10)
+    loss_callback = LossAggregateCallback()
+    trainer = Trainer(logger=logger,
+                      enable_checkpointing=True,
+                      callbacks=[checkpoint_callback, early_stopping_callback, loss_callback],
+                      max_epochs=parsed_args.epochs,
+                      gpus=torch.cuda.device_count())
+    model = TopicCountAutoencoderModule(features=n_features,
+                                      lr=parsed_args.lr,
+                                      loss=parsed_args.loss)
+
+    trainer.fit(model, datamodule=datamodule)
 
 
 
@@ -186,8 +279,6 @@ if __name__ == '__main__':
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
     parser.add_argument("--batch_size", type=int, default=10, help="batch size")
     parser.add_argument("--window_size", type=int, default=10, help="window size")
-    parser.add_argument("--hidden_states", type=int, default=158, help="Number of hidden states")
-    parser.add_argument("--layers", type=int, default=2, help="Number of layers")
 
     parsed_args, _ = parser.parse_known_args()
 
