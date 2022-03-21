@@ -2,7 +2,7 @@
 
 import torch
 from torch import nn, Tensor, optim
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader, ConcatDataset
 import pytorch_lightning as pl
 from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
@@ -24,7 +24,7 @@ from autoencoder import Autoencoder
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
-N_EPOCHS = 60
+N_EPOCHS = 100
 BATCH_SIZE=20
 HIDDEN_SIZE=79
 
@@ -37,9 +37,6 @@ class TopicsCountDataset(Dataset):
 
     def __len__(self):
         return len(self.sequences)
-
-    # def __iter__(self):
-    #     pass
 
     def __getitem__(self, index):
         sequence, label = self.sequences[index]
@@ -116,16 +113,13 @@ class TopicsCountDatamodule(pl.LightningDataModule):
                 self.val.append(TopicsCountDataset(t))
 
     def train_dataloader(self):
-        return [DataLoader(d, batch_size=self.batch_size, shuffle=False)
-                for d in self.train]
+        return DataLoader(ConcatDataset(self.train), batch_size=self.batch_size, shuffle=False)
 
     def test_dataloader(self):
-        return [DataLoader(d, batch_size=self.batch_size, shuffle=False)
-                for d in self.test]
+        return DataLoader(ConcatDataset(self.test), batch_size=self.batch_size, shuffle=False)
 
     def val_dataloader(self):
-        return [DataLoader(d, batch_size=self.batch_size, shuffle=False)
-                for d in self.val]
+        return DataLoader(ConcatDataset(self.val), batch_size=self.batch_size, shuffle=False)
 
     def normalize_data(self, data, name=""):
         norm_data = data
@@ -177,13 +171,13 @@ class TopicCountAutoencoderModule(pl.LightningModule):
         return loss, output
 
     def training_step(self, batch, index):
-        sequence = batch[index]["sequence"]
-        labels = batch[index]["label"]
+        sequence = batch["sequence"]
+        labels = batch["label"]
         loss, output = self(sequence, labels)
         self.log("train_loss", loss, prog_bar=True, logger=True, on_epoch=True)
         return loss
 
-    def validation_step(self, batch, index, subindex):
+    def validation_step(self, batch, index):
         sequence = batch["sequence"]
         labels = batch["label"]
         loss, output = self(sequence, labels)
@@ -191,8 +185,8 @@ class TopicCountAutoencoderModule(pl.LightningModule):
         return loss
 
     def test_step(self, batch, index):
-        sequence = batch[index]["sequence"]
-        labels = batch[index]["label"]
+        sequence = batch["sequence"]
+        labels = batch["label"]
         loss, output = self(sequence, labels)
         self.log("test_loss", loss, prog_bar=True, logger=True, on_epoch=True)
         return loss
@@ -211,13 +205,10 @@ class LossAggregateCallback(pl.Callback):
         self.validation_losses = []
 
     def on_train_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
-        self.train_losses.append([trainer.logged_metrics[v].item() for v in trainer.logged_metrics])
-
-    def on_validation_start(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
-        print('hello')
+        self.train_losses.append(trainer.logged_metrics['train_loss_epoch'])
 
     def on_validation_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
-        self.validation_losses.append([trainer.logged_metrics[v].item() for v in trainer.logged_metrics])
+        self.validation_losses.append(trainer.logged_metrics['val_loss'])
 
     def on_fit_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
         global date_time
@@ -254,30 +245,86 @@ def main(parsed_args):
                                           mode='min')
 
     logger = TensorBoardLogger(save_dir='logs', name='topic-counts')
-    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=10)
+    early_stopping_callback = EarlyStopping(monitor='val_loss', patience=100)
     loss_callback = LossAggregateCallback()
     trainer = Trainer(logger=logger,
                       enable_checkpointing=True,
                       callbacks=[checkpoint_callback, early_stopping_callback, loss_callback],
                       max_epochs=parsed_args.epochs,
                       gpus=torch.cuda.device_count())
-    model = TopicCountAutoencoderModule(features=n_features,
-                                      lr=parsed_args.lr,
-                                      loss=parsed_args.loss)
+    if parsed_args.train:
+        model = TopicCountAutoencoderModule(features=n_features,
+                                          lr=parsed_args.lr,
+                                          loss=parsed_args.loss)
 
-    trainer.fit(model, datamodule=datamodule)
+        trainer.fit(model, datamodule=datamodule)
 
+    list_of_files = filter(os.path.isfile,
+                           glob.glob('checkpoints/' + '*'))
+    last_model = sorted(list_of_files,
+                        key=os.path.getmtime)
+    print(last_model)
+    last_model = last_model[len(last_model) - 1]
+    print(last_model)
+    trained_model = TopicCountAutoencoderModule.load_from_checkpoint(last_model,
+                                                                   features=n_features)
 
+    trained_model.freeze()
+    datamodule.setup('val')
+    normal_set = datamodule.val
+    normal_losses = []
+    for d in normal_set:
+        nl = []
+        for item in tqdm(d):
+            sequence = item['sequence']
+            label = item['label']
+            loss, output = trained_model(sequence.unsqueeze(dim=0), label.unsqueeze(dim=0))
+            nl.append(loss.item())
+        normal_losses.append(nl)
+
+    datamodule.setup('test')
+    anomaly_set = datamodule.test
+    anomaly_losses = []
+    for d in anomaly_set:
+        nl = []
+        for item in tqdm(d):
+            sequence = item['sequence']
+            label = item['label']
+            loss, output = trained_model(sequence.unsqueeze(dim=0), label.unsqueeze(dim=0))
+            nl.append(loss.item())
+        anomaly_losses.append(nl)
+
+    i = 0
+    for nl in normal_losses:
+        fig, axs = plt.subplots(1, figsize=(15, 10))
+        axs.plot(range(len(nl)), nl, color="g", label="Normal Loss")
+        axs.legend()
+        plt.legend()
+        plt.savefig('plots/normal_loss_' + date_time + '_' + str(i) + '.png')
+        plt.show()
+        plt.close()
+        i += 1
+
+    i = 0
+    for al in anomaly_losses:
+        fig, axs = plt.subplots(1, figsize=(15, 10))
+        axs.plot(range(len(al)), al, color="r", label="Anomaly Loss")
+        axs.legend()
+        plt.legend()
+        plt.savefig('plots/anomaly_loss_' + date_time + '_' + str(i) + '.png')
+        plt.show()
+        plt.close()
+        i += 1
 
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser = Trainer.add_argparse_args(parser)
-    parser.add_argument("--train", type=bool, default=True, help="Retrain model pass True")
+    parser.add_argument("--train", type=bool, default=False, help="Retrain model pass True")
     parser.add_argument("--norm", type=bool, default=True, help="Normalizing data")
     parser.add_argument("--loss", type=str, default='mse', help="Loss function (mse, pois)")
     parser.add_argument("--epochs", type=int, default=N_EPOCHS, help="Number of epochs")
     parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
-    parser.add_argument("--batch_size", type=int, default=10, help="batch size")
+    parser.add_argument("--batch_size", type=int, default=5, help="batch size")
     parser.add_argument("--window_size", type=int, default=10, help="window size")
 
     parsed_args, _ = parser.parse_known_args()

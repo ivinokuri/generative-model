@@ -32,7 +32,8 @@ class Decoder(nn.Module):
             nn.Linear(self.decoder_input_size, int(self.decoder_input_size * 2)),
             nn.ReLU(True),
             nn.Linear(int(self.decoder_input_size * 2), self.output_size),
-            nn.Tanh())
+            nn.ReLU(True)
+        )
 
     def forward(self, x: torch.Tensor):
         return self.seq(x)
