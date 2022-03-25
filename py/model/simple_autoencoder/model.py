@@ -30,6 +30,15 @@ HIDDEN_SIZE=79
 
 date_time=""
 
+NORMAL_DATA_BASE_PATH = "../../../robot-data/new_data/normal/"
+NORMAL_DATA = ['building/counts_only', 'cans/counts_only', 'corr/counts_only', 'pick/counts_only']
+
+ANOMALY_DATA_BASE_PATH = "../../../robot-data/new_data/test/"
+ANOMALY_DATA = ['laser_fault/build/counts_only', 'laser_fault/cans/counts_only', 'laser_fault/corr/counts_only',
+                'obs/cans/counts_only', 'obs/corr/counts_only', 'obs/cans/counts_only',
+                'pick/miss_cup/counts_only', 'pick/restricted_vision/counts_only', 'pick/stolen/counts_only',
+                'pick/stuck/counts_only', 'software_fault/counts_only', 'velocity_attack/counts_only']
+
 class TopicsCountDataset(Dataset):
 
     def __init__(self, sequences):
@@ -49,8 +58,7 @@ class TopicsCountDatamodule(pl.LightningDataModule):
 
     def __init__(self, data_dir_path: str = "", test_dir_path="", batch_size=10,
                  window_size=10,
-                 normalize=True,
-                 features=None):
+                 normalize=True):
         super(TopicsCountDatamodule, self).__init__()
         self.scalers = {}
 
@@ -75,29 +83,31 @@ class TopicsCountDatamodule(pl.LightningDataModule):
 
     def prepare_data(self) -> None:
         # load train and validation data
-        data_files = list_files(self.normal_data_path)
-        for f in data_files:
-            file_data = pandas.read_csv(f)
-            self.n_features = len(file_data.columns)
-            if self.normalize:
-                _, tail = os.path.split(f)
-                file_data = self.normalize_data(file_data, name=tail)
-            train_size = int(len(file_data.values) * 0.8)
-            x_y_tuples = self._sliding_windows(file_data.values, self.window_size)
-            self.train_val_data.append((x_y_tuples[:train_size], x_y_tuples[train_size:]))
-            # full set for calculating loss at the end of the training
-            x_y_tuples = self._sliding_windows(file_data.values, 1)
-            self.validation_data.append(x_y_tuples)
+        if self.normal_data_path:
+            data_files = list_files(self.normal_data_path)
+            for f in data_files:
+                file_data = pandas.read_csv(f)
+                self.n_features = len(file_data.columns)
+                if self.normalize:
+                    _, tail = os.path.split(f)
+                    file_data = self.normalize_data(file_data, name=tail)
+                train_size = int(len(file_data.values) * 0.8)
+                x_y_tuples = self._sliding_windows(file_data.values, self.window_size)
+                self.train_val_data.append((x_y_tuples[:train_size], x_y_tuples[train_size:]))
+                # full set for calculating loss at the end of the training
+                x_y_tuples = self._sliding_windows(file_data.values, 1)
+                self.validation_data.append(x_y_tuples)
 
         # load test data
-        data_files = list_files(self.anomaly_data_path)
-        for f in data_files:
-            file_data = pandas.read_csv(f)
-            if self.normalize:
-                _, tail = os.path.split(f)
-                file_data = self.normalize_data(file_data, name=tail)
-            x_y_tuples = self._sliding_windows(file_data.values, 1)
-            self.test_data.append(x_y_tuples)
+        if self.anomaly_data_path:
+            data_files = list_files(self.anomaly_data_path)
+            for f in data_files:
+                file_data = pandas.read_csv(f)
+                if self.normalize:
+                    _, tail = os.path.split(f)
+                    file_data = self.normalize_data(file_data, name=tail)
+                x_y_tuples = self._sliding_windows(file_data.values, 1)
+                self.test_data.append(x_y_tuples)
 
     def setup(self, stage='') -> None:
         if stage == 'fit':
@@ -228,6 +238,17 @@ class LossAggregateCallback(pl.Callback):
 def main(parsed_args):
     now = datetime.now()
     global date_time
+    normal_dir_paths = []
+    anomaly_dir_paths = []
+    for nd in NORMAL_DATA:
+        normal_dir_paths.append({nd.replace('/', '_'): NORMAL_DATA_BASE_PATH + nd})
+
+    for ad in ANOMALY_DATA:
+        anomaly_dir_paths.append({ad.replace('/', '_'): ANOMALY_DATA_BASE_PATH + ad})
+    print(normal_dir_paths)
+    print(anomaly_dir_paths)
+    # heat map for all scenarios
+    # mean and std
     date_time = now.strftime("%m-%d-%Y_%H-%M-%S")
     datamodule = TopicsCountDatamodule(
         data_dir_path="../../../robot-data/new_data/normal/pick/counts_only/",
