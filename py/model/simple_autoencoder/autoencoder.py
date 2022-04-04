@@ -13,9 +13,12 @@ class Encoder(nn.Module):
 
         self.seq = nn.Sequential(
             nn.Linear(self.input_size, int(self.input_size/2)),
-            nn.ReLU(),
+            nn.ReLU(True),
             nn.Linear(int(self.input_size/2), int(self.input_size/4)),
-            nn.ReLU()
+            nn.ReLU(True),
+            nn.Linear(int(self.input_size / 4), int(self.input_size / 8)),
+            nn.ReLU(True),
+            nn.Linear(int(self.input_size / 8), int(self.input_size / 16))
         )
 
     def forward(self, x: torch.Tensor):
@@ -29,10 +32,14 @@ class Decoder(nn.Module):
         self.output_size = output_size
 
         self.seq = nn.Sequential(
-            nn.Linear(self.decoder_input_size, int(self.decoder_input_size * 2)),
+            nn.Linear(int(self.decoder_input_size / 16), int(self.decoder_input_size / 8)),
             nn.ReLU(True),
-            nn.Linear(int(self.decoder_input_size * 2), self.output_size),
-            nn.ReLU(True)
+            nn.Linear(int(self.decoder_input_size / 8), int(self.decoder_input_size / 4)),
+            nn.ReLU(True),
+            nn.Linear(int(self.decoder_input_size / 4), int(self.decoder_input_size / 2)),
+            nn.ReLU(True),
+            nn.Linear(int(self.decoder_input_size / 2), self.output_size),
+            nn.Tanh()
         )
 
     def forward(self, x: torch.Tensor):
@@ -43,7 +50,7 @@ class Autoencoder(nn.Module):
     def __init__(self, input_size: int, decoder_input_size: int, output_size: int):
         super(Autoencoder, self).__init__()
         self.encoder = Encoder(input_size).to(device)
-        self.decoder = Decoder(int(decoder_input_size), output_size).to(device)
+        self.decoder = Decoder(input_size, output_size).to(device)
 
     def forward(self, x: torch.Tensor):
         encoder_output = self.encoder(x)

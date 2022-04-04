@@ -9,6 +9,16 @@ import re
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+NORMAL_DATA_BASE_PATH = "../../../robot-data/new_data/normal/"
+NORMAL_DATA = ['building/counts_only/', 'cans/counts_only/', 'corr/counts_only/', 'pick/counts_only/']
+
+ANOMALY_DATA_BASE_PATH = "../../../robot-data/new_data/test/"
+ANOMALY_DATA = ['laser_fault/build/counts_only/', 'laser_fault/cans/counts_only/', 'laser_fault/corr/counts_only/',
+                'obs/cans/counts_only/', 'obs/corr/counts_only/', 'obs/cans/counts_only/',
+                'pick/miss_cup/counts_only/', 'pick/restricted_vision/counts_only/', 'pick/stolen/counts_only/',
+                'pick/stuck/counts_only/', 'software_fault/counts_only/', 'velocity_attack/counts_only/']
+
+
 def sort_predicate(value):
     nums = re.findall(r'\d+', value)
     return int(nums[0])
@@ -30,3 +40,14 @@ def init_hidden(x: torch.Tensor, hidden_size: int, num_layers: int = 1):
         xavier: (bool): wether or not use xavier initialization
     """
     return Variable(torch.zeros(num_layers, x.size(0), hidden_size)).to(device)
+
+def get_file_paths():
+    normal_dir_paths = []
+    anomaly_dir_paths = []
+    for nd in NORMAL_DATA:
+        normal_dir_paths.append({nd.replace('/', '_'): NORMAL_DATA_BASE_PATH + nd})
+
+    for ad in ANOMALY_DATA:
+        anomaly_dir_paths.append({ad.replace('/', '_'): ANOMALY_DATA_BASE_PATH + ad})
+
+    return normal_dir_paths, anomaly_dir_paths

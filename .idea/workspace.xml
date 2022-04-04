@@ -20,65 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/distance-measure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/autoencoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_0/events.out.tfevents.1647892617.MacBook-Pro.local.37420.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_0/hparams.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/model-data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/model-data-adapter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_build1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/build/laser_fault_build1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_build2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/build/laser_fault_build2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_build3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/build/laser_fault_build3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans11.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_cans9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans/laser_fault_cans9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/laser_fault_corr_rand9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr/laser_fault_corr_rand9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_cans7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/cans/obs_cans7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/obs/obs_corr_rand9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/robot-data/new_data/test/obs/corr/obs_corr_rand9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup10.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup11.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup12.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup13.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup14.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup15.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup16.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup5.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot-data/new_data/test/pick/miss_cup_counts/counts_miss_cup9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/loss_03-21-2022_21-56-55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,14 +243,14 @@
       <recent name="$PROJECT_DIR$/robot-data/new_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/robot-data/new_data/test/obs/corr_rand" />
-      <recent name="$PROJECT_DIR$/robot-data/new_data/test/obs/cans" />
-      <recent name="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/corr_rand" />
-      <recent name="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/cans" />
-      <recent name="$PROJECT_DIR$/robot-data/new_data/test/laser_fault/build" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.model (2)">
+  <component name="RunManager" selected="Python.simple-autoencoder">
     <configuration name="data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -292,7 +273,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="distance-measure" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,12 +281,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/autoencoder" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/simple_autoencoder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/autoencoder/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/simple_autoencoder/distance-measure.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,28 +317,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="generative-model" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/simple_autoencoder" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="model-data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -380,20 +339,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="simple-autoencoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="generative-model" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/simple_autoencoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.data-adapter" />
       <item itemvalue="Python.model (1)" />
       <item itemvalue="Python.model-data-adapter" />
-      <item itemvalue="Python.model (2)" />
+      <item itemvalue="Python.simple-autoencoder" />
+      <item itemvalue="Python.distance-measure" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.model (2)" />
+        <item itemvalue="Python.simple-autoencoder" />
+        <item itemvalue="Python.distance-measure" />
         <item itemvalue="Python.model-data-adapter" />
         <item itemvalue="Python.model (1)" />
         <item itemvalue="Python.data-adapter" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -415,7 +396,13 @@
       <workItem from="1645273136157" duration="5634000" />
       <workItem from="1647888030288" duration="3783000" />
       <workItem from="1648044185222" duration="1653000" />
-      <workItem from="1648204225530" duration="3456000" />
+      <workItem from="1648204225530" duration="8782000" />
+      <workItem from="1648577595366" duration="789000" />
+      <workItem from="1648625204588" duration="4132000" />
+      <workItem from="1648645413289" duration="2734000" />
+      <workItem from="1648659873334" duration="6075000" />
+      <workItem from="1648734260353" duration="3616000" />
+      <workItem from="1648806595842" duration="20660000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -508,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647893597313</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="prepare data and model to train">
+      <created>1648207828002</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648207828002</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,7 +570,8 @@
     <MESSAGE value="dataloading done, adding autoencoder not completed" />
     <MESSAGE value="implemented model but there is a bug with indexes" />
     <MESSAGE value="fixed dataset iteration problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed dataset iteration problem" />
+    <MESSAGE value="prepare data and model to train" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepare data and model to train" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -621,29 +616,26 @@
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/model.py</url>
-          <line>217</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/model.py</url>
-          <line>310</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/model.py</url>
-          <line>248</line>
+          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/distance-measure.py</url>
+          <line>21</line>
           <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/model.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generative_model$model__2_.coverage" NAME="model (2) Coverage Results" MODIFIED="1648206640107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$model__2_.coverage" NAME="model (2) Coverage Results" MODIFIED="1648628946834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$simple_autoencoder.coverage" NAME="simple-autoencoder Coverage Results" MODIFIED="1648976376494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
-    <SUITE FILE_PATH="coverage/generative_model$model_data_adapter.coverage" NAME="model-data-adapter Coverage Results" MODIFIED="1648205589408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$model_data_adapter.coverage" NAME="model-data-adapter Coverage Results" MODIFIED="1648294193210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1647716882723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$distance_measure.coverage" NAME="distance-measure Coverage Results" MODIFIED="1648737241273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
