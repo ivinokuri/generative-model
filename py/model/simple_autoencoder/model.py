@@ -82,9 +82,10 @@ class TopicsCountDatamodule(pl.LightningDataModule):
                     _, tail = os.path.split(f)
                     file_data = self.normalize_data(file_data, name=tail)
                 train_size = int(len(file_data.values) * 0.8)
-                x_batches = self._sliding_windows(file_data.values, self.window_size)
+                x_batches = self._sliding_windows(file_data.values, self.window_size, shuffle=True)
                 self.train_val_data.append((x_batches[:train_size], x_batches[train_size:]))
                 # full set for calculating loss at the end of the training
+                x_batches = self._sliding_windows(file_data.values, self.window_size)
                 self.validation_data.append(x_batches)
 
         # load test data
@@ -147,11 +148,13 @@ class TopicsCountDatamodule(pl.LightningDataModule):
         return np.array(restored_data)
 
     @staticmethod
-    def _sliding_windows(data, window_size=10):
+    def _sliding_windows(data, window_size=10, shuffle=False):
         x_batches = []
         for i in range(len(data) - window_size):
             _x = data[i:(i + window_size)]
             x_batches.append(_x)
+        if shuffle:
+            np.random.shuffle(x_batches)
         return x_batches
 
 class TopicCountAutoencoderModule(pl.LightningModule):
@@ -229,17 +232,16 @@ def main_2(parsed_args):
     now = datetime.now()
     global date_time
     date_time = now.strftime("%m-%d-%Y_%H-%M-%S")
-    normal_dir_paths, anomaly_dir_paths = get_file_paths()
+    normal_dir_paths = get_file_paths()
 
     print(normal_dir_paths)
-    print(anomaly_dir_paths)
 
     for o in normal_dir_paths:
         key = list(o.keys())[0]
         value = list(o.values())[0]
         print(key, value)
         datamodule = TopicsCountDatamodule(
-            data_dir_path=value,
+            data_dir_path=value[0],
             test_dir_path='',
             batch_size=parsed_args.batch_size,
             window_size=parsed_args.window_size,
@@ -260,12 +262,12 @@ def main_2(parsed_args):
                           callbacks=[checkpoint_callback, early_stopping_callback, loss_callback],
                           max_epochs=parsed_args.epochs,
                           gpus=torch.cuda.device_count())
-        model = TopicCountAutoencoderModule(features=n_features,
-                                            window_size=parsed_args.window_size,
-                                            lr=parsed_args.lr,
-                                            loss=parsed_args.loss)
-
-        trainer.fit(model, datamodule=datamodule)
+        if parsed_args.train:
+            model = TopicCountAutoencoderModule(features=n_features,
+                                                window_size=parsed_args.window_size,
+                                                lr=parsed_args.lr,
+                                                loss=parsed_args.loss)
+            trainer.fit(model, datamodule=datamodule)
 
         list_of_files = filter(os.path.isfile,
                                glob.glob(key + 'checkpoints/' + '*'))
@@ -308,10 +310,21 @@ def main_2(parsed_args):
             axs.fill_between(range(len(nl)), mean + std, mean - std, facecolor='blue', alpha=0.3, label="std loss " + str(std))
             axs.legend()
             plt.legend()
-            plt.savefig('plots/'+ key +'/normal_loss_' + key + '_' + date_time + '_' + str(i) + '.png')
+            plt.savefig('plots/'+ key +'/normal_loss_' + key + '_' + '_' + str(i) + '.png')
             plt.show()
             plt.close()
             i += 1
+
+        concated_normal_losses = np.concatenate(normal_losses)
+        means = [np.mean(concated_normal_losses)] * len(concated_normal_losses)
+        fig, axs = plt.subplots(1, figsize=(15, 10))
+        axs.plot(range(len(concated_normal_losses)), concated_normal_losses, color="g", label="Normal Loss")
+        axs.plot(range(len(concated_normal_losses)), means, color="r", label="mean loss ", linestyle='--')
+        axs.legend()
+        plt.legend()
+        plt.savefig('plots/' + key + '/total_normal_loss_' + key + '_'  + '_' + str(i) + '.png')
+        plt.show()
+        plt.close()
 
         print(mean_losses)
         print(std_losses)
@@ -319,7 +332,7 @@ def main_2(parsed_args):
         ax.hist(mean_losses, density=True, stacked=True, label="Normal losses mean")
         ax.legend()
         ax.set_title('Mean ' + str(np.mean(mean_losses)))
-        plt.savefig('plots/'+ key +'/mean_losses_hist_' + date_time + '.png')
+        plt.savefig('plots/' + key + '/mean_losses_hist_'  + '.png')
         plt.legend()
         plt.show()
 
@@ -327,9 +340,107 @@ def main_2(parsed_args):
         ax.hist(std_losses, density=True, stacked=True, label="Normal losses std")
         ax.legend()
         ax.set_title('STDs ' + str(np.mean(std_losses)))
-        plt.savefig('plots/'+ key +'/std_losses_hist_' + date_time + '.png')
+        plt.savefig('plots/' + key + '/std_losses_hist_' + '.png')
         plt.legend()
         plt.show()
+
+        for ans in value[1]:
+            a_key = list(ans.keys())[0]
+            a_value = list(ans.values())[0]
+            datamodule = TopicsCountDatamodule(
+                data_dir_path='',
+                test_dir_path=a_value,
+                batch_size=parsed_args.batch_size,
+                window_size=parsed_args.window_size,
+                normalize=parsed_args.norm)
+            datamodule.prepare_data()
+            datamodule.setup('test')
+            anomaly_set = datamodule.test
+
+            anomaly_losses = []
+            mean_losses = []
+            std_losses = []
+            for d in anomaly_set:
+                nl = []
+                for item in tqdm(d):
+                    sequence = item['sequence']
+                    loss, output = trained_model(sequence)
+                    nl.append(loss.item())
+                anomaly_losses.append(nl)
+                mean_losses.append(np.mean(nl))
+                std_losses.append(np.std(nl))
+
+            i = 0
+            for nl in anomaly_losses:
+                means = [mean_losses[i]] * len(nl)
+                mean = mean_losses[i]
+                std = [std_losses[i]]
+                fig, axs = plt.subplots(1, figsize=(15, 10))
+                axs.plot(range(len(nl)), nl, color="g", label="Anomaly Loss")
+                axs.plot(range(len(nl)), means, color="r", label="anomaly mean loss " + str(mean), linestyle='--')
+                axs.fill_between(range(len(nl)), mean + std, mean - std, facecolor='blue', alpha=0.3,
+                                 label="anomaly std loss " + str(std))
+                axs.legend()
+                plt.legend()
+                plt.savefig('plots/' + key + '/anomaly_loss_' + a_key + '_' + '_' + str(i) + '.png')
+                plt.show()
+                plt.close()
+                i += 1
+
+            concated_anomaly_losses = np.concatenate(anomaly_losses)
+            means = [np.mean(concated_anomaly_losses)] * len(concated_anomaly_losses)
+            fig, axs = plt.subplots(1, figsize=(15, 10))
+            axs.plot(range(len(concated_anomaly_losses)), concated_anomaly_losses, color="g", label="Anomaly Loss")
+            axs.plot(range(len(concated_anomaly_losses)), means, color="r", label="mean loss ", linestyle='--')
+            axs.legend()
+            plt.legend()
+            plt.savefig('plots/' + key + '/total_anomaly_loss_' + a_key + '_' + '_' + str(i) + '.png')
+            plt.show()
+            plt.close()
+
+            fig, ax = plt.subplots()
+            ax.hist(mean_losses, density=True, stacked=True, label="Anomaly losses mean")
+            ax.legend()
+            ax.set_title('Mean ' + str(np.mean(mean_losses)))
+            plt.savefig('plots/' + key + '/mean_losses_hist_' + a_key + "_" + '.png')
+            plt.legend()
+            plt.show()
+
+            fig, ax = plt.subplots()
+            ax.hist(std_losses, density=True, stacked=True, label="Anomaly losses std")
+            ax.legend()
+            ax.set_title('STDs ' + str(np.mean(std_losses)))
+            plt.savefig('plots/' + key + '/std_losses_hist_' + a_key + "_" + '.png')
+            plt.legend()
+            plt.show()
+
+            all_lines = []
+            dfs = []
+            for nl in normal_losses:
+                # means = [np.mean(nl)] * len(nl)
+                all_lines.append(np.array(nl))
+                dfs.append(pandas.DataFrame(nl, columns=['normal']))
+            index = len(all_lines)
+            for al in anomaly_losses:
+                # means = [np.mean(al)] * len(al)
+                all_lines.append(np.array(al))
+                dfs.append(pandas.DataFrame(al, columns=['anomaly']))
+
+            fig, ax = plt.subplots(1, figsize=(15, 10))
+            for i in range(len(all_lines)):
+                l = all_lines[i]
+                if i >= index:
+                    ax.plot(range(len(l)), l,  linestyle='--', label="Anomaly")
+                else:
+                    ax.plot(range(len(l)), l, label="Normal")
+            ax.legend()
+            ax.set_title('All losses lines ')
+            plt.savefig('plots/' + key + '/losses_lines' + '.png')
+            plt.legend()
+            plt.show()
+
+            pandas.concat(dfs, axis=1).to_csv('./loss_csv/lines_' + key + '.csv')
+
 
 def main(parsed_args):
     now = datetime.now()

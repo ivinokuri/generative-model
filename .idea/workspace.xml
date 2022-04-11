@@ -20,45 +20,405 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/distance-measure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/autoencoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/best-checkpoint.ckpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_0/events.out.tfevents.1647892617.MacBook-Pro.local.37420.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/building_counts_only_checkpoints/building_counts_only_best-checkpoint-v1.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/building_counts_only_checkpoints/building_counts_only_best-checkpoint-v2.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/building_counts_only_checkpoints/building_counts_only_best-checkpoint-v3.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/building_counts_only_checkpoints/building_counts_only_best-checkpoint-v4.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/building_counts_only_checkpoints/building_counts_only_best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/cans_counts_only_checkpoints/cans_counts_only_best-checkpoint-v1.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/cans_counts_only_checkpoints/cans_counts_only_best-checkpoint-v2.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/cans_counts_only_checkpoints/cans_counts_only_best-checkpoint-v3.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/cans_counts_only_checkpoints/cans_counts_only_best-checkpoint-v4.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/cans_counts_only_checkpoints/cans_counts_only_best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/corr_counts_only_checkpoints/corr_counts_only_best-checkpoint-v1.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/corr_counts_only_checkpoints/corr_counts_only_best-checkpoint-v2.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/corr_counts_only_checkpoints/corr_counts_only_best-checkpoint-v3.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/corr_counts_only_checkpoints/corr_counts_only_best-checkpoint-v4.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/corr_counts_only_checkpoints/corr_counts_only_best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_0/events.out.tfevents.1648967849.MacBook-Pro.local.51449.0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_0/hparams.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/model-data-adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/model-data-adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_1/events.out.tfevents.1648968788.MacBook-Pro.local.51449.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_1/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_10/events.out.tfevents.1648974019.MacBook-Pro.local.93599.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_10/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_11/events.out.tfevents.1648974438.MacBook-Pro.local.93599.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_11/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_12/events.out.tfevents.1648976380.MacBook-Pro.local.24520.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_12/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_13/events.out.tfevents.1648977048.MacBook-Pro.local.24520.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_13/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_14/events.out.tfevents.1648977651.MacBook-Pro.local.24520.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_14/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_15/events.out.tfevents.1648978210.MacBook-Pro.local.24520.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_15/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_2/events.out.tfevents.1648969151.MacBook-Pro.local.51449.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_2/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_3/events.out.tfevents.1648969352.MacBook-Pro.local.51449.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_3/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_4/events.out.tfevents.1648970197.MacBook-Pro.local.71840.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_4/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_5/events.out.tfevents.1648970955.MacBook-Pro.local.71840.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_5/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_6/events.out.tfevents.1648971397.MacBook-Pro.local.71840.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_6/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_7/events.out.tfevents.1648972088.MacBook-Pro.local.71840.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_7/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_8/events.out.tfevents.1648972780.MacBook-Pro.local.93599.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_8/hparams.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_9/events.out.tfevents.1648973397.MacBook-Pro.local.93599.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/logs/topic-counts/version_9/hparams.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/anomaly_loss_03-21-2022_22-11-00_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/loss_03-21-2022_21-56-55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/normal_loss_03-21-2022_22-11-00_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/pick_counts_only_checkpoints/pick_counts_only_best-checkpoint-v1.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/pick_counts_only_checkpoints/pick_counts_only_best-checkpoint-v2.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/pick_counts_only_checkpoints/pick_counts_only_best-checkpoint-v3.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/pick_counts_only_checkpoints/pick_counts_only_best-checkpoint-v4.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/pick_counts_only_checkpoints/pick_counts_only_best-checkpoint.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/mean_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/normal_loss_building_counts_only__04-03-2022_11-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/building_counts_only_/std_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/mean_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_11-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/cans_counts_only_/std_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/mean_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_11-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/corr_counts_only_/std_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/loss_building_counts_only__04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/loss_cans_counts_only__04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/loss_corr_counts_only__04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/loss_pick_counts_only__04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/mean_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_11-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10/pick_counts_only_/std_losses_hist_04-03-2022_11-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/mean_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-16-35_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/building_counts_only_/std_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/mean_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-16-35_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/cans_counts_only_/std_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/mean_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-16-35_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/corr_counts_only_/std_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/loss_building_counts_only__04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/loss_cans_counts_only__04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/loss_corr_counts_only__04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/loss_pick_counts_only__04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/mean_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-16-35_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2/pick_counts_only_/std_losses_hist_04-03-2022_10-16-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/mean_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/normal_loss_building_counts_only__04-03-2022_09-37-26_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/building_counts_only_/std_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/mean_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_09-37-26_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/cans_counts_only_/std_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/mean_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_09-37-26_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/corr_counts_only_/std_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/loss_building_counts_only__04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/loss_cans_counts_only__04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/loss_corr_counts_only__04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/loss_pick_counts_only__04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/mean_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_09-37-26_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3/pick_counts_only_/std_losses_hist_04-03-2022_09-37-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/mean_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/normal_loss_building_counts_only__04-01-2022_23-14-30_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/building_counts_only_/std_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/mean_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/normal_loss_cans_counts_only__04-01-2022_23-14-30_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/cans_counts_only_/std_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/mean_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/normal_loss_corr_counts_only__04-01-2022_23-14-30_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/corr_counts_only_/std_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/loss_building_counts_only__04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/loss_cans_counts_only__04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/loss_corr_counts_only__04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/loss_pick_counts_only__04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/mean_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/normal_loss_pick_counts_only__04-01-2022_23-14-30_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5/pick_counts_only_/std_losses_hist_04-01-2022_23-14-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/mean_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/normal_loss_building_counts_only__04-03-2022_10-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/building_counts_only_/std_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/mean_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/normal_loss_cans_counts_only__04-03-2022_10-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/cans_counts_only_/std_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/mean_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/normal_loss_corr_counts_only__04-03-2022_10-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/corr_counts_only_/std_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/loss_building_counts_only__04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/loss_cans_counts_only__04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/loss_corr_counts_only__04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/loss_pick_counts_only__04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/mean_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/normal_loss_pick_counts_only__04-03-2022_10-59-38_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7/pick_counts_only_/std_losses_hist_04-03-2022_10-59-38.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/py/model/simple_autoencoder/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/model/simple_autoencoder/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,36 +603,14 @@
       <recent name="$PROJECT_DIR$/robot-data/new_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/10" />
-      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/7" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/2" />
       <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2" />
       <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3" />
-      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/5" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/3" />
+      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/5" />
     </key>
   </component>
   <component name="RunManager" selected="Python.simple-autoencoder">
-    <configuration name="data-adapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="generative-model" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/robot-data/new_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robot-data/new_data/data-adapter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="distance-measure" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -339,6 +677,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plots" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="generative-model" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/simple_autoencoder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/simple_autoencoder/plots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="simple-autoencoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -362,19 +722,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.data-adapter" />
       <item itemvalue="Python.model (1)" />
       <item itemvalue="Python.model-data-adapter" />
       <item itemvalue="Python.simple-autoencoder" />
       <item itemvalue="Python.distance-measure" />
+      <item itemvalue="Python.plots" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.simple-autoencoder" />
+        <item itemvalue="Python.plots" />
         <item itemvalue="Python.distance-measure" />
         <item itemvalue="Python.model-data-adapter" />
         <item itemvalue="Python.model (1)" />
-        <item itemvalue="Python.data-adapter" />
       </list>
     </recent_temporary>
   </component>
@@ -402,7 +762,9 @@
       <workItem from="1648645413289" duration="2734000" />
       <workItem from="1648659873334" duration="6075000" />
       <workItem from="1648734260353" duration="3616000" />
-      <workItem from="1648806595842" duration="20660000" />
+      <workItem from="1648806595842" duration="39273000" />
+      <workItem from="1649498141438" duration="8402000" />
+      <workItem from="1649665481600" duration="6441000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -620,19 +982,15 @@
           <line>21</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/py/model/simple_autoencoder/model.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generative_model$model__2_.coverage" NAME="model (2) Coverage Results" MODIFIED="1648628946834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
-    <SUITE FILE_PATH="coverage/generative_model$simple_autoencoder.coverage" NAME="simple-autoencoder Coverage Results" MODIFIED="1648976376494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$simple_autoencoder.coverage" NAME="simple-autoencoder Coverage Results" MODIFIED="1649694892493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
     <SUITE FILE_PATH="coverage/generative_model$model_data_adapter.coverage" NAME="model-data-adapter Coverage Results" MODIFIED="1648294193210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$plots.coverage" NAME="plots Coverage Results" MODIFIED="1649269325779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1647716882723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$distance_measure.coverage" NAME="distance-measure Coverage Results" MODIFIED="1648737241273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
