@@ -12,10 +12,10 @@ def only_count_data(source_dir, dest_dir):
     for f in onlyfiles:
         _, tail = os.path.split(f)
         data = pd.read_csv(f, sep=',')
-        print("processing " + tail)
         for c in data.columns:
             if "Counter" not in c:
                 del data[c]
+        print("processing " + tail + ' ' + str(len(data.columns)))
         data.to_csv(dest_dir + 'counts_' + tail, index=False)
 
 def main():
@@ -32,9 +32,6 @@ def main():
     only_count_data('../../../robot-data/new_data/normal/building/',
                     '../../../robot-data/new_data/normal/building/counts_only/')
 
-    # pick miss cup test
-    only_count_data('../../../robot-data/new_data/test/pick/miss_cup/',
-                    '../../../robot-data/new_data/test/pick/counts_only/')
     # laser fault build
     only_count_data('../../../robot-data/new_data/test/laser_fault/build/',
                     '../../../robot-data/new_data/test/laser_fault/build/counts_only/')
