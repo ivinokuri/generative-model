@@ -9,6 +9,7 @@ from typing import AnyStr, List
 
 import numpy as np
 import torch
+from torch.autograd import Variable
 from torchinfo import summary
 
 import model
@@ -19,7 +20,7 @@ WINDOWS_SIZE = 10
 BATCH_SIZE = 128
 NUM_EPOCHS = 100
 BURNIN = 5
-LEARNING_RATE = 0.001
+LEARNING_RATE = 0.0001
 PATIENCE = 5
 EPSILON = 1E-8  # Adam's stabilizer
 SEED = 0
@@ -124,7 +125,12 @@ def make_data(paths: List, windows_size: int) -> torch.Tensor:
         array = array[:, idx]
         dataset.append(vectorization(array, windows_size))
     data = np.concatenate(dataset)
-    x, y, z = data.shape
+    _data = []
+    for i in range(len(data)):
+        _data.append(data[i].T)
+    data = np.concatenate(_data)
+    # x, y, z = data.shape
+    logger.info(f'data shape: {data.shape}')
     # data = data.reshape(x, 1, y, z)
 
     return torch.from_numpy(data).float()
@@ -148,7 +154,11 @@ def split_data(data, args):
 
 
 def get_paths(folder: AnyStr) -> List[AnyStr]:
-    return [os.path.join(folder, file) for file in os.listdir(folder)]
+    return [
+        os.path.join(folder, file)
+        for file in os.listdir(folder)
+        if os.path.isfile(os.path.join(folder, file))
+    ]
 
 
 def main():
@@ -163,7 +173,7 @@ def main():
     # Split into train, validation, and test
     train_data, validation_data, test_data = split_data(data, args)
     # Create data loaders
-    logger.info(f'len train data {len(train_data)}')
+    logger.info(f'is leaf train data {data[0].is_leaf}')
     train_loader = torch.utils.data.DataLoader(train_data,
                                                batch_size=args.batch_size,
                                                shuffle=True)
@@ -182,7 +192,7 @@ def main():
     loss_fn = torch.nn.MSELoss()
 
     ### Set the random seed for reproducible results
-    torch.manual_seed(SEED)
+    # torch.manual_seed(SEED)
 
     ### Initialize the two networks
     d = 50
@@ -192,11 +202,11 @@ def main():
 
     encoder = model.Encoder(
         encoded_space_dim=d,
-        sqln=args.windows_size,
+        features=79,
     )
     decoder = model.Decoder(
         encoded_space_dim=d,
-        sqln=args.windows_size,
+        features=79,
     )
 
     params_to_optimize = [{
@@ -204,28 +214,29 @@ def main():
     }, {
         'params': decoder.parameters()
     }]
-    optim = torch.optim.Adam(params_to_optimize,
+    optim = torch.optim.SGD(params_to_optimize,
                              lr=args.learning_rate,
                              weight_decay=1e-05)
     # Move both the encoder and the decoder to the selected device
     encoder.to(args.device)
     decoder.to(args.device)
-
+    print(encoder)
     diz_loss = {
         'train_loss': [],
         'val_loss': [],
         'test_loss': [],
         'anomaly_loss': []
     }
+    val_loss, test_loss, anomaly_loss = 0, 0, 0
     for epoch in range(args.num_epochs):
         train_loss = model.train_epoch(encoder, decoder, args.device,
                                        train_loader, loss_fn, optim)
-        val_loss = model.test_epoch(encoder, decoder, args.device,
-                                    validation_loader, loss_fn)
-        test_loss = model.test_epoch(encoder, decoder, args.device, test_loader,
-                                     loss_fn)
-        anomaly_loss = model.test_epoch(encoder, decoder, args.device,
-                                        anomaly_loader, loss_fn)
+        # val_loss = model.test_epoch(encoder, decoder, args.device,
+        #                             validation_loader, loss_fn)
+        # test_loss = model.test_epoch(encoder, decoder, args.device, test_loader,
+        #                              loss_fn)
+        # anomaly_loss = model.test_epoch(encoder, decoder, args.device,
+        #                                 anomaly_loader, loss_fn)
         logger.info(f'\n EPOCH {epoch + 1}/{args.num_epochs} '
                     f'\t train loss {train_loss} '
                     f'\t val loss {val_loss}'

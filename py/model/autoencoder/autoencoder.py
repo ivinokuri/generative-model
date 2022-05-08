@@ -31,4 +31,4 @@ class Autoencoder(nn.Module):
         encoder_output, (h_t, c_t) = self.encoder(encoder_input)
         outputs = self.decoder(encoder_output)
 
-        return outputs.unsqueeze(0)
+        return outputs.unsqueeze(0)    

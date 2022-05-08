@@ -7,6 +7,7 @@ from typing import Tuple
 import numpy as np
 import torch
 import torch.nn as nn
+from torch.autograd import Variable
 from torch.nn.common_types import _size_2_t
 from torch.nn.modules.utils import _pair
 
@@ -44,26 +45,26 @@ def shape1d(
 
 class Encoder(nn.Module):
 
-    def __init__(self, encoded_space_dim, sqln: int):
+    def __init__(self, encoded_space_dim, features: int):
         super().__init__()
 
         ### Convolutional section
         self.encoder_cnn = nn.Sequential(
-            nn.Conv1d(1, 8, 3, stride=2, padding=0),
+            nn.Conv1d(79, 8, 3, stride=2, padding=0),
             nn.ReLU(True),
             nn.Conv1d(8, 16, 3, stride=2, padding=0),
-            nn.BatchNorm2d(16),
+            nn.BatchNorm1d(16),
             nn.ReLU(True),
             nn.Conv1d(16, 32, 3, stride=2, padding=0),
             nn.ReLU(True),
         )
 
         # pylint: disable=invalid-name
-        L = shape1d(sqln, 3, stride=2)
+        L = shape1d(79, 3, stride=2)
         L = shape1d(L, 3, stride=2)
         L = shape1d(L, 3, stride=2)
         # pylint: enable=invalid-name
-
+        logger.info(f'L: {L}')
         ### Flatten layer
         self.flatten = nn.Flatten(start_dim=1)
         ### Linear section 3 * 3* 32
@@ -82,41 +83,36 @@ class Encoder(nn.Module):
 
 class Decoder(nn.Module):
 
-    def __init__(self, encoded_space_dim, sqln: int):
+    def __init__(self, encoded_space_dim, features: int):
         super().__init__()
 
         # pylint: disable=invalid-name
-        L = shape1d(sqln, 3, stride=2)
+        L = shape1d(79, 3, stride=2)
         L = shape1d(L, 3, stride=2)
         L = shape1d(L, 3, stride=2)
         # pylint: enable=invalid-name
-
-        self.decoder_lin = nn.Sequential(nn.Linear(encoded_space_dim, 128),
-                                         nn.ReLU(True),
-                                         nn.Linear(128, L * 32),
-                                         nn.ReLU(True))
+        logger.info(f'L: {L}')
+        self.decoder_lin = nn.Sequential(
+            nn.Linear(encoded_space_dim, 128),
+            nn.ReLU(True),
+            nn.Linear(128, L * 32),
+            # nn.ReLU(True),
+        )
 
         self.unflatten = nn.Unflatten(dim=1, unflattened_size=(32, L))
 
         self.decoder_conv = nn.Sequential(
             nn.ConvTranspose1d(32, 16, 3, stride=2, output_padding=0),
-            nn.BatchNorm2d(16),
+            nn.BatchNorm1d(16),
             nn.ReLU(True),
-            nn.ConvTranspose1d(16,
-                               8, 3,
-                               stride=2,
-                               padding=0,
-                               output_padding=0),
-            nn.BatchNorm2d(8),
+            nn.ConvTranspose1d(16, 8, 3, stride=2, padding=0, output_padding=0),
+            nn.BatchNorm1d(8),
             nn.ReLU(True),
-            nn.ConvTranspose1d(8,
-                               1, 3,
-                               stride=2,
-                               padding=0,
-                               output_padding=0),
+            nn.ConvTranspose1d(8, 79, 3, stride=2, padding=0, output_padding=0),
         )
 
     def forward(self, x):
+        logger.info(f'x is leaf: {x.is_leaf}')
         x = self.decoder_lin(x)
         x = self.unflatten(x)
         x = self.decoder_conv(x)
@@ -127,12 +123,10 @@ class Decoder(nn.Module):
 def train_epoch(encoder, decoder, device, dataloader, loss_fn, optimizer):
     """Training function"""
 
-    logger.info('tttrain ')
     # Set train mode for both the encoder and the decoder
     encoder.train()
     decoder.train()
     train_loss = []
-    logger.info(f'{len(dataloader)} ')
 
     for batch in dataloader:
 
@@ -143,7 +137,10 @@ def train_epoch(encoder, decoder, device, dataloader, loss_fn, optimizer):
         # Decode data
         decoded_data = decoder(encoded_data)
         # Evaluate loss
+        logger.info(f"decoded data {decoded_data}")
+        logger.info(f"batch {batch}")
         loss = loss_fn(decoded_data, batch)
+
         # Backward pass
         optimizer.zero_grad()
         loss.backward()
