@@ -490,11 +490,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.distance-measure" />
       <item itemvalue="Python.model (1)" />
       <item itemvalue="Python.model-data-adapter" />
-      <item itemvalue="Python.simple-autoencoder" />
-      <item itemvalue="Python.distance-measure" />
       <item itemvalue="Python.plots" />
+      <item itemvalue="Python.simple-autoencoder" />
     </list>
     <recent_temporary>
       <list>
