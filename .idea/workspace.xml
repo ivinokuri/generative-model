@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="" />
+    <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/final-experiments/experiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final-experiments/Pickup tests extended.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final-experiments/Pickup tests extended.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,14 +213,14 @@
       <recent name="$PROJECT_DIR$/robot-data/new_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/final-experiments" />
+      <recent name="$PROJECT_DIR$/final-experiments/data/normal/pick" />
       <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/2" />
       <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/2" />
       <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/plots/3" />
-      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/3" />
-      <recent name="$PROJECT_DIR$/py/model/simple_autoencoder/checkpoints/5" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.simple-autoencoder">
+  <component name="RunManager" selected="Python.experiment">
     <configuration name="distance-measure" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,20 +243,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="experiment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="generative-model" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/py/model/lstm" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final-experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py/model/lstm/model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final-experiments/experiment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -328,19 +332,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.distance-measure" />
-      <item itemvalue="Python.model (1)" />
       <item itemvalue="Python.model-data-adapter" />
-      <item itemvalue="Python.plots" />
       <item itemvalue="Python.simple-autoencoder" />
+      <item itemvalue="Python.distance-measure" />
+      <item itemvalue="Python.plots" />
+      <item itemvalue="Python.experiment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.experiment" />
         <item itemvalue="Python.simple-autoencoder" />
         <item itemvalue="Python.plots" />
         <item itemvalue="Python.distance-measure" />
         <item itemvalue="Python.model-data-adapter" />
-        <item itemvalue="Python.model (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +381,8 @@
       <workItem from="1651065199485" duration="756000" />
       <workItem from="1652202445069" duration="6859000" />
       <workItem from="1652435459714" duration="5809000" />
-      <workItem from="1655484954500" duration="674000" />
+      <workItem from="1654345055473" duration="3909000" />
+      <workItem from="1654433898068" duration="2374000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -477,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648207828002</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixing the bug">
+      <created>1654342457071</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654342457071</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -546,7 +558,8 @@
     <MESSAGE value="implemented model but there is a bug with indexes" />
     <MESSAGE value="fixed dataset iteration problem" />
     <MESSAGE value="prepare data and model to train" />
-    <option name="LAST_COMMIT_MESSAGE" value="prepare data and model to train" />
+    <MESSAGE value="fixing the bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing the bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -595,17 +608,23 @@
           <line>21</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/final-experiments/experiment.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generative_model$model__2_.coverage" NAME="model (2) Coverage Results" MODIFIED="1648628946834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
-    <SUITE FILE_PATH="coverage/generative_model$simple_autoencoder.coverage" NAME="simple-autoencoder Coverage Results" MODIFIED="1649694892493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$simple_autoencoder.coverage" NAME="simple-autoencoder Coverage Results" MODIFIED="1654434329416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$data_adapter.coverage" NAME="data-adapter Coverage Results" MODIFIED="1639825885947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot-data/new_data" />
-    <SUITE FILE_PATH="coverage/generative_model$model_data_adapter.coverage" NAME="model-data-adapter Coverage Results" MODIFIED="1648294193210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$model_data_adapter.coverage" NAME="model-data-adapter Coverage Results" MODIFIED="1647609519369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
     <SUITE FILE_PATH="coverage/generative_model$plots.coverage" NAME="plots Coverage Results" MODIFIED="1649269325779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
-    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1647716882723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
+    <SUITE FILE_PATH="coverage/generative_model$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1647005914347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/lstm" />
     <SUITE FILE_PATH="coverage/generative_model$main.coverage" NAME="main Coverage Results" MODIFIED="1632827459297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/autoencoder" />
+    <SUITE FILE_PATH="coverage/generative_model$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1654434406495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final-experiments" />
     <SUITE FILE_PATH="coverage/generative_model$distance_measure.coverage" NAME="distance-measure Coverage Results" MODIFIED="1648737241273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py/model/simple_autoencoder" />
   </component>
   <component name="debuggerHistoryManager">
