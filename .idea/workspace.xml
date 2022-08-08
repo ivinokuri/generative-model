@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4143472-28a1-4759-8938-f07618b6b099" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-experiments/kolmogorov_smirnov_test_experiments.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final-experiments/kolmogorov_smirnov_test_experiments.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final-experiments/KSTest Example.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/final-experiments/KSTest Example.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +381,8 @@
       <workItem from="1652202445069" duration="6859000" />
       <workItem from="1652435459714" duration="5809000" />
       <workItem from="1654345055473" duration="3909000" />
-      <workItem from="1654433898068" duration="2374000" />
+      <workItem from="1654433898068" duration="2890000" />
+      <workItem from="1657366165181" duration="3677000" />
     </task>
     <task id="LOCAL-00001" summary="package fixing">
       <created>1624707689138</created>
@@ -488,14 +489,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654342457071</updated>
     </task>
-    <task id="LOCAL-00016" summary="fix">
-      <created>1655967886984</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1655967886984</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -565,8 +559,7 @@
     <MESSAGE value="fixed dataset iteration problem" />
     <MESSAGE value="prepare data and model to train" />
     <MESSAGE value="fixing the bug" />
-    <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing the bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
