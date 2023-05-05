@@ -1,0 +1,9 @@
+Building with laser fault - AUROC: 0.5166666666666666
+Building with software fault - AUROC: 0.401
+Building with velocity attack - AUROC: 0.34
+Corr with Laser fault - AUROC: 0.76
+Corr with Obstacles - AUROC: 0.5701754385964912
+Pick and miss cup - AUROC: 0.09151785714285712
+Pick and restricted vision - AUROC: 0.14285714285714285
+Pick and stolen - AUROC: 0.17857142857142855
+Pick and stuck - AUROC: 0.05357142857142855

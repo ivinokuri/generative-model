@@ -1,0 +1,14 @@
+Building with laser fault - AUROC: 0.2677
+Building with software fault - AUROC: 0.37
+Building with velocity attack - AUROC: 0.24
+Corr with Laser fault - AUROC: 0.76
+Corr with Obstacles - AUROC: 0.38457894736842113
+Pick and miss cup - AUROC: 0.13436785714285715
+Pick and restricted vision - AUROC: 0.4535
+Pick and stolen - AUROC: 0.4464
+Pick and stuck - AUROC: 0.3892
+
+
+We are \textbf{not} searching for the best way to detect anomalies.\\
+        We are searching for a method that can handle the type of data we are using.\\
+        We are trying to find the improvement level of methods by using only count data.
